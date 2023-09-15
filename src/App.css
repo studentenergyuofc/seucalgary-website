@@ -1,42 +1,90 @@
-#root {
-  max-width: 1280px;
+
+/* GENERAL STYLES */
+
+:root{
+  --regblue: #317DB2;
+  --reggreen: #ABC737;
+  --white: #FDFDFD;
+  --lightblue: #60A7F2;
+  --black: #202223;
+  --altblue: #4BADCE;
+  --coolgreen: #8CBA7A;
+  --turq: #54AE96;
+  --yellow: #F8B714;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+.App {
+    width: 100%;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+.container{
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0 3rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+li{
+  list-style: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* HEADER */
+
+.header{
+  overflow-x: hidden;
+  width: 100%;
+  background-color: red;
+  height: 5rem;
 }
 
-.card {
-  padding: 2em;
+.head-center{
+  justify-content: space-between;
+  height: 100%;
 }
 
-.read-the-docs {
-  color: #888;
+.logo-img{
+  background-color: blue;
+  height: 4rem;
+  width: 4rem;
 }
+
+.nav-list .nav-item:not(:last-child){
+  margin-right: 1.5rem;
+}
+
+.green{
+  background-color: green;
+}
+
+.header p{
+  font-size: 2rem;
+}
+
+
