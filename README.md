@@ -1,2 +1,2 @@
-# seucalgary
-Student Energy Website Repository!
+# Student Energy UCalgary
+Student Energy UCalgary Website Repository!
