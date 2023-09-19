@@ -1,5 +1,4 @@
-
-/* GENERAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&family=Raleway:wght@100;400;500;600&display=swap');/* GENERAL STYLES */
 
 :root{
   --regblue: #317DB2;
@@ -17,11 +16,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 body,
 .App {
     width: 100%;
+    overflow: visible;
 }
 
 .main{
@@ -55,13 +56,34 @@ a{
   color: inherit;
 }
 
+div{
+  display: block;
+}
+
+.section{
+  padding: 4rem;
+}
+
 /* HEADER */
 
 .header{
   overflow-x: hidden;
   width: 100%;
-  background-color: red;
   height: 5rem;
+  position: fixed;
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.header.active{
+  overflow-x: hidden;
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  z-index: 999;
+  background-color: var(--regblue);
+  transition: all 0.5s ease-in-out;
 }
 
 .head-center{
@@ -69,10 +91,34 @@ a{
   height: 100%;
 }
 
-.logo-img{
-  background-color: blue;
+.logo{
   height: 4rem;
   width: 4rem;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.logo-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-title{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding-left: 0.6rem;
+}
+
+.nav-item{
+  font-size: 1.2rem;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover{
+  color: var(--reggreen);
 }
 
 .nav-list .nav-item:not(:last-child){
@@ -85,6 +131,159 @@ a{
 
 .header p{
   font-size: 2rem;
+}
+
+/* Home */
+
+.section{
+  width:100%;
+}
+
+/* video{
+  width:100%;
+  height: 100vh;
+  object-fit:cover;
+} */
+
+video{
+  width: 120%;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 0 !important;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.video-overlay{
+  width: 100%;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 0 !important;
+  height: 100%;
+  background-image: linear-gradient(rgb(49, 125, 178), transparent);
+}
+
+/* .search-bar{
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:25rem;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+} */
+
+.club-name{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.club-name img{
+  width: 30%;
+  max-width: 300px;
+}
+
+.intro-search{
+  position: relative;
+  height: 60vw;
+}
+
+.video-container{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  margin:0;
+  top:0;
+  width: 110%;
+  height: 100%;
+  z-index:0;
+}
+
+.intro-info{
+  height: 100vh;
+  background: white;
+  position: relative;
+}
+
+.intro-info h1, span{
+  font-family: 'Raleway', sans-serif; 
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+#word-one{
+  color: var(--reggreen);
+}
+
+#word-two{
+  color: var(--altblue)
+}
+
+.mission-text p{
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+.milestones{
+  height: auto;
+  background-color: green;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-piece-container{
+  width: 90%;
+  background-color: red;
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.news-piece.right-container{
+  width: 30%;
+}
+
+.news-piece.left-container{
+  width: 70%;
+  padding: 0 2rem;
+}
+
+.img-container{
+
+  height: 100%;
+  background-color: blue;
+}
+
+.img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sponsors{
+  height: 100vh;
+  background: white;
+  position: relative;
+}
+
+.footer{
+  background-color: red;
+  height: 15rem;
+  position: relative;
 }
 
 
