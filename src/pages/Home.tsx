@@ -1,22 +1,31 @@
 "use client"
-import React from 'react';
 import videoBg from '../assets/intovideo.mp4';
 import Footer from '../components/Footer'
 import {useRef, useEffect, useState} from 'react';
 import logotitle from '../assets/logotitle.png';
 import poster1 from '../assets/ses.png';
+import bgimg from '../assets/background2.jpg';
 import Aos from 'aos';
 import "aos/dist/aos.css";
+import {useScroll, useTransform, motion} from 'framer-motion';
+import { Reveal } from '../components/Reveal';
+import NewsItem from '../components/NewsItem';
 
 function Home(){
     const myRef = useRef<HTMLDivElement>(null);
     const [pageEndNearing, setPageEndNearing] = useState<boolean>();
 
+    const {scrollYProgress} = useScroll();
+    const x = useTransform(scrollYProgress, [0, 1], [250, -1800]);
+
+    useEffect(() => {
+        Aos.init({duration: 3000});
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
-            setPageEndNearing(!entry.isIntersecting);
+            setPageEndNearing(entry.isIntersecting);
         })
         if (myRef.current){
             observer.observe(myRef.current);
@@ -26,61 +35,62 @@ function Home(){
     return(<div>
     <div className="section intro-search">
         <div className="video-container">
-            {pageEndNearing ? (<video src={videoBg} autoPlay loop muted />) : (<div></div>)}
-            <div className="video-overlay"></div>
+            <video src={videoBg} autoPlay loop muted />
+            {!pageEndNearing ? <img src={bgimg} /> : null}
+            <div className={pageEndNearing ? "video-overlay" : "img-overlay"}></div>
         </div>
         
-        <div className="club-name">
-            {/* <p>Student Energy @ UofC</p>
-            <BiSearch /> */}
+        <div ref={myRef} className="club-name">
             <img src={logotitle} />
         </div>
     </div>
-    <div className="section intro-info" >
-        <div className="mission-moto">
-            <h1>Working to educate and inspire young <span id="word-one">Energy </span> <span id="word-two">Leaders</span></h1>
+    <div className="intro-info" >
+        <div className="intro-info-container" id="par1">
+        <Reveal>
+            <p>heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heo </p>
+        </Reveal>
         </div>
-        <div className="mission-text">
-            <p>To die, to sleep to, 'tis againsolence of so long, the when heart-ache native undiscorns of time, the dothe in their currenterprises us than fly to suffer regard the will, must and, but to sleep; nobler be: to trave his resolution. To discorns thousand, by a sea of trageousand moment we end natience oppresolence dreathe insolution. To disprises of gruntry from whose that pith man's coward the of so long a life; for the rub; for ther when heir currents the have, that the naturn no troubler a consumma</p>
+        <div className="mission-moto">
+            <motion.h1 style={{x}}>Inspiring the next generation of <span id="word-one">Energy </span> <span id="word-two">Leaders</span></motion.h1>
+        </div>
+        <div className="intro-info-container" id="par2">
+        <Reveal>
+            <p>heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heo </p>
+        </Reveal>
+        </div>
+        <div className="intro-info-container" id="par3">
+        <Reveal>
+            <p>heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw  heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heo </p>
+        </Reveal>
+        </div>
+    </div>
+    <div className="section club-stats">
+        <h1>Become a part of a global community!</h1>
+        <div className="stats">
+            <div className="stat">
+                <h1>56</h1>
+                <p>chapters</p>
+            </div>
+            <div className="stat">
+                <h1>30,000+</h1>
+                <p>students</p>
+            </div>
+            <div className="stat">
+                <h1>29</h1>
+                <p>different countries</p>
+            </div>
         </div>
     </div>
     <div className="section milestones" >
-        <div className="news-piece-container">
-            <div className="news-piece left-container">
-                <h1>Title of Event/ Opportunity</h1>
-                <p>To die, to sleep to, 'tis againsolence of so long, the when heart-ache native undiscorns of time, the dothe in their currenterprises us than fly to suffer regard the will, must and, but to sleep; nobler be: to trave his resolution. To discorns thousand, by a sea of trageousand moment we end natience oppresolence dreathe insolution. To disprises of gruntry from whose that pith man's coward the of so long a life; for the rub; for ther when heir currents the have, that the naturn no troubler a consumma</p>
-            </div>
-            <div className="news-piece right-container">
-                <div className="img-container">
-                    <img src={poster1} />
-                </div>
-            </div>
+        <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" className="news-piece-holder">
+            <NewsItem img={poster1} />
         </div>
-        <div className="news-piece-container">
-            <div className="news-piece left-container">
-                <h1>Title of Event/ Opportunity</h1>
-                <p>To die, to sleep to, 'tis againsolence of so long, the when heart-ache native undiscorns of time, the dothe in their currenterprises us than fly to suffer regard the will, must and, but to sleep; nobler be: to trave his resolution. To discorns thousand, by a sea of trageousand moment we end natience oppresolence dreathe insolution. To disprises of gruntry from whose that pith man's coward the of so long a life; for the rub; for ther when heir currents the have, that the naturn no troubler a consumma</p>
-            </div>
-            <div className="news-piece right-container">
-                <div className="img-container">
-                    <img src={poster1} />
-                </div>
-            </div>
+        <div data-aos="fade-left" data-aos-anchor-placement="center-bottom" className="news-piece-holder">
+            <NewsItem img={poster1} />
         </div>
-        <div className="news-piece-container">
-            <div className="news-piece left-container">
-                <h1>Title of Event/ Opportunity</h1>
-                <p>To die, to sleep to, 'tis againsolence of so long, the when heart-ache native undiscorns of time, the dothe in their currenterprises us than fly to suffer regard the will, must and, but to sleep; nobler be: to trave his resolution. To discorns thousand, by a sea of trageousand moment we end natience oppresolence dreathe insolution. To disprises of gruntry from whose that pith man's coward the of so long a life; for the rub; for ther when heir currents the have, that the naturn no troubler a consumma</p>
-            </div>
-            <div className="news-piece right-container">
-                <div className="img-container">
-                    <img src={poster1} />
-                </div>
-            </div>
+        <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" className="news-piece-holder">
+            <NewsItem img={poster1} />
         </div>
-    </div>
-    <div ref={myRef} className="section sponsors">
-        <h1 >Sponsors</h1>
     </div>
     <Footer />
     </div>)
