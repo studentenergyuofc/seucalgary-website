@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&family=Raleway:wght@100;400;500;600&display=swap');/* GENERAL STYLES */
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;1,200&family=Raleway:wght@100;400;500;600&display=swap');
 :root{
   --regblue: #317DB2;
   --reggreen: #ABC737;
@@ -16,19 +15,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: visible;
 }
 
 body,
 .App {
     width: 100%;
-    overflow: visible;
+    overflow-x: hidden;
 }
 
 .main{
   display: flex;
   flex-direction: column;
   width: 100%;
+
 }
 
 .app-container {
@@ -112,7 +113,8 @@ div{
 }
 
 .nav-item{
-  font-size: 1.2rem;
+  font-weight: 200;
+  font-size: 1rem;
   color: var(--white);
   transition: all 0.3s ease-in-out;
 }
@@ -163,20 +165,18 @@ video{
   z-index: 0 !important;
   height: 100%;
   background-image: linear-gradient(rgb(49, 125, 178), transparent);
+  
 }
 
-/* .search-bar{
-  position: absolute;
-  top: 50%;
-  left: 35%;
-  padding: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width:25rem;
-  background-color: var(--white);
-  border-radius: 1.5rem;
-} */
+.img-overlay{
+  width: 100%;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 0 !important;
+  height: 100%;
+  background-color: rgba(49, 125, 178, 0.6);
+}
 
 .club-name{
   position: relative;
@@ -209,15 +209,19 @@ video{
 }
 
 .intro-info{
-  height: 100vh;
+  padding: 3rem 0;
+  height: fit-content;
   background: white;
   position: relative;
 }
 
 .intro-info h1, span{
   font-family: 'Raleway', sans-serif; 
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 600;
+  margin: 3.5rem 0;
+  white-space: nowrap;
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #word-one{
@@ -228,29 +232,64 @@ video{
   color: var(--altblue)
 }
 
-.mission-text p{
+.intro-info-container{
+  width: 100%;
+}
+
+.mission-text{
+  font-family: 'Raleway', sans-serif; 
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 200;
   margin-top: 2rem;
   line-height: 1.5;
+  width: 1rem;
+
 }
+
+.mission-text p{
+  margin-bottom: 1rem;
+}
+
+#par1{
+  display: flex;
+  justify-content: start;
+  text-align: start;
+}
+
+#par2{
+  display: flex;
+  justify-content: end;
+  text-align: end;
+}
+
+#par3{
+  text-align: center;
+}
+
 
 .milestones{
   height: auto;
-  background-color: green;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.news-piece-holder{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .news-piece-container{
   width: 90%;
-  background-color: red;
   display: flex;
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  border-radius: 1rem;
+  background-color: rgba(75, 173, 206, 0.4);
 }
 
 .news-piece.right-container{
@@ -259,7 +298,17 @@ video{
 
 .news-piece.left-container{
   width: 70%;
-  padding: 0 2rem;
+  padding: 1rem 2.5rem;
+}
+
+.news-piece h1{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.news-piece p{
+  line-height: 1.5; 
 }
 
 .img-container{
@@ -274,10 +323,59 @@ video{
   object-fit: cover;
 }
 
-.sponsors{
-  height: 100vh;
-  background: white;
+.parallax-img{
+  width: 120%;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 0 !important;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  background-image: url(./assets/background2.jpg);
+}
+
+.video-container img{
+  width: 100%;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 0 !important;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+
+.club-stats{
+  height: 60vh;
+  width: 100%;
   position: relative;
+  padding: 4rem;
+
+}
+
+.club-stats h1{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+
+
+.stats{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40vh;
+  width: 100%;
+  color: white;  
+}
+
+.stats h1{
+  font-size: 6rem;
+}
+
+.stat{
+  text-align: center ;
 }
 
 .footer{
