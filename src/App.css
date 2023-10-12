@@ -526,7 +526,6 @@ video{
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    background: red;
     position: relative;
 }
 
@@ -566,4 +565,134 @@ video{
   color: white;
   font-size: 1.2rem;
 }
+
+
+/* Contact Page */
+
+.contact-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8rem 11rem;
+}
+
+.form-details{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-form-heading{
+  width: 100%;
+  background:rgba(49, 125, 178, 0.2);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.contact-form-heading h5{
+  margin-bottom: 1rem;
+}
+
+.contact-form-heading p{
+  font-size: 0.8rem;
+}
+
+.contact-form-heading p:nth-child(2){
+  margin-bottom: 1rem;
+}
+
+.contact-details{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-details form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.form-details form input, .form-details form textarea{
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e2e9e1;
+  font-size: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.form-details form button{
+  background-color: rgba(140, 186, 122, 0.3);
+  border-radius: 0.5rem;
+  color: black;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-details .map{
+  width: 100%;
+  height: 400px;
+
+}
+
+.contact-details .map iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.map iframe{
+  border: none;
+}
+
+
+.contact-details-heading{
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.contact-details-heading li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-details-heading .icon{
+  margin-right: 0.5rem;
+  color: #8CBA7A;
+}
+
+.contact-details-heading h5{
+  margin-bottom: 1.5rem;
+}
+
+.contact-details-heading p{
+  font-size: 0.8rem;
+}
+
+/* .contact-details li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+} */
+
+/* .contact-details .icon{
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: #8CBA7A;
+
+} */
+
 
