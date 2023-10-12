@@ -1,13 +1,19 @@
-import { BiEnvelope, BiPhone } from "react-icons/bi";
+import { BiEnvelope } from "react-icons/bi";
 import {AiOutlineInstagram} from 'react-icons/ai';
-import {useState} from 'react';
+import {useState, useRef, useEffect } from 'react';
 import {toast} from 'react-toastify';
+
 
 function Contact(){
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [subject, setSubject] = useState<string>('');
     const [message, setMessage] = useState<string>('');
+    const topOfPage = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        topOfPage.current?.scrollIntoView({ behavior: "smooth" });
+    }, []);
 
     const onSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -45,7 +51,7 @@ function Contact(){
 
     return(
         <div>
-            <div className="contact-container">
+            <div className="contact-container" ref={topOfPage}>
                 <div className="form-details">
                     <div className="contact-form-heading">
                         <h5>LEAVE US A MESSAGE</h5>
@@ -77,7 +83,7 @@ function Contact(){
                         </li>
                     </div>
                     <div className="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.6303236638937!2d-114.13917211114503!3d51.07837390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717db7481cb3b1%3A0x36aff4a9e3c803fb!2sUniversity%20of%20Calgary!5e0!3m2!1sen!2sca!4v1683659211581!5m2!1sen!2sca" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="map"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.6303236638937!2d-114.13917211114503!3d51.07837390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717db7481cb3b1%3A0x36aff4a9e3c803fb!2sUniversity%20of%20Calgary!5e0!3m2!1sen!2sca!4v1683659211581!5m2!1sen!2sca" referrerPolicy="no-referrer-when-downgrade" title="map"></iframe>
                     </div>
                 </div>
             </div>
