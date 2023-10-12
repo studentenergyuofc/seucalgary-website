@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Team from './pages/Team';
 import GetInvolved from './pages/GetInvolved';
+import Blogs from './pages/Blogs';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="getinvolved" element={<GetInvolved />} />
           <Route path="team" element={<Team />} />
+          <Route path="blogs" element={<Blogs />} />
         </Route>
       </Routes>
       </BrowserRouter>

@@ -1,10 +1,10 @@
 "use client"
-import videoBg from '../assets/intovideo.mp4';
+import videoBg from '/intovideo.mp4';
 import Footer from '../components/Footer'
 import {useRef, useEffect, useState} from 'react';
-import logotitle from '../assets/logotitle.png';
+import logotitle from '/logotitle.png';
 import poster1 from '../assets/ses.png';
-import bgimg from '../assets/background2.jpg';
+import bgimg from '/background2.jpg';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import {useScroll, useTransform, motion} from 'framer-motion';

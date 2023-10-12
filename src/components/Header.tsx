@@ -2,15 +2,18 @@
 
 import {Link} from 'react-router-dom';
 import useMediaQuery from '../hooks/useMediaQuery';
-import logo from '../assets/logo3.png';
-import logotitle from '../assets/logotitle.png';
+import logo from '/logo3.png';
+import logotitle from '/logotitle.png';
 import {useState} from "react";
-
+import {useLocation} from "react-router-dom";
 
 function Header(){
     const [navbar, setNavbar] = useState<boolean>(false);
-
+    const location = useLocation();
     const isWindow = useMediaQuery("(min-width: 800px)");
+    const atHome = location.pathname === '/';
+
+    console.log(atHome)
 
     const changeBackground = () => {
         if(window.scrollY >= 10){
@@ -25,7 +28,7 @@ function Header(){
 
     return(
         
-        <div className={navbar ? 'header active' : 'header'}>
+        <div className={(navbar || !atHome) ? 'header active' : 'header'}>
             <div className="head-center container d-flex">
                 <div className="logo">
                     <img className="logo-img" src={logo} />
@@ -33,10 +36,10 @@ function Header(){
                 </div>
                 <div className="navigation">
                     {isWindow ? (
-                        <ul className="nav-list d-flex">
+                    <ul className="nav-list d-flex">
                         <li className="nav-item"><Link to="/">HOME</Link></li>
                         <li className="nav-item"><Link to="/about">ABOUT</Link></li>
-                        <li className="nav-item"><Link to="/team">TEAM</Link></li>
+                        <li className="nav-item"><Link to="/blogs">BLOGS</Link></li>
                         <li className="nav-item"><Link to="/getinvolved">GET INVOLVED</Link></li>
                         <li className="nav-item"><Link to="/contact">CONTACT US</Link></li>
                     </ul>

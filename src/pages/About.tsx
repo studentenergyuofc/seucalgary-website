@@ -1,9 +1,10 @@
-import Header from '../components/Header';
+import ExecCard from "../components/ExecCard";
 
 function About(){
     return(<div>
-        <Header />
-        <h1>About Page</h1>
+        <div className="section team-members">
+            <ExecCard />
+        </div>
     </div>)
 }
 
