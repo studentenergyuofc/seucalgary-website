@@ -1,8 +1,13 @@
-import Header from '../components/Header';
+import { useRef, useEffect } from "react";
 
 function GetInvolved(){
+    const topOfPage = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        topOfPage.current?.scrollIntoView({ behavior: "smooth" });
+    }, []);
+
     return(<div>
-        <Header />
         <h1>Get Involved Page</h1>
     </div>)
 }
