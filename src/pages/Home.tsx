@@ -3,7 +3,7 @@ import videoBg from "/intovideo.mp4";
 import Footer from "../components/Footer";
 import { useRef, useEffect, useState } from "react";
 import logotitle from "/logotitle.png";
-import poster1 from "../assets/ses.png";
+import poster1 from "/ses.png";
 import bgimg from "/background2.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,6 +13,7 @@ import NewsItem from "../components/NewsItem";
 
 function Home() {
   const myRef = useRef<HTMLDivElement>(null);
+  const topOfPage = useRef<HTMLDivElement>(null);
   const [pageEndNearing, setPageEndNearing] = useState<boolean>();
 
   const { scrollYProgress } = useScroll();
@@ -23,6 +24,7 @@ function Home() {
   }, []);
 
   useEffect(() => {
+    topOfPage.current?.scrollIntoView({ behavior: "smooth" });
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       setPageEndNearing(entry.isIntersecting);
@@ -34,7 +36,7 @@ function Home() {
 
   return (
     <div>
-      <div className="section intro-search">
+      <div className="section intro-search" ref={topOfPage}>
         <div className="video-container">
           <video src={videoBg} autoPlay loop muted />
           {!pageEndNearing ? <img src={bgimg} /> : null}
@@ -95,7 +97,7 @@ function Home() {
           </div>
           <div className="stat">
             <h1>29</h1>
-            <p>different countries</p>
+            <p>countries</p>
           </div>
         </div>
       </div>

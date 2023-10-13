@@ -1,6 +1,6 @@
 import { Position } from "../vite-env";
 
-function PositionCard(props: Position) {
+function PositionCard(props: Position): JSX.Element {
   return (
     <div
       className="position-card"

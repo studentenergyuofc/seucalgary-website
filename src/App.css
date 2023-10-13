@@ -69,9 +69,7 @@ div{
   display: block;
 }
 
-.section{
-  padding: 4rem;
-}
+
 
 /* HEADER */
 
@@ -147,6 +145,7 @@ div{
 
 .section{
   width:100%;
+  padding: 4rem;
 }
 
 video{
@@ -386,21 +385,279 @@ video{
   position: relative;
 }
 
-/* Team section styling */
-.team-members{
+/* About page */
+
+/* About */
+.about-section{
   height: 100vh;
-  background: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-banner{
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-banner-overlay{
+  width: 100%;
+  height: 100%;
+  background:rgba(49, 125, 178, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-banner-overlay h1{
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 0.8rem;
+}
+
+.main-banner-overlay h3{
+  color: white;
+  max-width: 50%;
+  text-align: center; 
+  font-weight: 200;
+}
+
+.sub-banners{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.sub-banner-right-overlay{
+  width: 100%;
+  height: 100%;
+  background:rgba(49, 125, 178, 0.4);
+  position: absolute;
+  top: 0;
+  left: 40%;
+}
+
+.sub-banner-right img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sub-banner-left{
+  width: 40%;
+  height: 100%;
+  background: white;
+  padding: 4rem 3rem;
+}
+
+.sub-banner-left p{
+  color: var(--regblue);
+  z-index: 10;
+  font-weight: 400;
+}
+
+.sub-banner-right{
+  width: 60%;
+  height: 100%;
+  background: yellow;
+}
+
+
+/* Team Section */
+.team-members-section{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
+.team-members-header{
+  width: 100%;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-members-header h1{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--reggreen)
+}
+
+.team-members-header p{
+  font-size: 0.8rem;
+}
+
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .card{
   background: white;
-  width: 25%;
-  padding: 3rem 5rem;
+  width: 18%;
+  height: 20rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
-.card p{
-  padding-top: 1rem;
+.inner-card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.card-content{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-content.back{
+  padding: 1rem;
+  line-height: 1.2rem;
+}
+
+.exec-img-container{
+  width: 80%;
+  height: 75%;
+  margin-bottom: 0.5rem;
+}
+
+.exec-img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content p{
+  font-size: 0.7rem;
+}
+
+.card-content h4{
+  font-size: 1rem;
+}
+
+.card-content h6{
+  font-size: 0.8rem;
+  color: var(--regblue);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+/* Founders */
+.club-founders-main{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
+.club-founders-header{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 80%;
+}
+
+.founder-title{
+  width: 100%;
+  line-height: 2.2rem;
+  text-align: start;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+  color: var(--regblue);
+}
+
+.founder-name{
+  width: 100%;
+  margin-top: 1rem;
+  text-align: end;
+  color: var(--reggreen);
+}
+
+.club-founders-header h1{
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--reggreen)
+}
+
+.club-founders-header p{
+  width: 35%;
+  font-size: 1rem;
+  width: 60%;
+  margin-top: 0.5rem;
+}
+
+.club-founders-title p{
+  text-align: start;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.founder-container{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.founder-container:not(:last-child){
+  margin-bottom: 8rem;
+}
+
+.founder-testimony{
+  width: 40%;
+  padding: 0 2rem;
+  line-height: 1.8;
+}
+
+.founder-img{
+  width: 40%;
+  height: 30rem;
+  border-radius: 0.5rem;
+}
+
+.founder-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+
+}
+
+
 
 /* Blogs */
 .blog{
@@ -680,20 +937,7 @@ video{
   font-size: 0.8rem;
 }
 
-/* .contact-details li{
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
-} */
 
-/* .contact-details .icon{
-  font-size: 1rem;
-  margin-right: 1rem;
-  color: #8CBA7A;
-
-} */
 
 
 /* Join Us Page */

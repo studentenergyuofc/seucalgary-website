@@ -1,12 +1,22 @@
+import { useRef, useEffect } from "react";
+
 function Blogs() {
+  const topOfPage = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    topOfPage.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
     <div>
-      <div className="page-heading">
-        <img src="/background3.jpg" alt="" />
-        <div className="page-heading-overlay"></div>
-        <div className="page-heading-text">
-          <h1>Blogs</h1>
-          <p>Check out our selection of blogs this week</p>
+      <div>
+        <div className="page-heading" ref={topOfPage}>
+          <img src="/background3.jpg" alt="" />
+          <div className="page-heading-overlay"></div>
+          <div className="page-heading-text">
+            <h1>Blogs</h1>
+            <p>Check out our selection of blogs this week</p>
+          </div>
         </div>
       </div>
       <div className="blog">

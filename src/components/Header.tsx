@@ -11,7 +11,7 @@ function Header() {
   const [navbar, setNavbar] = useState<boolean>(false);
   const location = useLocation();
   const isWindow = useMediaQuery("(min-width: 800px)");
-  const atHome = location.pathname === "/";
+  const atHome = location.pathname === "/" || location.pathname === "/about";
 
   console.log(atHome);
 

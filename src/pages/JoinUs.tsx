@@ -1,8 +1,15 @@
+import { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import PositionCard from "../components/PositionCard";
 import { Position } from "../vite-env";
 
 function JoinUs(): JSX.Element {
+  const topOfPage = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    topOfPage.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   const positions: Position[] = [
     {
       title: "VP DEVELOPMENT",
@@ -82,7 +89,7 @@ function JoinUs(): JSX.Element {
     <>
       <Header />
       <div className="page-heading">
-        <img src="/imgtry.jpg" alt="" />
+        <img src="/banner.webp" alt="" />
         <div className="page-heading-overlay"></div>
         <div className="page-heading-text">
           <h1>Positions</h1>
