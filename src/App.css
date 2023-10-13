@@ -826,117 +826,164 @@ video{
 
 /* Contact Page */
 
-.contact-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 8rem 11rem;
+.contact-banner{
+  width: 100%;
+  height: 65vh;
 }
 
-.form-details{
-  width: 40%;
+.contact-banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-banner-overlay{
+  background: rgba(49, 125, 178, 0.8);
+  width: 100%;
+  height: 65vh;
+  position: absolute;
+  top: 0;
+}
+
+.contact-main{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact-form-heading{
+.contact-main-inner{
+  width: 60%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.contact-text h1{
+  font-size: 3rem;
+  color: white;
+}
+
+.contact-text p{
+  font-size: 1rem;
+  color: white;
+  margin-top: 1rem;
+  width: 60%;
+}
+
+.contact-window{
+  /* position: absolute;
+  top: 40%;
+  left: 20%; */
+  height: 22rem;
   width: 100%;
-  background:rgba(49, 125, 178, 0.2);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  display: flex;
+  flex-direction: row;
 }
 
-.contact-form-heading h5{
+.contact-window-left{
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 2rem 5rem 2rem 3rem;
+}
+
+.contact-window-left h4{
+  font-size: 0.9rem;
   margin-bottom: 1rem;
+  color: var(--reggreen)
 }
 
-.contact-form-heading p{
+.contact-window-left form{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  position: relative;
+}
+
+.contact-window-left form input, .contact-window-left form textarea{
+  margin-bottom: 0.5rem;
+  border: none !important;
+  border-bottom: 1px solid rgb(221, 221, 221) !important;
+  padding: 0.8rem 0.5rem;
   font-size: 0.8rem;
 }
 
-.contact-form-heading p:nth-child(2){
+.contact-window-left form button{
+  background-color: var(--reggreen);
+  color: white;
+  padding: 6px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  position: absolute;
+  top: -3.4rem;
+  right: -5.5rem;
+  /* border-radius: 50%; */
+}
+
+.contact-window-right{
+  height: 100%;
+  width: 35%;
+  background: #194C70;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials .social-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-window-right h4{
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+
+.socials .icon{
+  margin-right: 0.5rem;
+  font-size: 20px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.contact-window-right p{
+  color: white;
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  word-break: break-all;
+  margin-bottom: 0;
+}
+
+.socials .social-link:last-child p {
+  word-break: normal;
 }
 
 .contact-details{
-  width: 45%;
-  display: flex;
-  flex-direction: column;
+  width: 80%;
 }
-
-.form-details form{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 2rem;
-}
-
-.form-details form input, .form-details form textarea{
-  width: 100%;
-  padding: 12px 15px;
-  outline: none;
-  margin-bottom: 20px;
-  border: 1px solid #e2e9e1;
-  font-size: 0.7rem;
-  border-radius: 0.5rem;
-}
-
-.form-details form button{
-  background-color: rgba(140, 186, 122, 0.3);
-  border-radius: 0.5rem;
-  color: black;
-  padding: 12px 25px;
-  border: none;
-  cursor: pointer;
-}
-
-.contact-details .map{
-  width: 100%;
-  height: 400px;
-
-}
-
-.contact-details .map iframe{
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-}
-
-.map iframe{
-  border: none;
-}
-
-
-.contact-details-heading{
-  width: 100%;
-  height: fit-content;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
-.contact-details-heading li{
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.contact-details-heading .icon{
-  margin-right: 0.5rem;
-  color: #8CBA7A;
-}
-
-.contact-details-heading h5{
-  margin-bottom: 1.5rem;
-}
-
-.contact-details-heading p{
-  font-size: 0.8rem;
-}
-
 
 
 
