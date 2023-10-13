@@ -696,3 +696,64 @@ video{
 } */
 
 
+/* Join Us Page */
+.join-main-container {
+  padding-top: 80px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+.position-card {
+  margin-bottom: 80px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 400px;
+  width: 500px;
+  border-radius: 0px;
+  background: #ffffff;
+  box-shadow:  25px 25px 50px #d9d9d9,
+             -25px -25px 50px #ffffff;
+}
+.position-card-title{
+  text-align: center;
+  color: var(--reggreen);
+}
+.position-card-image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.position-card-image{
+  width: 100px;
+  height: 100px;
+}
+.position-card-btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.position-card-btn{
+  background-color: var(--regblue);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.position-card-btn:hover{
+  background-color: var(--reggreen);
+}
