@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       newestOnTop
       closeOnClick
       draggable={false}
-      theme="colored"
+      theme="light"
     />
   </>
 );
