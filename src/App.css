@@ -937,13 +937,9 @@ video{
   font-size: 0.8rem;
 }
 
-
-
-
 /* Join Us Page */
 .join-main-container {
-  padding-top: 80px;
-  margin-top: 80px;
+  margin-top: 120px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -951,7 +947,6 @@ video{
   gap: 20px;
   background-color: #ffffff;
 }
-
 .position-card {
   margin-bottom: 80px;
   padding: 40px;
