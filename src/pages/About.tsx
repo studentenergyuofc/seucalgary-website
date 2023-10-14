@@ -49,13 +49,13 @@ function About(){
                 <h1>Meet Our Executive Team</h1>
             </div>
             <div className="cards-container">
-                <FlipCard name={"Kareem Yousef"} execImg={"/img-kareem.webp"} position={"President"} major={"Electrical Engineering"}/>
+                <FlipCard name={"Kareem Yousef"} execImg={"/img-kareem2.webp"} position={"President"} major={"Electrical Engineering"}/>
                 <FlipCard name={"Abdul Jalel"} execImg={""} position={"Vice President"} major={"Mechanical Engineering"}/>
                 <FlipCard name={"Ibrahim Hashmi"} execImg={""} position={"VP Communications" } major={"Mechanical Engineering"}/>
                 <FlipCard name={"Axel Sanchez"} execImg={""} position={"Co-VP Development"} major={"Software Engineering"}/>
-                <FlipCard name={"Mariia Podgaietska"} execImg={""} position={"Co-VP Development"} major={"Software Engineering"}/>
+                <FlipCard name={"Mariia Podgaietska"} execImg={"/img-mariia.jpg"} position={"Co-VP Development"} major={"Software Engineering"}/>
                 <FlipCard name={"Murad Tashkandi"} execImg={""} position={"VP Public Relations"} major={"Electrical Engineering"}/>
-                <FlipCard name={"Omar Ahmed"} execImg={""} position={"VP Events"} major={"Electrical Engineering"}/>
+                <FlipCard name={"Omar Ahmed"} execImg={"/img-omar.webp"} position={"VP Events"} major={"Electrical Engineering"}/>
                 <FlipCard name={"Kiichi Sakai"} execImg={"/img-kiichi.jpg"} position={"VP Finance"} major={"Business Technology"}/>
             </div>
         </div>

@@ -379,11 +379,15 @@ video{
   text-align: center ;
 }
 
+/* Footer */
+
 .footer{
   background-color: red;
   height: 15rem;
   position: relative;
 }
+
+
 
 /* About page */
 
