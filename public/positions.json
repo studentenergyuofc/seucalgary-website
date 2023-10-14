@@ -1,0 +1,66 @@
+[
+  {
+    "title": "VP DEVELOPMENT",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
+    "deadline": "September 15th 2023",
+    "path": "/rocket-dynamic-color.png",
+    "btnText": "Applications closed",
+    "isEnable": false
+  },
+  {
+    "title": "JR. DEVELOPMENT",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
+    "deadline": "September 15th 2023",
+    "path": "/computer-dynamic-color.png",
+    "btnText": "Applications closed",
+    "isEnable": false
+  },
+  {
+    "title": "VP EVENTS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
+    "deadline": "September 15th 2023",
+    "path": "/video-camera-dynamic-color.png",
+    "btnText": "Applications closed",
+    "isEnable": false
+  },
+  {
+    "title": "JR. EVENTS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
+    "deadline": "September 15th 2023",
+    "path": "/calender-dynamic-color.png",
+    "btnText": "Applications closed",
+    "isEnable": false
+  },
+  {
+    "title": "VP PUBLIC RELATIONS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
+    "deadline": "September 15th 2023",
+    "path": "/megaphone-dynamic-color.png",
+    "btnText": "Applications closed",
+    "isEnable": false
+  },
+  {
+    "title": "JR. PUBLIC RELATIONS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
+    "deadline": "September 15th 2023",
+    "path": "/at-dynamic-color.png",
+    "btnText": "Applications closed",
+    "isEnable": false
+  },
+  {
+    "title": "VP COMMUNICATIONS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
+    "deadline": "September 15th 2023",
+    "path": "/chat-bubble-dynamic-color.png",
+    "btnText": "Applications closed",
+    "isEnable": false
+  },
+  {
+    "title": "JR. COMMUNICATIONS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
+    "deadline": "September 15th 2023",
+    "path": "/phone-missing-dynamic-color.png",
+    "btnText": "Applications closed",
+    "isEnable": false
+  }
+]
