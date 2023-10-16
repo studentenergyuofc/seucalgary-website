@@ -1,0 +1,17 @@
+name: lint
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run lint

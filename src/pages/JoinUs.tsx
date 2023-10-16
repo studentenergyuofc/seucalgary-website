@@ -1,95 +1,22 @@
 import { useEffect, useRef } from "react";
+import usePositionsData from "../hooks/usePositionsData";
 import Header from "../components/Header";
 import PositionCard from "../components/PositionCard";
 import { Position } from "../vite-env";
 
 function JoinUs(): JSX.Element {
   const topOfPage = useRef<HTMLDivElement>(null);
+  const positions = usePositionsData();
 
   useEffect(() => {
     topOfPage.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
-  const positions: Position[] = [
-    {
-      title: "VP DEVELOPMENT",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-      deadline: "September 15th 2023",
-      path: "/rocket-dynamic-color.png",
-      btnText: "Applications closed",
-      isEnable: false,
-    },
-    {
-      title: "JR. DEVELOPMENT",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-      deadline: "September 15th 2023",
-      path: "/computer-dynamic-color.png",
-      btnText: "Applications closed",
-      isEnable: false,
-    },
-    {
-      title: "VP EVENTS",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-      deadline: "September 15th 2023",
-      path: "/video-camera-dynamic-color.png",
-      btnText: "Applications closed",
-      isEnable: false,
-    },
-    {
-      title: "JR. EVENTS",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-      deadline: "September 15th 2023",
-      path: "/calender-dynamic-color.png",
-      btnText: "Applications closed",
-      isEnable: false,
-    },
-    {
-      title: "VP PUBLIC RELATIONS",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-      deadline: "September 15th 2023",
-      path: "/megaphone-dynamic-color.png",
-      btnText: "Applications closed",
-      isEnable: false,
-    },
-    {
-      title: "JR. PUBLIC RELATIONS",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-      deadline: "September 15th 2023",
-      path: "/at-dynamic-color.png",
-      btnText: "Applications closed",
-      isEnable: false,
-    },
-    {
-      title: "VP COMMUNICATIONS",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-      deadline: "September 15th 2023",
-      path: "/chat-bubble-dynamic-color.png",
-      btnText: "Applications closed",
-      isEnable: false,
-    },
-    {
-      title: "JR. COMMUNICATIONS",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-      deadline: "September 15th 2023",
-      path: "/phone-missing-dynamic-color.png",
-      btnText: "Applications closed",
-      isEnable: false,
-    },
-  ];
-
   return (
     <>
       <Header />
-      <div className="page-heading">
-        <img src="/banner.webp" alt="" />
+      <div className="page-heading" ref={topOfPage}>
+        <img src="/banner.webp" alt="solar panels" />
         <div className="page-heading-overlay"></div>
         <div className="page-heading-text">
           <h1>Positions</h1>
