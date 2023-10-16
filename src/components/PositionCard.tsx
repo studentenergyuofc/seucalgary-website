@@ -4,9 +4,8 @@ function PositionCard(props: Position): JSX.Element {
   return (
     <div
       className="position-card"
-      data-aos="fade-right"
+      data-aos="fade-left"
       data-aos-anchor-placement="center-bottom"
-      data-aos-duration="1500"
     >
       <h2 className="position-card-title">{props.title}</h2>
       <div className="position-card-image-container">
