@@ -29,6 +29,7 @@ body,
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-x: hidden;
 
 }
 
@@ -198,6 +199,27 @@ video{
   height: 60vw;
 }
 
+.scroll-down-btn{
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll-down-btn:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 .video-container{
   position: absolute;
   bottom: 0;
@@ -235,6 +257,8 @@ video{
 
 .intro-info-container{
   width: 100%;
+  padding: 0 2rem;
+  padding: 2rem;
 }
 
 .mission-text{
@@ -243,12 +267,11 @@ video{
   font-weight: 200;
   margin-top: 2rem;
   line-height: 1.5;
-  width: 1rem;
-
 }
 
 .mission-text p{
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+  width: 60%;
 }
 
 #par1{
@@ -267,13 +290,42 @@ video{
   text-align: center;
 }
 
-
 .milestones{
   height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
+}
+
+.milestones-nav{
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.milestones-nav-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; 
+  width: 50%;
+}
+
+.milestones-nav-items li{
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: rgba(140, 186, 122, 0.4);
+  color: black;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.5rem;
+}
+
+.milestones-nav-items .active{
+  background: rgba(140, 186, 122, 0.8);
 }
 
 .news-piece-holder{
@@ -449,7 +501,7 @@ video{
 .sub-banner-right-overlay{
   width: 100%;
   height: 100%;
-  background:rgba(49, 125, 178, 0.4);
+  background:rgba(88, 170, 30, 0.25);
   position: absolute;
   top: 0;
   left: 40%;
@@ -469,7 +521,7 @@ video{
 }
 
 .sub-banner-left p{
-  color: var(--regblue);
+  color: black;
   z-index: 10;
   font-weight: 400;
 }
@@ -1007,7 +1059,7 @@ video{
   gap: 20px;
   height: 400px;
   width: 500px;
-  border-radius: 0px;
+  border-radius: 2rem;
   background: #ffffff;
   box-shadow:  25px 25px 50px #d9d9d9,
              -25px -25px 50px #ffffff;

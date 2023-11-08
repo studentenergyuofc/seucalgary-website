@@ -1,5 +1,5 @@
 import FlipCard from "../components/FlipCard";
-import subbnr from "/banner2.webp";
+import subbnr from "/banner4.webp";
 import mainbnr from "/banner3.webp";
 import ImgComponent from "../components/ImgComponent";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
