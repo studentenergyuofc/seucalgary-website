@@ -45,16 +45,7 @@ function Header() {
                 <Link to="/about">ABOUT</Link>
               </li>
               <li className="nav-item">
-                <Link to="/achievements">ACHIEVEMENTS</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/internships">INTERNSHIPS</Link>
-              </li>
-              <li className="nav-item">
                 <Link to="/blogs">BLOGS</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/partners">PARTNERS</Link>
               </li>
               <li className="nav-item">
                 <Link to="/join">JOIN US</Link>
