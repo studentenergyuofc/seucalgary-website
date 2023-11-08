@@ -285,12 +285,11 @@ video{
 }
 
 .news-piece-container{
-  width: 90%;
+  width: 70%;
   display: flex;
   padding: 2rem;
   margin-bottom: 4rem;
-  border-radius: 1rem;
-  background-color: rgba(75, 173, 206, 0.4);
+  background-image: linear-gradient(rgba(49, 126, 180, 0.7), rgba(139, 186, 120, 0.3));
 }
 
 .news-piece.right-container{
@@ -315,7 +314,6 @@ video{
 .img-container{
 
   height: 100%;
-  background-color: blue;
 }
 
 .img-container img{
@@ -1005,8 +1003,7 @@ video{
   width: 500px;
   border-radius: 0px;
   background: #ffffff;
-  box-shadow:  25px 25px 50px #d9d9d9,
-             -25px -25px 50px #ffffff;
+  box-shadow:rgba(126, 127, 127, 0.3) 0px 6px 10px; 
 }
 .position-card-title{
   text-align: center;
@@ -1043,4 +1040,56 @@ video{
 }
 .position-card-btn:hover{
   background-color: var(--reggreen);
+}
+.position-card-deadline{
+  color: var(--black);
+}
+
+.events-navbar{
+  width: 100%;
+  background-color: var(--white);
+  height: 14rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.events-list{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  gap: 40px;
+}
+.events-list {
+  list-style: none;
+}
+.events-button{
+  padding: 20px;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  background-color: var(--regblue);
+}
+.events-button:hover{
+  background-color: #23699b;
+  scale: 1.05;
+  transition: all 0.2s ease;
+}
+.events-button.active{
+  background: var(--coolgreen);
+}
+.events-button:active {
+  scale: 1.01;
+  transition: all 0.1s ease;
+}
+.event-article{
+  position: relative;
+  height: auto;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }

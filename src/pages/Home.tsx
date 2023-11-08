@@ -3,18 +3,22 @@ import videoBg from "/intovideo.mp4";
 import Footer from "../components/Footer";
 import { useRef, useEffect, useState } from "react";
 import logotitle from "/logotitle.png";
-import poster1 from "/ses.png";
 import bgimg from "/background2.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { Reveal } from "../components/Reveal";
 import NewsItem from "../components/NewsItem";
+import { achievementsEvents, upcomingEvents, pastEvents } from "../lib/data";
+import { NewsItemProps } from "../vite-env";
 
 function Home() {
   const myRef = useRef<HTMLDivElement>(null);
   const topOfPage = useRef<HTMLDivElement>(null);
   const [pageEndNearing, setPageEndNearing] = useState<boolean>();
+  const [event, setEvent] = useState<string>("upcoming");
+
+  console.log(event);
 
   const { scrollYProgress } = useScroll();
   const x = useTransform(scrollYProgress, [0, 1], [250, -1800]);
@@ -35,7 +39,7 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <section>
       <div className="section intro-search" ref={topOfPage}>
         <div className="video-container">
           <video src={videoBg} autoPlay loop muted />
@@ -101,31 +105,105 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="section milestones">
-        <div
-          data-aos="fade-right"
-          data-aos-anchor-placement="center-bottom"
-          className="news-piece-holder"
-        >
-          <NewsItem img={poster1} />
-        </div>
-        <div
-          data-aos="fade-left"
-          data-aos-anchor-placement="center-bottom"
-          className="news-piece-holder"
-        >
-          <NewsItem img={poster1} />
-        </div>
-        <div
-          data-aos="fade-right"
-          data-aos-anchor-placement="center-bottom"
-          className="news-piece-holder"
-        >
-          <NewsItem img={poster1} />
-        </div>
+      <div className="events-navbar">
+        <ul className="events-list">
+          <li className="events-link">
+            <button
+              className={
+                event === "upcoming" ? "events-button active" : "events-button"
+              }
+              onClick={() => setEvent("upcoming")}
+            >
+              Upcoming Events
+            </button>
+          </li>
+          <li>
+            <button
+              className={
+                event === "past" ? "events-button active" : "events-button"
+              }
+              onClick={() => setEvent("past")}
+            >
+              Past Events
+            </button>
+          </li>
+          <li>
+            <button
+              className={
+                event === "achievements"
+                  ? "events-button active"
+                  : "events-button"
+              }
+              onClick={() => setEvent("achievements")}
+            >
+              Achievements
+            </button>
+          </li>
+        </ul>
       </div>
+      {event === "upcoming" ? (
+        <article className="event-article" data-aos>
+          {upcomingEvents.map((event: NewsItemProps) => {
+            return (
+              <div
+                className="news-piece-holder"
+                data-aos={event.animation}
+                data-aos-anchor-placement="center-bottom"
+              >
+                <NewsItem
+                  path={event.path}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  animation={event.animation}
+                ></NewsItem>
+              </div>
+            );
+          })}
+        </article>
+      ) : event === "past" ? (
+        <article className="event-article">
+          {pastEvents.map((event: NewsItemProps) => {
+            return (
+              <div
+                className="news-piece-holder"
+                data-aos={event.animation}
+                data-aos-anchor-placement="center-bottom"
+              >
+                <NewsItem
+                  path={event.path}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  animation={event.animation}
+                ></NewsItem>
+              </div>
+            );
+          })}
+        </article>
+      ) : (
+        <article className="event-article">
+          {achievementsEvents.map((event: NewsItemProps) => {
+            return (
+              <div
+                className="news-piece-holder"
+                data-aos={event.animation}
+                data-aos-anchor-placement="center-bottom"
+              >
+                <NewsItem
+                  path={event.path}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  animation={event.animation}
+                ></NewsItem>
+              </div>
+            );
+          })}
+        </article>
+      )}
       <Footer />
-    </div>
+    </section>
   );
 }
 
