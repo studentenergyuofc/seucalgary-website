@@ -12,7 +12,7 @@ function PositionCard(props: Position): JSX.Element {
         <img src={props.path} alt="" className="position-card-image" />
       </div>
       <p>{props.description}</p>
-      <p>
+      <p className="position-card-deadline">
         <b>Deadline: </b>
         {props.deadline}
       </p>

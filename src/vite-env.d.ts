@@ -8,3 +8,11 @@ export interface Position {
   btnText: string;
   isEnable: boolean;
 }
+
+export interface NewsItemProps {
+  path: string;
+  title: string;
+  description: string;
+  date: string;
+  animation: string;
+}
