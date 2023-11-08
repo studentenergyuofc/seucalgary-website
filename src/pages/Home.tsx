@@ -7,7 +7,6 @@ import bgimg from "/background2.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { Reveal } from "../components/Reveal";
 import NewsItem from "../components/NewsItem";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { achievementsEvents, upcomingEvents, pastEvents } from "../lib/data";
