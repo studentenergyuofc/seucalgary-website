@@ -6,7 +6,6 @@ const NewsItem: React.FC<NewsItemProps> = ({
   title,
   description,
   date,
-  animation,
 }) => {
   return (
     <div className="news-piece-container">
