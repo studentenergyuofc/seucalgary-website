@@ -12,7 +12,7 @@ const NewsItem: React.FC<NewsItemProps> = ({
       <div className="news-piece left-container">
         <h1>{title}</h1>
         <p>{description}</p>
-        <p>{date}</p>
+        <span>{date}</span>
       </div>
       <div className="news-piece right-container">
         <div className="img-container">

@@ -1,14 +1,15 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useState } from 'react';
+import { ExecMembers } from "../vite-env";
 
-type cardProps = {
-  name : string,
-  execImg : string,
-  position : string,
-  major : string,
-}
+// type cardProps = {
+//   name : string,
+//   execImg : string,
+//   position : string,
+//   major : string,
+// }
 
-function FlipCard({name, execImg, position, major} : cardProps) {
+function FlipCard(props : ExecMembers) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const controlsCard = useAnimation();
   const controlsText = useAnimation();
@@ -40,11 +41,11 @@ function FlipCard({name, execImg, position, major} : cardProps) {
         ) : (
         <div className="card-content">
           <div className="exec-img-container">
-            <img src={execImg} alt="exec-img" className="exec-img"/>
+            <img src={props.path} alt="exec-img" className="exec-img"/>
           </div>
-          <h4>{name}</h4>
-          <h6>{position}</h6>
-          <p>{major}</p>
+          <h4>{props.name}</h4>
+          <h6>{props.position}</h6>
+          <p>{props.major}</p>
         </div>
         )}
       </motion.div>

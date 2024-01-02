@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import Footer from "../components/Footer";
 
 function Blogs() {
   const topOfPage = useRef<HTMLDivElement>(null);
@@ -69,6 +70,7 @@ function Blogs() {
           <h1>06/10</h1>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

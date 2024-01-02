@@ -16,8 +16,6 @@ function Header() {
     location.pathname === "/about" ||
     location.pathname === "/contact";
 
-  console.log(atHome);
-
   const changeBackground = () => {
     if (window.scrollY >= 10) {
       setNavbar(true);
@@ -48,14 +46,11 @@ function Header() {
                 <Link to="/blogs">BLOGS</Link>
               </li>
               <li className="nav-item">
-                <Link to="/join">JOIN US</Link>
-              </li>
-              <li className="nav-item">
                 <Link to="/contact">CONTACT US</Link>
               </li>
             </ul>
           ) : (
-            <p>&#9776;</p>
+            <p className="hamburger-menu">&#9776;</p>
           )}
         </div>
       </div>

@@ -2,8 +2,12 @@ import FlipCard from "../components/FlipCard";
 import subbnr from "/banner4.webp";
 import mainbnr from "/banner3.webp";
 import ImgComponent from "../components/ImgComponent";
+import Footer from "../components/Footer";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useRef, useEffect } from "react";
+import { AiOutlineArrowDown } from "react-icons/ai";
+import { ExecMembers } from "../vite-env";
+import { executives } from "../lib/data";
 
 function About() {
   const topOfPage = useRef<HTMLDivElement>(null);
@@ -14,13 +18,18 @@ function About() {
 
   const [text] = useTypewriter({
     words: [
-      "Student Energy UofC",
-      "Student Energy at University of Calgary",
+      "STUDENT ENERGY UOFC",
+      "STUDENT ENERGY AT UNIVERCITY OF CALGARY",
       "SEUC",
     ],
     loop: true,
     deleteSpeed: 50,
   });
+
+  const handleScroll = () => {
+    const scrollDistance = window.innerHeight;
+    window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
+  };
 
   return (
     <div>
@@ -35,27 +44,25 @@ function About() {
           />
           <div className="main-banner-overlay">
             <h1>
-              We are{" "}
-              <span style={{ color: "white", fontSize: "2.5rem" }}>{text}</span>
+              WE ARE{" "}
+              <span style={{ color: "white", fontSize: "2.5rem", fontWeight: "400" }}>{text}</span>
               <Cursor />
             </h1>
             <h3>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit eos harum architecto temporibus amet odio sunt
-              beatae pariatur numquam illo.
+              Nurturing professional development and bridging the gap between university and the energy sector.
             </h3>
           </div>
         </div>
         <div className="sub-banners">
           <div className="sub-banner-left">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Pariatur, laudantium? Minima autem cumque vel, atque veniam porro
-              nam, dolor consectetur quas, eum non debitis repellendus
-              perferendis totam magni itaque soluta. Illo, accusantium
-              consectetur in ducimus, obcaecati nobis repellendus commodi nisi
-              possimus, libero odit tenetur soluta dolore quae dolor!
-              Consectetur, molestias?
+              "FUELED BY <span id="blue-text">PASSION</span>,
+            </p>
+            <p>
+              DRIVEN BY <span id="green-text">INNOVATION</span>,
+            </p>
+            <p>
+              SHAPING A<span id="yellow-text"> SUSTAINABLE FUTURE</span>"
             </p>
           </div>
           <div className="sub-banner-right">
@@ -68,60 +75,25 @@ function About() {
             <div className="sub-banner-right-overlay"></div>
           </div>
         </div>
+        <div className="scroll-down-btn about" onClick={handleScroll}>
+          <AiOutlineArrowDown />
+        </div>
       </div>
       <div className="section team-members-section">
         <div className="team-members-header">
           <h1>Meet Our Executive Team</h1>
         </div>
         <div className="cards-container">
-          <FlipCard
-            name={"Kareem Yousef"}
-            execImg={"/img-kareem.webp"}
-            position={"President"}
-            major={"Electrical Engineering"}
-          />
-          <FlipCard
-            name={"Abdul Jalel"}
-            execImg={""}
-            position={"Vice President"}
-            major={"Mechanical Engineering"}
-          />
-          <FlipCard
-            name={"Ibrahim Hashmi"}
-            execImg={""}
-            position={"VP Communications"}
-            major={"Mechanical Engineering"}
-          />
-          <FlipCard
-            name={"Axel Sanchez"}
-            execImg={""}
-            position={"Co-VP Development"}
-            major={"Software Engineering"}
-          />
-          <FlipCard
-            name={"Mariia Podgaietska"}
-            execImg={""}
-            position={"Co-VP Development"}
-            major={"Software Engineering"}
-          />
-          <FlipCard
-            name={"Murad Tashkandi"}
-            execImg={""}
-            position={"VP Public Relations"}
-            major={"Electrical Engineering"}
-          />
-          <FlipCard
-            name={"Omar Ahmed"}
-            execImg={""}
-            position={"VP Events"}
-            major={"Electrical Engineering"}
-          />
-          <FlipCard
-            name={"Kiichi Sakai"}
-            execImg={"/img-kiichi.jpg"}
-            position={"VP Finance"}
-            major={"Business Technology"}
-          />
+          {executives.map((exec: ExecMembers) => {
+            return (
+              <FlipCard
+                name={exec.name}
+                path={exec.path}
+                position={exec.position}
+                major={exec.major}
+              />
+            )
+          })}
         </div>
       </div>
       <div className="section club-founders">
@@ -173,11 +145,12 @@ function About() {
               </div>
             </div>
             <div className="founder-img">
-              <img src="/img-kiichi.jpg" alt="founder-img" />
+              <img src="/aj_img1.webp" alt="founder-img" />
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

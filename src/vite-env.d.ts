@@ -16,3 +16,10 @@ export interface NewsItemProps {
   date: string;
   animation: string;
 }
+
+export interface ExecMembers {
+  name: string;
+  position: string;
+  path: string;
+  major: string;
+  }

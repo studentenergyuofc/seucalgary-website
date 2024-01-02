@@ -6,6 +6,7 @@ import {
 } from "react-icons/bs";
 import { useState, useRef, useEffect } from "react";
 import { toast } from "react-toastify";
+import Footer from "../components/Footer";
 
 function Contact() {
   const [name, setName] = useState<string>("");

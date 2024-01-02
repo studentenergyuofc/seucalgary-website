@@ -17,12 +17,13 @@ function Home() {
   const topOfPage = useRef<HTMLDivElement>(null);
   const secondSection = useRef<HTMLDivElement>(null);
   const [pageEndNearing, setPageEndNearing] = useState<boolean>();
+  const [changeBackground, setChangeBackground] = useState<boolean>(false);
   const [event, setEvent] = useState<string>("upcoming");
 
-  console.log(event);
+  console.log(changeBackground);
 
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], [250, -1800]);
+  const x = useTransform(scrollYProgress, [0, 1], [200, -1350]);
 
   useEffect(() => {
     Aos.init({ duration: 3000 });
@@ -39,10 +40,29 @@ function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = (scrolled / scrollableHeight) * 100;
+
+      if (scrollPercentage >= 15) {
+        setChangeBackground(true);
+      }
+    };
+
+    // Add event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const handleScroll = () => {
     const scrollDistance = window.innerHeight;
     window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
-
   };
 
   return (
@@ -65,9 +85,7 @@ function Home() {
       <div className="intro-info" ref={secondSection}>
         <div className="intro-info-container mission-text" id="par1">
             <p>
-              heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heobpi ewh
-              wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj
-              iefw heobpi ewh wihefdq9uj iefw heo{" "}
+              We're passionate about fostering a <span id="word-highlight">dynamic community</span>, enabling students to <span id="word-highlight">explore</span>, <span id="word-highlight">innovate</span> and <span id="word-highlight">thrive</span> within the energy sector.{" "}
             </p>
         </div>
         <div className="mission-moto">
@@ -78,18 +96,16 @@ function Home() {
         </div>
         <div className="intro-info-container mission-text" id="par2">
             <p>
-              heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heobpi ewh
-              wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj
-              iefw heobpi ewh wihefdq9uj iefw heo{" "}
+              Our commitment lies in nurturing <span id="word-highlight">professional growth</span> while championing <span id="word-highlight">sustainability</span> and <span id="word-highlight">innovation</span>. Join us on this exciting journey as we shape the future of energy together!{" "}
             </p>
         </div>
-        <div className="intro-info-container mission-text" id="par3">
+        {/* <div className="intro-info-container mission-text" id="par3">
             <p>
               heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heobpi ewh
               wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj
               iefw heobpi ewh wihefdq9uj iefw heo{" "}
             </p>
-        </div>
+        </div> */}
       </div>
       <div className="section club-stats">
         <h1>Become a part of a global community!</h1>
@@ -139,7 +155,7 @@ function Home() {
               }
               onClick={() => setEvent("achievements")}
             >
-              Achievements
+              Highlights
             </button>
           </li>
         </ul>
