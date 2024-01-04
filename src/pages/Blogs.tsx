@@ -1,5 +1,7 @@
 import { useRef, useEffect } from "react";
 import Footer from "../components/Footer";
+import { Articles } from "../vite-env";
+import { articles } from "../lib/data";
 
 function Blogs() {
   const topOfPage = useRef<HTMLDivElement>(null);
@@ -16,28 +18,30 @@ function Blogs() {
           <div className="page-heading-overlay"></div>
           <div className="page-heading-text">
             <h1>Blogs</h1>
-            <p>Check out our selection of blogs this week</p>
+            <p>Check out some articles that we found interesting!</p>
           </div>
         </div>
       </div>
       <div className="blog">
-        <div className="blog-box">
-          <div className="blog-details">
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              eos mollitia voluptatum atque consequatur deserunt blanditiis
-              obcaecati ut libero adipisci?...
-            </p>
-            <a href="#">CONTINUE READING</a>
-          </div>
-          <div className="blog-img">
-            <img src="/blog3.jpg" alt="" />
-            <div className="blog-img-overlay"></div>
-          </div>
-          <h1>07/05</h1>
-        </div>
-        <div className="blog-box">
+        {articles.map((article: Articles) => {
+            return (
+              <div className="blog-box">
+                <div className="blog-details">
+                  <h4>{article.title}</h4>
+                  <p>
+                    {article.description}
+                  </p>
+                  <a href={article.link} target="_blank">CONTINUE READING</a>
+                </div>
+                <div className="blog-img">
+                  <img src={article.image} alt="" />
+                  <div className="blog-img-overlay"></div>
+                </div>
+                <h1>{article.date}</h1>
+            </div>
+            )
+          })}
+        {/* <div className="blog-box">
           <div className="blog-details">
             <h4>Lorem ipsum dolor sit amet.</h4>
             <p>
@@ -68,7 +72,7 @@ function Blogs() {
             <div className="blog-img-overlay"></div>
           </div>
           <h1>06/10</h1>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>

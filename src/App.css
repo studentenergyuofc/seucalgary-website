@@ -155,6 +155,43 @@ div{
   color: white;
 }
 
+.dropdown-menu{
+  background: var(--regblue);
+  position: fixed;
+  top: 5rem;
+  height: fit-content;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none; /* Add this line */
+  z-index: -99999;
+}
+
+.dropdown-menu.active{
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  pointer-events: auto; /* Add this line */
+  z-index: 99999;
+}
+
+.dd-menu-optns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  color: white;
+}
+
+.dd-menu-nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Home */
 
 .section{
@@ -268,7 +305,7 @@ video{
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 440px){
 
   .club-name img{
     width: 70% !important;
@@ -390,7 +427,7 @@ video{
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 440px){
   .intro-info{
     padding: 1rem 0;
     height: fit-content;
@@ -550,7 +587,7 @@ video{
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 440px){
 
   .events-list{
     width: 80%;
@@ -679,7 +716,7 @@ video{
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 440px){
 
   .club-stats h1{
     font-size: 2.3rem;
@@ -786,7 +823,7 @@ video{
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 440px){
 
   .main-footer{
     height: 85%;
@@ -1121,8 +1158,6 @@ video{
 
 }
 
-
-
 /* Blogs */
 .blog{
   padding: 12rem 13rem 9rem 13rem;
@@ -1158,7 +1193,7 @@ video{
 .blog-img-overlay{
   width: 100%;
   height: 100%;
-  background:rgba(49, 125, 178, 0.4);
+  background:rgba(49, 125, 178, 0.3);
   transition: opacity 800ms ease-in-out;
   z-index: 20;
   position: absolute;
@@ -1170,14 +1205,12 @@ video{
 .blog .blog-box .blog-details{
   width: 40%;
   position: absolute;
-  top: 70px;
   right: 0;
 }
 
 .blog .blog-box .blog-details h4{
   font-size: 1.6rem;
   margin-bottom: 40px;
-
 }
 
 .blog .blog-box .blog-details p{
@@ -1216,7 +1249,7 @@ video{
 
 .blog .blog-box h1{
   position: absolute;
-  top: -75px;
+  top: -80px;
   left: 0;
   font-size: 5.5rem;
   font-weight: 700;
@@ -1283,6 +1316,144 @@ video{
 .page-heading-text p{
   color: white;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1176px){
+  .blog{
+    padding: 10rem 5rem 9rem 5rem;
+    overflow: hidden;
+  }
+
+  .blog .blog-box:not(:last-child){
+    margin-bottom: 10rem;
+  }
+  
+}
+
+@media screen and (max-width: 812px){
+  .blog{
+    padding: 8rem 2rem 9rem 2rem;
+  }
+
+  .blog .blog-box{
+    height: 250px;
+  }
+
+  .blog .blog-box:not(:last-child){
+    margin-bottom: 8rem;
+  }
+
+  .blog .blog-box .blog-img{
+    width: 55%;
+    height: 250px;
+  }
+
+  .blog .blog-box .blog-details h4{
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .blog .blog-box .blog-details p{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .blog .blog-box h1{
+    font-size: 5rem;
+  }
+  
+}
+
+@media screen and (max-width: 440px){
+
+  .blog{
+    padding: 8rem 2rem 9rem 2rem;
+  }
+
+  .blog .blog-box{
+    height: 160px;
+  }
+
+  .blog .blog-box:not(:last-child){
+    margin-bottom: 8rem;
+  }
+
+  .blog .blog-box .blog-img{
+    width: 50%;
+    height: 160px;
+  }
+
+  .blog .blog-box .blog-details h4{
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+  
+  .blog .blog-box .blog-details p{
+    font-size: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .blog .blog-box h1{
+    font-size: 3.5rem;
+    top: -50px;
+    left: 0;
+  }
+
+  .blog .blog-box .blog-details a{
+    font-size: 0.5rem;
+  }
+  
+  .blog .blog-box .blog-details a::after{
+    width: 30px;
+    top: 8px;
+    right: -33px;
+  }
+
+  .page-heading{
+    width: 100%;
+    height: 35vh;
+    background: var(--grey2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+}
+
+.page-heading .page-heading-text{
+  width: 100%;
+  height: 35vh;
+  margin-top: 2rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-heading-text h1{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.7rem;
+}
+
+.page-heading-overlay{
+  width: 100%;
+  height: 35vh;
+  background: rgba(49, 125, 178, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-heading-text p{
+  color: white;
+  font-size: 0.9rem;
+}
+
 }
 
 

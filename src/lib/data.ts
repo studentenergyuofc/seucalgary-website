@@ -73,6 +73,30 @@ export const positions = [
   },
 ] as const;
 
+export const articles = [
+  {
+    title: "Alternative energy sources you probably haven’t heard of",
+    description: "People everywhere are looking for new energy ideas to help them make energy-smart decisions for the future. Here at EDF Energy, we believe in renewable energy and changing the attitudes and practices about how people generate and use energy...",
+    image: "/blog1.jpg",
+    link: "https://www.edfenergy.com/energywise/alternative-energy-sources-you-probably-havent-heard",
+    date: "31/10"
+  },
+  {
+    title: "Engineers develop an efficient process to make fuel from carbon dioxide",
+    description: "The search is on worldwide to find ways to extract carbon dioxide from the air or from power plant exhaust and then make it into something useful...",
+    image: "/blog2.jpg",
+    link: "https://www.sciencedaily.com/releases/2023/10/231030141345.htm",
+    date: "30/10"
+  },
+  {
+    title: "Two million European households could abandon the electrical grid by 2050",
+    description: "Researchers report that 53% of European freestanding homes could have supplied all their own energy needs in 2020 using only local rooftop solar radiation...",
+    image: "/blog3.jpg",
+    link: "https://www.sciencedaily.com/releases/2023/11/231102135037.htm",
+    date: "02/11"
+  },
+]
+
 export const executives = [
   {
     name: "Kareem Youssef",

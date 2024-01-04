@@ -23,3 +23,11 @@ export interface ExecMembers {
   path: string;
   major: string;
   }
+
+export interface Articles {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  date: string;
+}

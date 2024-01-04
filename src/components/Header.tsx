@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import useMediaQuery from "../hooks/useMediaQuery";
 import logo from "/logo3.png";
 import logotitle from "/logotitle.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function Header() {
+function Header({ setDropdownMenu, dropdownMenu} : {setDropdownMenu: any, dropdownMenu: boolean}) {
   const [navbar, setNavbar] = useState<boolean>(false);
   const location = useLocation();
   const isWindow = useMediaQuery("(min-width: 800px)");
@@ -25,6 +25,25 @@ function Header() {
   };
 
   window.addEventListener("scroll", changeBackground);
+
+  const showDropdown = () => {
+    setDropdownMenu(!dropdownMenu);
+  };
+
+  useEffect(() => {
+    if (dropdownMenu) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+        }
+  }, [dropdownMenu]);
+
+  useEffect(() => {
+    if (isWindow && dropdownMenu) {
+      setDropdownMenu(false);
+    }
+
+  }, [isWindow]);
 
   return (
     <div className={navbar || !atHome ? "header active" : "header"}>
@@ -50,7 +69,7 @@ function Header() {
               </li>
             </ul>
           ) : (
-            <p className="hamburger-menu">&#9776;</p>
+            <p className="hamburger-menu" onClick={() => showDropdown()}>&#9776;</p>
           )}
         </div>
       </div>

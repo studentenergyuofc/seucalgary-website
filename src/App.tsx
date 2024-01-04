@@ -9,13 +9,16 @@ import Interships from "./pages/Internships";
 import Blogs from "./pages/Blogs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Partners from "./pages/Partners";
+import {useState} from "react";
 
 function App() {
+  const [dropdownMenu, setDropdownMenu] = useState<boolean>(false);
+
   return (
     <div className="app-container">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout dropdownMenu={dropdownMenu} setDropdownMenu={setDropdownMenu}/>}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
