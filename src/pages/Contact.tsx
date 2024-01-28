@@ -103,7 +103,7 @@ function Contact() {
               <div className="contact-window-right">
                 <div className="contact-details">
                   <h4>OTHER WAYS TO CONTACT US</h4>
-                  <div className="socials">
+                  <div className="contact-methods">
                     <div className="social-link">
                       <BsFillEnvelopeFill className="icon" />
                       <p>ucalgary@studentenergy.org</p>

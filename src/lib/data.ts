@@ -103,60 +103,88 @@ export const executives = [
     position: "President",
     path: "/img-kareem2.webp",
     major: "Electrical Engineering",
+    text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
+    hobby: "Public speaking, gaming and gym."
   }, 
   {
     name: "Abdul Jalel",
     position: "Vice President",
     path: "/aj_img2.webp",
     major: "Mechenical Engineering",
+    text: "My interest stems from the pure dichotomy regarding energy usage and production philosophies. Taking a look into uniting both will be a great challenge that I am ready to partake in.",
+    hobby: "Public speaking, gyn and being an all-around legend."
   },
   {
     name: "Ibrahim Hashmi",
     position: "VP Communications",
-    path: "/img-kareem2.webp",
+    path: "/img-ibrahim.webp",
     major: "Mechanical Engineering",
+    text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
+    hobby: "Public speaking, gaming, gym."
   },
   {
     name: "Axel Sanchez",
     position: "Co-VP Development",
-    path: "/img-kareem2.webp",
+    path: "/img-axel.webp",
     major: "Software Engineering",
+    text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
+    hobby: "Public speaking, gaming, gym."
   }, 
   {
     name: "Mariia Podgaietska",
     path: "/img-mariia.webp",
     position: "Co-VP Development",
     major: "Software Engineering",
+    text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
+    hobby: "Public speaking, gaming and gym."
   },
   {
     name: "Murad Tashkandi",
     path: "/img-murad.webp",
     position: "VP Public Relations",
     major: "Electrical Engineering",
+    text: "Renewable Energy Technologies! I am interested in the idea of developing and implementing sustainable energy resources.",
+    hobby: "Sketching and drawing."
   },
   {
     name: "Omar Ahmed",
     path: "/img-omar.webp",
     position: "VP Events",
     major: "Electrical Engineering",
+    text: "I am interested in the groundbreaking possibilities of renewable energy technologies, their innovative nature, and the sustainability-driven impact they offer.",
+    hobby: "Gym and hiking"
   }, 
   {
     name: "Adballah El Gendy",
-    path: "/img-kareem2.webp",
+    path: "/img-elgendy.webp",
     position: "Junior VP Public Relations",
-    major: "Energy Sciences",
+    major: "Natural Sciences",
+    text: "I am interested in renewable energy systems and how economics, research and policy interwine within the energy sector today.",
+    hobby: "Squash and basketball."
   },
   {
     name: "Banan Al Dabbas",
-    path: "/img-kareem2.webp",
+    path: "/img-bannan.webp",
     position: "Junior VP Communications",
-    major: "Sustanable Engineering"
+    major: "Sustainable Systems Engineering",
+    text: "I am interested in a low carbon footprint future where renewable energy thrives and can produce sufficient energy for consumers' consumption.",
+    hobby: "Gym, Brazillian jiujitsu and gaming."
   },
   {
     name: "Mariam Aly",
     path: "/mariam_img.webp",
     position: "Junior VP Events",
     major: "Biomedical Engineering",
+    text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
+    hobby: "Public speaking, gaming, gym."
+  },
+  {
+    name: "Cameron Winfield",
+    path: "/img-cameron.webp",
+    position: "Junior VP Public Relations",
+    major: "Environmental Science & Geology",
+    text: "I am interested in contributing to sustainable practices and addressing global energy challenges to protect our future generations.",
+    hobby: "Reading, hiking and gym."
   }
 ] as const;
 

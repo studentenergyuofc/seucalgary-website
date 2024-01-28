@@ -22,6 +22,8 @@ export interface ExecMembers {
   position: string;
   path: string;
   major: string;
+  text: string;
+  hobby: string;
   }
 
 export interface Articles {

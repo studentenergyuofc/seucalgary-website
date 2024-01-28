@@ -18,9 +18,8 @@ function About() {
 
   const [text] = useTypewriter({
     words: [
-      "STUDENT ENERGY UOFC",
-      "STUDENT ENERGY AT UNIVERCITY OF CALGARY",
-      "SEUC",
+      "Student Energy at UofC!",
+      "SEUC!",
     ],
     loop: true,
     deleteSpeed: 50,
@@ -42,37 +41,40 @@ function About() {
             height={500}
             blurhash={"LDBM#,R+W;tR~Wt8kCt7$zt7oztR"}
           />
-          <div className="main-banner-overlay">
+          <div className="main-banner-overlay blue">
             <h1>
-              WE ARE{" "}
-              <span style={{ color: "white", fontSize: "2.5rem", fontWeight: "400" }}>{text}</span>
+              We are{" "}
+              <span className="cursor-text">{text}</span>
               <Cursor />
             </h1>
             <h3>
               Nurturing professional development and bridging the gap between university and the energy sector.
             </h3>
           </div>
+          <div className="main-banner-overlay yellow"></div>
         </div>
         <div className="sub-banners">
           <div className="sub-banner-left">
-            <p>
-              "FUELED BY <span id="blue-text">PASSION</span>,
-            </p>
-            <p>
-              DRIVEN BY <span id="green-text">INNOVATION</span>,
-            </p>
-            <p>
-              SHAPING A<span id="yellow-text"> SUSTAINABLE FUTURE</span>"
-            </p>
-          </div>
-          <div className="sub-banner-right">
             <ImgComponent
               src={subbnr}
               width={900}
               height={500}
               blurhash={"LWH3K=9axuRj*0WBWBWC01xZR*j["}
             />
-            <div className="sub-banner-right-overlay"></div>
+            <div className="sub-banner-left-overlay"></div>
+          </div>
+          <div className="sub-banner-right">
+            <div className="text">
+              <p>
+                "FUELED BY <span id="blue-text">PASSION</span>,
+              </p>
+              <p>
+                DRIVEN BY <span id="green-text">INNOVATION</span>,
+              </p>
+              <p>
+                SHAPING A<span id="yellow-text"> SUSTAINABLE FUTURE</span>"
+              </p>
+            </div>
           </div>
         </div>
         <div className="scroll-down-btn about" onClick={handleScroll}>
@@ -91,6 +93,8 @@ function About() {
                 path={exec.path}
                 position={exec.position}
                 major={exec.major}
+                text={exec.text}
+                hobby={exec.hobby}
               />
             )
           })}

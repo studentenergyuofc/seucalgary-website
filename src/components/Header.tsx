@@ -42,8 +42,7 @@ function Header({ setDropdownMenu, dropdownMenu} : {setDropdownMenu: any, dropdo
     if (isWindow && dropdownMenu) {
       setDropdownMenu(false);
     }
-
-  }, [isWindow]);
+  }, [isWindow, dropdownMenu, setDropdownMenu]);
 
   return (
     <div className={navbar || !atHome ? "header active" : "header"}>
