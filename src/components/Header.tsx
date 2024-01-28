@@ -7,7 +7,12 @@ import logotitle from "/logotitle.png";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function Header({ setDropdownMenu, dropdownMenu} : {setDropdownMenu: any, dropdownMenu: boolean}) {
+interface HeaderProps {
+  setDropdownMenu: (value: boolean) => void;
+  dropdownMenu: boolean;
+}
+
+function Header({setDropdownMenu, dropdownMenu} : HeaderProps) {
   const [navbar, setNavbar] = useState<boolean>(false);
   const location = useLocation();
   const isWindow = useMediaQuery("(min-width: 800px)");
@@ -16,15 +21,23 @@ function Header({ setDropdownMenu, dropdownMenu} : {setDropdownMenu: any, dropdo
     location.pathname === "/about" ||
     location.pathname === "/contact";
 
-  const changeBackground = () => {
-    if (window.scrollY >= 10) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
+    useEffect(() => {
 
-  window.addEventListener("scroll", changeBackground);
+      const changeBackground = () => {
+        if (window.scrollY >= 10) {
+          setNavbar(true);
+        } else {
+          setNavbar(false);
+        }
+        
+      };
+
+    // Register the event listener
+    window.addEventListener("scroll", changeBackground);
+
+    // Return a cleanup function to remove the event listener when the component unmounts
+    return () => window.removeEventListener("scroll", changeBackground);
+    }, []);
 
   const showDropdown = () => {
     setDropdownMenu(!dropdownMenu);
@@ -42,7 +55,7 @@ function Header({ setDropdownMenu, dropdownMenu} : {setDropdownMenu: any, dropdo
     if (isWindow && dropdownMenu) {
       setDropdownMenu(false);
     }
-  }, [isWindow, dropdownMenu]);
+  }, [isWindow, dropdownMenu, setDropdownMenu]);
 
   return (
     <div className={navbar || !atHome ? "header active" : "header"}>
