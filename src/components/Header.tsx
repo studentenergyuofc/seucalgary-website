@@ -38,7 +38,7 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
 
     // Return a cleanup function to remove the event listener when the component unmounts
     return () => window.removeEventListener("scroll", changeBackground);
-    }, []);
+    }, [setNavbar]);
 
   const showDropdown = () => {
     setDropdownMenu(!dropdownMenu);
@@ -48,7 +48,7 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
     if (dropdownMenu) {
       setNavbar(true);
     } 
-  }, [dropdownMenu]);
+  }, [dropdownMenu, setNavbar]);
 
   useEffect(() => {
     if (isWindow && dropdownMenu) {
