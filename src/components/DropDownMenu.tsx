@@ -22,6 +22,8 @@ function DropDownMenu({dropdownMenu, setDropdownMenu, setNavbar} : DropdownMenuP
         }
       };
 
+      console.log(dropdownMenu);
+
     return (
         <div>
             <div className={dropdownMenu ? "dropdown-menu active" : "dropdown-menu"}>

@@ -16,7 +16,7 @@ interface HeaderProps {
 
 function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps) {
   const location = useLocation();
-  const isWindow = useMediaQuery("(min-width: 800px)");
+  const isWindow = useMediaQuery("(max-width: 800px)");
   const atHome =
     location.pathname === "/" ||
     location.pathname === "/about" ||
@@ -25,10 +25,13 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
     useEffect(() => {
 
       const changeBackground = () => {
-        if (window.scrollY >= 10) {
+        if (window.scrollY >= 10 ) {
           setNavbar(true);
         } else {
           setNavbar(false);
+          if (dropdownMenu) {
+            setDropdownMenu(false);
+          }
         }
         
       };
@@ -38,7 +41,7 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
 
     // Return a cleanup function to remove the event listener when the component unmounts
     return () => window.removeEventListener("scroll", changeBackground);
-    }, [setNavbar]);
+    }, [setNavbar, setDropdownMenu, dropdownMenu]);
 
   const showDropdown = () => {
     setDropdownMenu(!dropdownMenu);
@@ -51,11 +54,10 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
   }, [dropdownMenu, setNavbar]);
 
   useEffect(() => {
-    if (isWindow && dropdownMenu) {
+    if (!isWindow && dropdownMenu) {
       setDropdownMenu(false);
     }
   }, [isWindow, dropdownMenu, setDropdownMenu]);
-
 
   return (
     <div className={navbar || !atHome ? "header active" : "header"}>
@@ -65,7 +67,7 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
           <img className="logo-title" src={logotitle} />
         </div>
         <div className="navigation">
-          {isWindow ? (
+          {!isWindow ? (
             <ul className="nav-list d-flex">
               <li className="nav-item">
                 <Link to="/">HOME</Link>
