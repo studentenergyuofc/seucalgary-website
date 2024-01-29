@@ -118,7 +118,7 @@ export const executives = [
     path: "/aj_img2.jpg",
     altimages: "/aj_img2-sm-150.jpg 150w, aj_img2.jpg 300w",
     altimagesizes: "(max-width: 440px) 130px, 300px",
-    major: "Mechenical Engineering",
+    major: "Mechanical Engineering",
     text: "My interest stems from the pure dichotomy regarding energy usage and production philosophies. Taking a look into uniting both will be a great challenge that I am ready to partake in.",
     hobby: "Public speaking, gym and being an all-around legend.",
     blurhash: "LjH.jBs;^+jG_4aJaJnhR:oHRjoc"
@@ -175,7 +175,7 @@ export const executives = [
     position: "VP Events",
     major: "Electrical Engineering",
     text: "I am interested in the groundbreaking possibilities of renewable energy technologies, their innovative nature, and the sustainability-driven impact they offer.",
-    hobby: "Gym and hiking",
+    hobby: "Gym and hiking.",
     blurhash: "LAGkm_=s0MSz00I[-oE3?]j?^6?F"
   }, 
   {

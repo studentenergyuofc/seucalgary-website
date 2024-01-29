@@ -149,7 +149,7 @@ function About() {
                 energy here in our province. Focused on sustainability, Student
                 Energy's goal is to facilitate meaningful youth engagement to
                 support youth-led energy solutions. Overall, this means that we
-                - students - will be able to have a greated impact on the
+                - students - will be able to have a greater impact on the
                 rapidly growing energy sector.
               </p>
               <div className="founder-name">
