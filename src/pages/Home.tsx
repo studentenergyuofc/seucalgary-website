@@ -21,7 +21,7 @@ function Home() {
   const topOfPage = useRef<HTMLDivElement>(null);
   const secondSection = useRef<HTMLDivElement>(null);
   const [pageEndNearing, setPageEndNearing] = useState<boolean>();
-  const [changeBackground, setChangeBackground] = useState<boolean>(false);
+  // const [changeBackground, setChangeBackground] = useState<boolean>(false);
   const [event, setEvent] = useState<string>("upcoming");
   const [defaultBanner, setDefaultBanner] = useState<string>(banner);
   const [defaultBanner2, setDefaultBanner2] = useState<string>(banner);
@@ -45,25 +45,25 @@ function Home() {
     }
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercentage = (scrolled / scrollableHeight) * 100;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrolled = window.scrollY;
+  //     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  //     const scrollPercentage = (scrolled / scrollableHeight) * 100;
 
-      if (scrollPercentage >= 15) {
-        setChangeBackground(true);
-      }
-    };
+  //     if (scrollPercentage >= 15) {
+  //       setChangeBackground(true);
+  //     }
+  //   };
 
-    // Add event listener
-    window.addEventListener('scroll', handleScroll);
+  //   // Add event listener
+  //   window.addEventListener('scroll', handleScroll);
 
-    // Cleanup
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   // Cleanup
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   const handleScroll = () => {
     const scrollDistance = window.innerHeight;

@@ -1,22 +1,16 @@
 import FlipCard from "../components/FlipCard";
 import subbnr from "/banner4.jpg";
 import mainbnr from "/banner3.jpg";
-import smmainbanr from "/banner3-sm-480.jpg";
-import smsubbnr from "/banner4-sm-300.jpg";
 import ImgComponent from "../components/ImgComponent";
 import Footer from "../components/Footer";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { ExecMembers } from "../vite-env";
 import { executives } from "../lib/data";
-import useMediaQuery from "../hooks/useMediaQuery";
 
 function About() {
   const topOfPage = useRef<HTMLDivElement>(null);
-  const isWindow = useMediaQuery("(max-width: 440px)");
-  const [defaultBanner, setDefaultBanner] = useState<string>(mainbnr);
-  const [defaultBanner2, setDefaultBanner2] = useState<string>(subbnr);
 
   useEffect(() => {
     topOfPage.current?.scrollIntoView({ behavior: "smooth" });
@@ -36,24 +30,13 @@ function About() {
     window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    if (isWindow){
-      setDefaultBanner(smmainbanr);
-      setDefaultBanner2(smsubbnr);
-    }
-    else{
-      setDefaultBanner(mainbnr);
-      setDefaultBanner2(subbnr);
-    }
-  }, [isWindow])
-
   return (
     <div>
       <div className="about-section" ref={topOfPage}>
         <div className="main-banner">
           <div className="banner-img"></div>
           <ImgComponent
-            src={"/banner3.jpg"}
+            src={mainbnr}
             altimages={"/banner3-sm-720.jpg 480w, /banner3.jpg 1080w"}
             altimagesizes={"(max-width: 440px) 440px, 1000px"}
             blurhash={"LDBM#,R+W;tR~Wt8kCt7$zt7oztR"}
