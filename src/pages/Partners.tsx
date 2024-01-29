@@ -1,12 +1,12 @@
-import Header from "../components/Header";
+// import Header from "../components/Header";
 
-function Partners() {
-  return (
-    <div>
-      <Header />
-      <h1>Partners Page</h1>
-    </div>
-  );
-}
+// function Partners() {
+//   return (
+//     <div>
+//       <Header />
+//       <h1>Partners Page</h1>
+//     </div>
+//   );
+// }
 
-export default Partners;
+// export default Partners;
