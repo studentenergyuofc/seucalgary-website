@@ -4,8 +4,38 @@ import {
     BsTwitter,
     BsFillEnvelopeFill,
   } from "react-icons/bs";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 function Footer(){
+    const [email, setEmail] = useState<string>("");
+
+    const onSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        fetch("https://formsubmit.co/ajax/ucalgary@studentenergy.org", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            message: email + " has subscribed to the newsletter.",
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            if (data.success == "true") {
+              toast.success("You are now subscribed!");
+              setEmail("");
+            } else {
+              toast.error("Subscription failed. Please try again.");
+              setEmail("");
+            }
+          })
+          .catch((error) => console.log(error));
+      };
+
     return(
         <div className="footer">
             <div className="main-footer">
@@ -18,11 +48,14 @@ function Footer(){
                     </div>
                 </div>
                 <div className="right-container footer">
-                    <form>
+                    <form onSubmit={onSubmit}>
                         <p>Subscribe to our news letters</p>
                         <div className="input">
                             <input
                             type="text"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
                             placeholder="Your email here"/>
                             <button type="submit">Subscribe</button>
                         </div>

@@ -21,7 +21,6 @@ function Home() {
   const topOfPage = useRef<HTMLDivElement>(null);
   const secondSection = useRef<HTMLDivElement>(null);
   const [pageEndNearing, setPageEndNearing] = useState<boolean>();
-  // const [changeBackground, setChangeBackground] = useState<boolean>(false);
   const [event, setEvent] = useState<string>("upcoming");
   const [defaultBanner, setDefaultBanner] = useState<string>(banner);
   const [defaultBanner2, setDefaultBanner2] = useState<string>(banner);
@@ -45,26 +44,6 @@ function Home() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrolled = window.scrollY;
-  //     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-  //     const scrollPercentage = (scrolled / scrollableHeight) * 100;
-
-  //     if (scrollPercentage >= 15) {
-  //       setChangeBackground(true);
-  //     }
-  //   };
-
-  //   // Add event listener
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   // Cleanup
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
   const handleScroll = () => {
     const scrollDistance = window.innerHeight;
     window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
@@ -81,14 +60,10 @@ function Home() {
     }
   }, [isWindow])
 
-  console.log(defaultBanner);
-  console.log(defaultBanner2);
-  console.log(isWindow);
-
   return (
     <section>
-      <div className="section intro-search" ref={topOfPage}>
-        <div className="video-container">
+      <div className="section landing-page" ref={topOfPage}>
+        <div className="background-container">
           {pageEndNearing ?
           <ImgComponent
           src={defaultBanner}
@@ -106,7 +81,7 @@ function Home() {
           />
           : null}
           <div
-            className={pageEndNearing ? "video-overlay" : "img-overlay"}
+            className={pageEndNearing ? "background-overlay" : "img-overlay"}
           ></div>
         </div>
         <div ref={myRef} className="club-name">
@@ -201,6 +176,7 @@ function Home() {
                 className="news-piece-holder"
                 data-aos={event.animation}
                 data-aos-anchor-placement="center-bottom"
+                key={event.title}
               >
                 <NewsItem
                   path={event.path}

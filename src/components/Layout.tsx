@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import DropDownMenu from "./DropDownMenu";
+import { useState } from "react";
 
 interface LayoutProps {
   setDropdownMenu: (value: boolean) => void;
@@ -8,11 +9,13 @@ interface LayoutProps {
 }
 
 function Layout({dropdownMenu, setDropdownMenu} : LayoutProps) {
+  const [navbar, setNavbar] = useState<boolean>(false);
+
   return (
     <div className="main">
-      <Header setDropdownMenu={setDropdownMenu} dropdownMenu={dropdownMenu}/>
+      <Header setDropdownMenu={setDropdownMenu} dropdownMenu={dropdownMenu} navbar={navbar} setNavbar={setNavbar}/>
       <Outlet />
-      <DropDownMenu dropdownMenu={dropdownMenu} setDropdownMenu={setDropdownMenu}/>
+      <DropDownMenu dropdownMenu={dropdownMenu} setDropdownMenu={setDropdownMenu} setNavbar={setNavbar}/>
     </div>
   );
 }

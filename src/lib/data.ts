@@ -120,7 +120,7 @@ export const executives = [
     altimagesizes: "(max-width: 440px) 130px, 300px",
     major: "Mechenical Engineering",
     text: "My interest stems from the pure dichotomy regarding energy usage and production philosophies. Taking a look into uniting both will be a great challenge that I am ready to partake in.",
-    hobby: "Public speaking, gyn and being an all-around legend.",
+    hobby: "Public speaking, gym and being an all-around legend.",
     blurhash: "LjH.jBs;^+jG_4aJaJnhR:oHRjoc"
   },
   {
@@ -130,8 +130,8 @@ export const executives = [
     altimages: "/img-ibrahim-sm-150.jpg 150w, img-ibrahim.jpg 300w",
     altimagesizes: "(max-width: 440px) 130px, 300px",
     major: "Mechanical Engineering",
-    text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
-    hobby: "Public speaking, gaming, gym.",
+    text: "Being able to facilitate and advocate for an exciting energy future unfolding right in front of us!",
+    hobby: "Reading and playing video games.",
     blurhash: "LJC~}Hxz5n9Z,$MuEeNI9dx[nOof"
   },
   {
@@ -141,8 +141,8 @@ export const executives = [
     altimages: "/img-axel-sm-150.jpg 150w, img-axel.jpg 300w",
     altimagesizes: "(max-width: 440px) 130px, 300px",
     major: "Software Engineering",
-    text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
-    hobby: "Public speaking, gaming, gym.",
+    text: "I am interested in the innovative technologies and sustainable practices within the energy sector, their role in advancing renewable energy sources and reducing environmental impact.",
+    hobby: "Football, gym and gaming.",
     blurhash: "L8BW*=~ps_,T?LD*Epb_02X9%6o["
   }, 
   {
@@ -152,8 +152,8 @@ export const executives = [
     altimagesizes: "(max-width: 440px) 130px, 300px",
     position: "Co-VP Development",
     major: "Software Engineering",
-    text: "I am interested in how technology can be leveraged in the energy sector to drive the transition towards renewable sources and pave a way for a sustainable energy future.",
-    hobby: "Public speaking, gaming and gym.",
+    text: "I am interested in how technology can be leveraged within the energy sector to drive the transition towards renewable sources and pave a way for a sustainable energy future.",
+    hobby: "Baking, gym and traveling.",
     blurhash: "LjLgtuxutmRP~qoft6RjE1jYVsoz"
   },
   {
@@ -229,9 +229,9 @@ export const upcomingEvents = [
     title: "Bridging Perspectives: The Road to Net-Zero",
     description:
       '"Bridging Prespectives: The Road to Net-Zero" is an insightful event hosted by CISSA and Student Energy at the Alta Hotel, which focuses on sustainability, renewable energy, net-zero pathways, and emphasizing the role of youth and indeginous perspectives in achieving sustainability. The event will include engaging discussions, a speaker pannel of industry experts, networking sessions and refreshments.',
-    date: "February 17th, from 3-6pm",
-    path: "/event.jpg",
-    blurhash: "LDCsaK.mZg8wPpOGMxVrm*#kyDXn",
+    date: "February 17th, 9:30am",
+    path: "/bridgingperspectives.jpg",
+    blurhash: "L3Ct%-E705tS_5wM%yDtLcES}$xo",
     animation: "fade-right",
   },
 ] as const;
@@ -286,7 +286,7 @@ export const achievementsEvents = [
     animation: "fade-left",
   },
   {
-    title: "Alberta Electricity Future Coalition.",
+    title: "Alberta Electricity Future Coalition",
     description:
       "The Alberta Electricity Future Coalition, hosted by Energy Futures Lab, featured two key workshops in June and October 2023. The event centered around discussions on the future of Alberta's electrical grid and its transition to net-zero electricity, with contributions from various industry and government attandeed, including insights on nuclear energy options of Alberta.",
     date: "September 15th 2022",
@@ -295,7 +295,7 @@ export const achievementsEvents = [
     animation: "fade-right",
   },
   {
-    title: "Alberta Energy Summit.",
+    title: "Alberta Energy Summit",
     description:
       "The Alberta Energy Summit featured speaker panels and crowd discussions, focusing on the challenges and developments in the energy sector. It emphasized the impact of smaller factors in achieving a sustainable future, aprticularly the need for a skilled workforce and understanding their requirements and aspirations.",
     date: "September 15th 2022",

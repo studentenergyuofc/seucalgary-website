@@ -217,7 +217,7 @@ div{
   padding: 4rem;
 }
 
-.intro-search{
+.landing-page{
   position: relative;
   height: 60vw;
 }
@@ -232,7 +232,7 @@ video{
   overflow: clip;
 }
 
-.video-container{
+.background-container{
   position: absolute;
   bottom: 0;
   left:0;
@@ -243,7 +243,7 @@ video{
   z-index:0;
 }
 
-.video-container img{
+.background-container img{
   width: 100%;
   position: fixed !important;
   top: 0 !important;
@@ -253,7 +253,7 @@ video{
   overflow: clip;
 }
 
-.video-overlay{
+.background-overlay{
   width: 100%;
   position: fixed !important;
   top: 0 !important;
@@ -286,7 +286,7 @@ video{
 
 .scroll-down-btn.about{
   bottom: 2rem;
-  z-index: 999;
+  z-index: 2;
   background-color: rgba(49, 125, 178, 0.4);
 }
 
@@ -296,7 +296,7 @@ video{
 
 @media screen and (max-width: 768px){
 
-  .intro-search{
+  .landing-page{
     height: 100vh;
   }
 
@@ -412,6 +412,12 @@ video{
 
 #par3{
   text-align: center;
+}
+
+@media screen and (min-width: 1800px){
+  .intro-info{
+    padding: 7rem 0;
+  }
 }
 
 @media screen and (max-width: 768px){
@@ -707,7 +713,7 @@ video{
   justify-content: space-between;
   align-items: center;
   height: 40vh;
-  width: 100%;
+  width: 80%;
   color: white;  
 }
 
@@ -717,6 +723,13 @@ video{
 
 .stat{
   text-align: center ;
+}
+
+@media screen and (max-width: 956px){
+
+  .stats{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px){
@@ -1250,6 +1263,7 @@ video{
     font-size: 2rem;
     font-weight: 600;
     color: var(--reggreen);
+    text-align: center;
     width: 90%;
   }
 
@@ -1483,8 +1497,16 @@ video{
 
 @media screen and (max-width: 440px){
 
+
+  .section.club-founders{
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
   .club-founders-header{
     width: 100%;
+    align-items: center;
+
   }
 
   .club-founders-header h1{
@@ -1493,7 +1515,8 @@ video{
   
   .club-founders-header p{
     font-size: 0.8rem;
-    width: 60%;
+    width: 85%;
+    text-align: center;
   }
 
   .founder-container{
@@ -1877,10 +1900,10 @@ video{
 }
 
 .contact-text p{
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
   margin-top: 1rem;
-  width: 60%;
+  width: 70%;
 }
 
 .contact-window{

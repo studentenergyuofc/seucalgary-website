@@ -4,15 +4,21 @@ import { Link } from "react-router-dom";
 interface DropdownMenuProps {
     setDropdownMenu: (value: boolean) => void;
     dropdownMenu: boolean;
+    setNavbar: (value: boolean) => void;
   }
 
-function DropDownMenu({dropdownMenu, setDropdownMenu} : DropdownMenuProps) {
-    console.log("dropdownMenu: ", dropdownMenu);
+function DropDownMenu({dropdownMenu, setDropdownMenu, setNavbar} : DropdownMenuProps) {
+    const atHome =
+    location.pathname === "/" ||
+    location.pathname === "/about" ||
+    location.pathname === "/contact";
 
     const handlePageChange = () => {
-        console.log("clicked")
         if (dropdownMenu) {
           setDropdownMenu(false);
+          if (atHome) {
+            setNavbar(false);
+          }
         }
       };
 

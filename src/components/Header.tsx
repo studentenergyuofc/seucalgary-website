@@ -4,16 +4,17 @@ import { Link } from "react-router-dom";
 import useMediaQuery from "../hooks/useMediaQuery";
 import logo from "/logo3.png";
 import logotitle from "/logotitle.png";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 interface HeaderProps {
   setDropdownMenu: (value: boolean) => void;
   dropdownMenu: boolean;
+  navbar: boolean;
+  setNavbar: (value: boolean) => void;
 }
 
-function Header({setDropdownMenu, dropdownMenu} : HeaderProps) {
-  const [navbar, setNavbar] = useState<boolean>(false);
+function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps) {
   const location = useLocation();
   const isWindow = useMediaQuery("(min-width: 800px)");
   const atHome =
@@ -46,9 +47,7 @@ function Header({setDropdownMenu, dropdownMenu} : HeaderProps) {
   useEffect(() => {
     if (dropdownMenu) {
       setNavbar(true);
-    } else {
-      setNavbar(false);
-        }
+    } 
   }, [dropdownMenu]);
 
   useEffect(() => {
@@ -75,7 +74,7 @@ function Header({setDropdownMenu, dropdownMenu} : HeaderProps) {
                 <Link to="/about">ABOUT</Link>
               </li>
               <li className="nav-item">
-                <Link to="/blogs">BLOGS</Link>
+                <Link to="/blogs">ARTICLES</Link>
               </li>
               <li className="nav-item">
                 <Link to="/contact">CONTACT US</Link>

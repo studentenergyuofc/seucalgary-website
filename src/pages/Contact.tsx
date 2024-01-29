@@ -19,7 +19,6 @@ function Contact() {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(name, email, message);
     const sending = toast("Sending...");
     fetch("https://formsubmit.co/ajax/ucalgary@studentenergy.org", {
       method: "POST",
@@ -118,7 +117,7 @@ function Contact() {
                     </div>
                     <div className="social-link">
                       <BsLinkedin className="icon" />
-                      <p>Student Eenergy at University of Calgary</p>
+                      <p>Student Energy at University of Calgary</p>
                     </div>
                   </div>
                 </div>

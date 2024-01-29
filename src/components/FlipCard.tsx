@@ -30,7 +30,7 @@ function FlipCard(props : ExecMembers) {
       >
         {isOpen? (
           <div className="card-content back">
-            <p className="exec-question">What is your interest in the Energy Sector?</p>
+            <p className="exec-question">What interests you in the energy sector?</p>
             <p className="exec-text">{props.text}</p>
             <p className="exec-question">Hobbies/ interests?</p>
             <p className="exec-text">{props.hobby}</p>

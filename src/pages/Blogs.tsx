@@ -38,7 +38,7 @@ function Blogs() {
           />
           <div className="page-heading-overlay"></div>
           <div className="page-heading-text">
-            <h1>Blogs</h1>
+            <h1>Articles</h1>
             <p>Check out some articles that we found interesting!</p>
           </div>
         </div>
@@ -46,7 +46,7 @@ function Blogs() {
       <div className="blog">
         {articles.map((article: Articles) => {
             return (
-              <div className="blog-box">
+              <div className="blog-box" key={article.title}>
                 <div className="blog-details">
                   <h4>{article.title}</h4>
                   <p>
