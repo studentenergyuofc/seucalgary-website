@@ -1091,7 +1091,7 @@ video{
   .scroll-down-btn.about{
     bottom: 1rem;
     right: 0.5rem;
-    z-index: 999;
+    z-index: 1;
     background-color: rgba(49, 125, 178, 0.4);
   }
   
