@@ -57,7 +57,7 @@ function Contact() {
     <div>
       <div className="contact-container">
         <div className="contact-banner">
-          <img src="/contact-banner.webp" alt="contact-banner" />
+          <img src="/contact-banner.jpg" alt="contact-banner" />
           <div className="contact-banner-overlay"></div>
         </div>
         <div className="contact-main">

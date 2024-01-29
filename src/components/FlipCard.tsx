@@ -1,6 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useState } from 'react';
 import { ExecMembers } from "../vite-env";
+import ImgComponent from "../components/ImgComponent";
 
 function FlipCard(props : ExecMembers) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -37,7 +38,12 @@ function FlipCard(props : ExecMembers) {
         ) : (
         <div className="card-content">
           <div className="exec-img-container">
-            <img src={props.path} alt="exec-img" className="exec-img"/>
+            <ImgComponent
+            src={props.path}
+            altimages={props.altimages}
+            altimagesizes={props.altimagesizes}
+            blurhash={props.blurhash}
+          />
           </div>
           <h4>{props.name}</h4>
           <h6>{props.position}</h6>

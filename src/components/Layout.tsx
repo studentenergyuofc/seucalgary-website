@@ -12,7 +12,7 @@ function Layout({dropdownMenu, setDropdownMenu} : LayoutProps) {
     <div className="main">
       <Header setDropdownMenu={setDropdownMenu} dropdownMenu={dropdownMenu}/>
       <Outlet />
-      <DropDownMenu dropdownMenu={dropdownMenu}/>
+      <DropDownMenu dropdownMenu={dropdownMenu} setDropdownMenu={setDropdownMenu}/>
     </div>
   );
 }

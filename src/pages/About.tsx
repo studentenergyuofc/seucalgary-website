@@ -1,16 +1,22 @@
 import FlipCard from "../components/FlipCard";
-import subbnr from "/banner4.webp";
-import mainbnr from "/banner3.webp";
+import subbnr from "/banner4.jpg";
+import mainbnr from "/banner3.jpg";
+import smmainbanr from "/banner3-sm-480.jpg";
+import smsubbnr from "/banner4-sm-300.jpg";
 import ImgComponent from "../components/ImgComponent";
 import Footer from "../components/Footer";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { ExecMembers } from "../vite-env";
 import { executives } from "../lib/data";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 function About() {
   const topOfPage = useRef<HTMLDivElement>(null);
+  const isWindow = useMediaQuery("(max-width: 440px)");
+  const [defaultBanner, setDefaultBanner] = useState<string>(mainbnr);
+  const [defaultBanner2, setDefaultBanner2] = useState<string>(subbnr);
 
   useEffect(() => {
     topOfPage.current?.scrollIntoView({ behavior: "smooth" });
@@ -30,15 +36,26 @@ function About() {
     window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    if (isWindow){
+      setDefaultBanner(smmainbanr);
+      setDefaultBanner2(smsubbnr);
+    }
+    else{
+      setDefaultBanner(mainbnr);
+      setDefaultBanner2(subbnr);
+    }
+  }, [isWindow])
+
   return (
     <div>
       <div className="about-section" ref={topOfPage}>
         <div className="main-banner">
           <div className="banner-img"></div>
           <ImgComponent
-            src={mainbnr}
-            width={1500}
-            height={500}
+            src={"/banner3.jpg"}
+            altimages={"/banner3-sm-720.jpg 480w, /banner3.jpg 1080w"}
+            altimagesizes={"(max-width: 440px) 440px, 1000px"}
             blurhash={"LDBM#,R+W;tR~Wt8kCt7$zt7oztR"}
           />
           <div className="main-banner-overlay blue">
@@ -57,9 +74,9 @@ function About() {
           <div className="sub-banner-left">
             <ImgComponent
               src={subbnr}
-              width={900}
-              height={500}
-              blurhash={"LWH3K=9axuRj*0WBWBWC01xZR*j["}
+              altimages={"/banner4-sm-300.jpg 300w, /banner4.jpg 800w"}
+              altimagesizes={"(max-width: 440px) 250px, 800px"}
+              blurhash={"LJD^JI-oM|Rk~nWCs.ofWGRlR*R%"}
             />
             <div className="sub-banner-left-overlay"></div>
           </div>
@@ -91,10 +108,13 @@ function About() {
               <FlipCard
                 name={exec.name}
                 path={exec.path}
+                altimages={exec.altimages}
+                altimagesizes={exec.altimagesizes}
                 position={exec.position}
                 major={exec.major}
                 text={exec.text}
                 hobby={exec.hobby}
+                blurhash={exec.blurhash}
               />
             )
           })}
@@ -111,7 +131,12 @@ function About() {
         <div className="club-founders-main">
           <div className="founder-container">
             <div className="founder-img">
-              <img src="/img-kareem-prof.webp" alt="founder-img" />
+              <ImgComponent
+              src={"/img-kareem-prof.jpg"}
+              altimages={"/img-kareem-prof-sm-300.jpg 300w, /img-kareem-prof.jpg 632w"}
+              altimagesizes={"(max-width: 440px) 300px, 500px"}
+              blurhash={"LhIiLG%1_Mof.TWAIUWBJFbIRks+"}
+            />
             </div>
             <div className="founder-testimony">
               <div className="founder-title">
@@ -149,7 +174,12 @@ function About() {
               </div>
             </div>
             <div className="founder-img">
-              <img src="/aj_img1.webp" alt="founder-img" />
+              <ImgComponent
+              src={"/aj_img1.jpg"}
+              altimages={"/aj_img1-sm-300.jpg 300w, /aj_img1.jpg 500w"}
+              altimagesizes={"(max-width: 440px) 300px, 500px"}
+              blurhash={"LwCa7IR:tSWAt:bIWFs.I_oKWBoc"}
+            />
             </div>
           </div>
         </div>

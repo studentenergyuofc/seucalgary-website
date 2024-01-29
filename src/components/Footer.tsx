@@ -11,10 +11,10 @@ function Footer(){
             <div className="main-footer">
                 <div className="left-container footer">
                     <div className="footer-links">
-                        <BsInstagram />
-                        <BsLinkedin />
-                        <BsTwitter />
-                        <BsFillEnvelopeFill />
+                        <a href="https://www.instagram.com/studentenergy_uofc/" target="_blank"><BsInstagram /></a>
+                        <a href="https://www.linkedin.com/company/studentenergyuofc/mycompany/" target="_blank"><BsLinkedin /></a>
+                        <a href="https://twitter.com/se_uofc" target="_blank"><BsTwitter /></a>
+                        <a href="mailto:ucalgary@studentenergy.org"><BsFillEnvelopeFill /></a>
                     </div>
                 </div>
                 <div className="right-container footer">

@@ -11,6 +11,7 @@ export interface Position {
 
 export interface NewsItemProps {
   path: string;
+  blurhash: string;
   title: string;
   description: string;
   date: string;
@@ -21,9 +22,12 @@ export interface ExecMembers {
   name: string;
   position: string;
   path: string;
+  altimages: string;
+  altimagesizes: string;
   major: string;
   text: string;
   hobby: string;
+  blurhash: string;
   }
 
 export interface Articles {
@@ -32,4 +36,5 @@ export interface Articles {
   image: string;
   link: string;
   date: string;
+  blurhash: string;
 }

@@ -1,9 +1,11 @@
 "use client";
-import videoBg from "/intovideo.mp4";
+import banner from "/banner.jpg";
+import smbanner from "/banner-sm-450.jpg";
 import Footer from "../components/Footer";
 import { useRef, useEffect, useState } from "react";
 import logotitle from "/logotitle.png";
-import bgimg from "/background2.jpg";
+import banner2 from "/background2.jpg";
+import smbanner2 from "/background2-sm-450.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -11,6 +13,8 @@ import NewsItem from "../components/NewsItem";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { achievementsEvents, upcomingEvents, pastEvents } from "../lib/data";
 import { NewsItemProps } from "../vite-env";
+import ImgComponent from "../components/ImgComponent";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 function Home() {
   const myRef = useRef<HTMLDivElement>(null);
@@ -19,11 +23,12 @@ function Home() {
   const [pageEndNearing, setPageEndNearing] = useState<boolean>();
   const [changeBackground, setChangeBackground] = useState<boolean>(false);
   const [event, setEvent] = useState<string>("upcoming");
-
-  console.log(changeBackground);
+  const [defaultBanner, setDefaultBanner] = useState<string>(banner);
+  const [defaultBanner2, setDefaultBanner2] = useState<string>(banner);
+  const isWindow = useMediaQuery("(max-width: 440px)");
 
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], [200, -1350]);
+  const x = useTransform(scrollYProgress, [0, 1], [200, -950]);
 
   useEffect(() => {
     Aos.init({ duration: 3000 });
@@ -65,12 +70,41 @@ function Home() {
     window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    if (isWindow){
+      setDefaultBanner(smbanner);
+      setDefaultBanner2(smbanner2);
+    }
+    else{
+      setDefaultBanner(banner);
+      setDefaultBanner2(banner2);
+    }
+  }, [isWindow])
+
+  console.log(defaultBanner);
+  console.log(defaultBanner2);
+  console.log(isWindow);
+
   return (
     <section>
       <div className="section intro-search" ref={topOfPage}>
         <div className="video-container">
-          <video src={videoBg} autoPlay loop muted />
-          {!pageEndNearing ? <img src={bgimg} /> : null}
+          {pageEndNearing ?
+          <ImgComponent
+          src={defaultBanner}
+          altimages={""}
+          altimagesizes={""}
+          blurhash={"LqHM=wRkxaWY*0RkjYay9GoJWVoL"}
+        />
+          : null}
+          {!pageEndNearing ? 
+          <ImgComponent
+          src={defaultBanner2}
+          altimages={""}
+          altimagesizes={""}
+          blurhash={"L8DS%Ox_0K-.u6o}s,NF?akUt7xt"}
+          />
+          : null}
           <div
             className={pageEndNearing ? "video-overlay" : "img-overlay"}
           ></div>
@@ -99,13 +133,11 @@ function Home() {
               Our commitment lies in nurturing <span id="word-highlight">professional growth</span> while championing <span id="word-highlight">sustainability</span> and <span id="word-highlight">innovation</span>. Join us on this exciting journey as we shape the future of energy together!{" "}
             </p>
         </div>
-        {/* <div className="intro-info-container mission-text" id="par3">
+        <div className="intro-info-container mission-text" id="par3">
             <p>
-              heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heobpi ewh
-              wihefdq9uj iefw heobpi ewh wihefdq9uj iefw heobpi ewh wihefdq9uj
-              iefw heobpi ewh wihefdq9uj iefw heo{" "}
+              Whether you are interested in building a <span id="word-highlight">career within the energy sector</span>, creating an impact through <span id="word-highlight">advocacy</span>, or are seeking <span id="word-highlight">project development experience</span>, our chapter will place you in the heart of innovation and help you kickstart your career with experiences that matter.{" "}
             </p>
-        </div> */}
+        </div>
       </div>
       <div className="section club-stats">
         <h1>Become a part of a global community!</h1>
@@ -143,7 +175,7 @@ function Home() {
               }
               onClick={() => setEvent("past")}
             >
-              Past Events
+              Recent Events
             </button>
           </li>
           <li>
@@ -155,11 +187,12 @@ function Home() {
               }
               onClick={() => setEvent("achievements")}
             >
-              Highlights
+              Advocacy
             </button>
           </li>
         </ul>
       </div>
+      <div className="event-container">
       {event === "upcoming" ? (
         <article className="event-article" data-aos>
           {upcomingEvents.map((event: NewsItemProps) => {
@@ -171,6 +204,7 @@ function Home() {
               >
                 <NewsItem
                   path={event.path}
+                  blurhash={event.blurhash}
                   title={event.title}
                   description={event.description}
                   date={event.date}
@@ -191,6 +225,7 @@ function Home() {
               >
                 <NewsItem
                   path={event.path}
+                  blurhash={event.blurhash}
                   title={event.title}
                   description={event.description}
                   date={event.date}
@@ -211,9 +246,10 @@ function Home() {
               >
                 <NewsItem
                   path={event.path}
+                  blurhash={event.blurhash}
                   title={event.title}
                   description={event.description}
-                  date={event.date}
+                  date={""}
                   animation={event.animation}
                 ></NewsItem>
               </div>
@@ -221,6 +257,7 @@ function Home() {
           })}
         </article>
       )}
+      </div>
       <Footer />
     </section>
   );

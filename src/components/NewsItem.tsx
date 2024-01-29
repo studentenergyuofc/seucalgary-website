@@ -1,8 +1,10 @@
 import React from "react";
 import { NewsItemProps } from "../vite-env";
+import ImgComponent from "./ImgComponent";
 
 const NewsItem: React.FC<NewsItemProps> = ({
   path,
+  blurhash,
   title,
   description,
   date,
@@ -16,7 +18,12 @@ const NewsItem: React.FC<NewsItemProps> = ({
       </div>
       <div className="news-piece right-container">
         <div className="img-container">
-          <img src={path} />
+          <ImgComponent
+          src={path}
+          altimages={""}
+          altimagesizes={""}
+          blurhash={blurhash}
+        />
         </div>
       </div>
     </div>

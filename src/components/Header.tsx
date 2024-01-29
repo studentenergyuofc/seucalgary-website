@@ -57,6 +57,7 @@ function Header({setDropdownMenu, dropdownMenu} : HeaderProps) {
     }
   }, [isWindow, dropdownMenu, setDropdownMenu]);
 
+
   return (
     <div className={navbar || !atHome ? "header active" : "header"}>
       <div className="head-center container d-flex">
