@@ -66,7 +66,7 @@ function Home() {
       const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercentage = (scrolled / scrollableHeight) * 100;
 
-      if (scrollPercentage <= 35) {
+      if (scrollPercentage <= 30) {
         setPageEndNearing(true)     
       } else {
         setPageEndNearing(false)
