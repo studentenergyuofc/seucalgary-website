@@ -18,9 +18,11 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 function Home() {
   const myRef = useRef<HTMLDivElement>(null);
+  const otherRef = useRef<HTMLDivElement>(null);
   const topOfPage = useRef<HTMLDivElement>(null);
   const secondSection = useRef<HTMLDivElement>(null);
   const [pageEndNearing, setPageEndNearing] = useState<boolean>();
+  const [pageStartNearing, setPageStartNearing] = useState<boolean>(false);
   const [event, setEvent] = useState<string>("upcoming");
   const [defaultBanner, setDefaultBanner] = useState<string>(banner);
   const [defaultBanner2, setDefaultBanner2] = useState<string>(banner);
