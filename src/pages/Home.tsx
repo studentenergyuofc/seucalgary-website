@@ -58,7 +58,29 @@ function Home() {
       setDefaultBanner(banner);
       setDefaultBanner2(banner2);
     }
-  }, [isWindow])
+  }, [isWindow]);
+
+   useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = (scrolled / scrollableHeight) * 100;
+
+      if (scrollPercentage <= 35) {
+        setPageEndNearing(true)     
+      } else {
+        setPageEndNearing(false)
+      }
+    };
+
+    // Add event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <section>
