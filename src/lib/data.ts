@@ -301,6 +301,6 @@ export const achievementsEvents = [
     date: "September 15th 2022",
     path: "/albertasummit.jpg",
     blurhash: "LEFh#CM}EKR*00%Kn#E1~TI@eo%1",
-    animation: "fade-right",
+    animation: "fade-left",
   },
 ] as const;
