@@ -1,17 +1,23 @@
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
+import DropDownMenu from "./DropDownMenu";
+import { useState } from "react";
 
-import {Outlet} from "react-router-dom";
-import Header from "../components/Header"
+interface LayoutProps {
+  setDropdownMenu: (value: boolean) => void;
+  dropdownMenu: boolean;
+}
 
+function Layout({dropdownMenu, setDropdownMenu} : LayoutProps) {
+  const [navbar, setNavbar] = useState<boolean>(false);
 
-function Layout(){
-
-    return(
-        <div className="main">
-            <Header />
-            <Outlet />
-        </div>
-    )
-};
+  return (
+    <div className="main">
+      <Header setDropdownMenu={setDropdownMenu} dropdownMenu={dropdownMenu} navbar={navbar} setNavbar={setNavbar}/>
+      <Outlet />
+      <DropDownMenu dropdownMenu={dropdownMenu} setDropdownMenu={setDropdownMenu} setNavbar={setNavbar}/>
+    </div>
+  );
+}
 
 export default Layout;
-
