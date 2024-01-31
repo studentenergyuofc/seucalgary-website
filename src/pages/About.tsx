@@ -134,7 +134,7 @@ function About() {
                 energy future.
               </p>
               <div className="founder-name">
-                <p>-Kareem Yousef</p>
+                <p>-Kareem Youssef</p>
               </div>
             </div>
           </div>

@@ -207,8 +207,8 @@ export const executives = [
     altimagesizes: "(max-width: 440px) 130px, 300px",
     position: "Junior VP Events",
     major: "Biomedical Engineering",
-    text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
-    hobby: "Public speaking, gaming, gym.",
+    text: "I am interested in the potential of renewable energy sources to significantly reduce the global carbon emissions and provide sustainable solutions for the world's growing energy needs.",
+    hobby: "Gym, cooking and reading.",
     blurhash: "LADJ6OD%.Sxa8{Rj01xtEOt7~CRj"
   },
   {
@@ -281,8 +281,8 @@ export const achievementsEvents = [
     description:
       'The "Day on the Hill" event hosted by EWB is an annual initiative where participants engage with MPs at Parliament Hill in Ottawa to discuss significant energy issues. This year, our chapter was notably invited to attend, marjing a significant step in broadening participation and representing diverse viewpoints.',
     date: "September 15th 2023",
-    path: "/ewbadvocacy.jpg",
-    blurhash: "LKIq$5={_M$*.R$jIpRPwIIUD*od",
+    path: "/advocacy.jpg",
+    blurhash: "LWHLMF#k-ot2_N%1NekCk9xaj]WC",
     animation: "fade-left",
   },
   {
