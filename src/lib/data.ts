@@ -113,7 +113,7 @@ export const executives = [
     blurhash: "LlH{csxa?uRn.mtRaeofN#R*M|ad"
   }, 
   {
-    name: "Abdul Jalel",
+    name: "Abduljalel Wadouh",
     position: "Vice President",
     path: "/aj_img2.jpg",
     altimages: "/aj_img2-sm-150.jpg 150w, aj_img2.jpg 300w",

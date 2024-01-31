@@ -153,7 +153,7 @@ function About() {
                 rapidly growing energy sector.
               </p>
               <div className="founder-name">
-                <p>-Abdul Jalel</p>
+                <p>-Abduljalel Wadouh</p>
               </div>
             </div>
             <div className="founder-img">
