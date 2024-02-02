@@ -107,8 +107,8 @@ function About() {
         <div className="club-founders-header">
           <h1>Meet Our Founders</h1>
           <p>
-            Check out what out founders had to say about about Student Energy
-            and their reasoning behind starting a chapter at Uofc.
+            Check out what our founders had to say about about Student Energy
+            and their reasoning behind starting a chapter at UofC.
           </p>
         </div>
         <div className="club-founders-main">

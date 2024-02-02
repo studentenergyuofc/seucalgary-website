@@ -193,6 +193,9 @@ function Home() {
       {event === "upcoming" ? (
         <article className="event-article" data-aos>
           {upcomingEvents.map((event: NewsItemProps) => {
+
+            const link = event.title === "Bridging Perspectives: The Road to Net-Zero" ? "https://www.eventbrite.com/e/bridging-perspectives-the-road-to-net-zero-tickets-795657100807?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl" : undefined;
+
             return (
               <div
                 className="news-piece-holder"
@@ -207,6 +210,7 @@ function Home() {
                   description={event.description}
                   date={event.date}
                   animation={event.animation}
+                  link={link}
                 ></NewsItem>
               </div>
             );

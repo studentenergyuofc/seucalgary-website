@@ -62,10 +62,12 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
   return (
     <div className={navbar || !atHome ? "header active" : "header"}>
       <div className="head-center container d-flex">
-        <div className="logo">
-          <img className="logo-img" src={logo} />
-          <img className="logo-title" src={logotitle} />
-        </div>
+        <Link to="/">
+          <div className="logo">
+            <img className="logo-img" src={logo} />
+            <img className="logo-title" src={logotitle} />
+          </div>
+        </Link>
         <div className="navigation">
           {!isWindow ? (
             <ul className="nav-list d-flex">

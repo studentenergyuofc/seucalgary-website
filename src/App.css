@@ -130,6 +130,7 @@ div{
   width: 4rem;
   margin-left: 2rem;
   position: relative;
+  cursor: pointer;
 }
 
 .logo-img{
@@ -512,6 +513,11 @@ video{
   line-height: 1.5; 
   color: black;
   margin-bottom: 4rem;
+}
+
+.news-piece .event-link{
+  color: var(--regblue);
+  text-decoration: underline;
 }
 
 .news-piece span{
