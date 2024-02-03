@@ -16,6 +16,7 @@ export interface NewsItemProps {
   description: string;
   date: string;
   animation: string;
+  link?: string;
 }
 
 export interface ExecMembers {

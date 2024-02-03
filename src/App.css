@@ -419,6 +419,16 @@ video{
   .intro-info{
     padding: 7rem 0;
   }
+
+  .club-name img{
+    width: 30%;
+    max-width: 300px;
+  }
+
+  .intro-info h1, span{
+    font-size: 7.1rem;
+    margin: 2rem 0;
+  }
 }
 
 @media screen and (max-width: 768px){
@@ -512,18 +522,31 @@ video{
 .news-piece p{
   line-height: 1.5; 
   color: black;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
-.news-piece .event-link{
-  color: var(--regblue);
-  text-decoration: underline;
+.bottom-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900%;
+  height: 3rem;
+  width: fit-content;
+}
+
+.news-piece .event-link-btn{
+  color: white;
+  font-size: 1rem;
+  background: var(--regblue);
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  text-decoration: none;
+  display: block;
+  margin-right: 2rem;
 }
 
 .news-piece span{
-  /* padding: 0.5rem 1rem; */
   font-size: 1.1rem;
-  margin-top: 4rem;
   color: var(--yellow);
 }
 
@@ -616,7 +639,6 @@ video{
   
   .news-piece span{
     font-size: 0.9rem;
-    margin-top: 2rem;
   }
 
 }
@@ -673,7 +695,26 @@ video{
   
   .news-piece span{
     font-size: 0.8rem;
-    margin-top: 1rem;
+  }
+
+  .news-piece .event-link-btn{
+    color: white;
+    font-size: 0.8rem;
+    background: var(--regblue);
+    padding: 0.2rem 0.7rem;
+    width: fit-content;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+    margin-right: 1.3rem;
+  }
+
+  .news-piece span{
+    font-size: 0.8rem;
+    width: fit-content;
+    display: block;
+    word-break: break-word;
+    white-space: normal;
   }
 }
 
@@ -1007,6 +1048,7 @@ video{
   align-items: center;
 }
 
+
 .sub-banner-right p{
   color: black;
   font-size: 1.4rem;
@@ -1035,6 +1077,28 @@ video{
   color: var(--regblue);
 }
 
+@media screen and (min-width: 1800px){
+
+  .sub-banner-right .text{
+    width: 70%;
+  }
+
+  .sub-banner-right p{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .sub-banner-right span{
+    font-size: 1.8rem;
+  }
+
+  .main-banner-overlay h3{
+    font-size: 1.6rem;
+  }
+  
+}
+
 @media screen and (max-width: 1004px){
 
   .main-banner-overlay h1{
@@ -1060,7 +1124,6 @@ video{
 }
 
 @media screen and (max-width: 620px){
-
 
   .main-banner-overlay h1{
     font-size: 2.3rem;
@@ -1603,7 +1666,6 @@ video{
   left: 0;
 }
 
-
 .blog .blog-box .blog-details{
   width: 40%;
   position: absolute;
@@ -1718,6 +1780,18 @@ video{
 .page-heading-text p{
   color: white;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1800px){
+  .blog{
+    padding: 12rem 20rem 12rem 20rem;
+  }
+
+  .blog .blog-box .blog-img{
+    width: 40%;
+    height: 320px;
+  }
+
 }
 
 @media screen and (max-width: 1176px){

@@ -185,7 +185,7 @@ export const executives = [
     altimagesizes: "(max-width: 440px) 130px, 300px",
     position: "Junior VP Public Relations",
     major: "Natural Sciences",
-    text: "I am interested in renewable energy systems and how economics, research and policy interwine within the energy sector today.",
+    text: "I am interested in renewable energy systems and how economics, research and policy intertwine within the energy sector today.",
     hobby: "Squash and basketball.",
     blurhash: "LkHTpuWTi{R+~Uads:ofTcjFtQt6"
   },
@@ -228,11 +228,12 @@ export const upcomingEvents = [
   {
     title: "Bridging Perspectives: The Road to Net-Zero",
     description:
-      '"Bridging Prespectives: The Road to Net-Zero" is an insightful event hosted by CISSA and Student Energy at the Alta Hotel, which focuses on sustainability, renewable energy, net-zero pathways, and emphasizing the role of youth and indeginous perspectives in achieving sustainability. The event will include engaging discussions, a speaker pannel of industry experts, networking sessions and refreshments.',
+      '"Bridging Prespectives: The Road to Net-Zero" is an insightful event hosted by CISSA and Student Energy at the Alta Hotel, which focuses on sustainability, renewable energy, net-zero pathways, and emphasizing the role of youth and indigenous perspectives in achieving sustainability. The event will include engaging discussions, a speaker panel of industry experts, networking sessions and refreshments.',
     date: "February 17th, 9:30am",
     path: "/bridgingperspectives.jpg",
     blurhash: "L3Ct%-E705tS_5wM%yDtLcES}$xo",
     animation: "fade-right",
+    link: "https://www.eventbrite.com/e/bridging-perspectives-the-road-to-net-zero-tickets-795657100807?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
   },
 ] as const;
 
@@ -268,36 +269,38 @@ export const pastEvents = [
 
 export const achievementsEvents = [
   {
+    title: "Alberta Electricity Future Coalition",
+    description:
+      "The Alberta Electricity Future Coalition, hosted by Energy Futures Lab, featured two key workshops in June and October 2023. The event centered around discussions on the future of Alberta's electrical grid and its transition to net-zero electricity, with contributions from various industry and government attendees, including insights on nuclear energy options of Alberta.",
+    date: "September 15th 2022",
+    path: "/electricity.jpg",
+    blurhash: "LOI4qj%1D%~U~W%2oJNH9cofkCIW",
+    animation: "fade-right",
+    link: "https://energyfutureslab.com/innovation-challenges/albertas-electricity-future/"
+  },
+  {
     title: "Minister Roundtable",
     description:
       "The roundtable discussion on Canada's Sustainable Jobs Plan and Clean Economy involved a diverse group of Calgary youth, leading to important community connections and leadership interactions.",
     date: "September 15th 2023",
     path: "/roundtable.jpg",
     blurhash: "LGI;nxNG9ZM|00IV%gNH~A?HIU-p",
-    animation: "fade-right",
+    animation: "fade-left",
+    link: "https://www.canada.ca/en/services/jobs/training/initiatives/sustainable-jobs/plan.html#s2"
   },
   {
     title: "Ottawa EWB Advocacy Day",
     description:
-      'The "Day on the Hill" event hosted by EWB is an annual initiative where participants engage with MPs at Parliament Hill in Ottawa to discuss significant energy issues. This year, our chapter was notably invited to attend, marjing a significant step in broadening participation and representing diverse viewpoints.',
+      'The "Day on the Hill" event hosted by EWB is an annual initiative where participants engage with MPs at Parliament Hill in Ottawa to discuss significant energy issues. This year, our chapter was notably invited to attend, marking a significant step in broadening participation and representing diverse viewpoints.',
     date: "September 15th 2023",
     path: "/advocacy.jpg",
     blurhash: "LWHLMF#k-ot2_N%1NekCk9xaj]WC",
-    animation: "fade-left",
-  },
-  {
-    title: "Alberta Electricity Future Coalition",
-    description:
-      "The Alberta Electricity Future Coalition, hosted by Energy Futures Lab, featured two key workshops in June and October 2023. The event centered around discussions on the future of Alberta's electrical grid and its transition to net-zero electricity, with contributions from various industry and government attandeed, including insights on nuclear energy options of Alberta.",
-    date: "September 15th 2022",
-    path: "/electricity.jpg",
-    blurhash: "LOI4qj%1D%~U~W%2oJNH9cofkCIW",
     animation: "fade-right",
   },
   {
     title: "Alberta Energy Summit",
     description:
-      "The Alberta Energy Summit featured speaker panels and crowd discussions, focusing on the challenges and developments in the energy sector. It emphasized the impact of smaller factors in achieving a sustainable future, aprticularly the need for a skilled workforce and understanding their requirements and aspirations.",
+      "The Alberta Energy Summit featured speaker panels and crowd discussions, focusing on the challenges and developments in the energy sector. It emphasized the impact of smaller factors in achieving a sustainable future, particularly the need for a skilled workforce and understanding their requirements and aspirations.",
     date: "September 15th 2022",
     path: "/albertasummit.jpg",
     blurhash: "LEFh#CM}EKR*00%Kn#E1~TI@eo%1",

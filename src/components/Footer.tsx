@@ -49,7 +49,7 @@ function Footer(){
                 </div>
                 <div className="right-container footer">
                     <form onSubmit={onSubmit}>
-                        <p>Subscribe to our news letters</p>
+                        <p>Subscribe to our newsletters!</p>
                         <div className="input">
                             <input
                             type="text"

@@ -34,20 +34,33 @@ function Home() {
   }, []);
 
   useEffect(() => {
+    setPageEndNearing(true)
     topOfPage.current?.scrollIntoView({ behavior: "smooth" });
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setPageEndNearing(entry.isIntersecting);
-    });
-    if (myRef.current) {
-      observer.observe(myRef.current);
-    }
   }, []);
 
   const handleScroll = () => {
     const scrollDistance = window.innerHeight;
     window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
   };
+
+   useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      if (scrolled >= viewportHeight + 170) {
+        setPageEndNearing(false)     
+      } else {
+        setPageEndNearing(true)
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (isWindow){
@@ -59,28 +72,6 @@ function Home() {
       setDefaultBanner2(banner2);
     }
   }, [isWindow]);
-
-   useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercentage = (scrolled / scrollableHeight) * 100;
-
-      if (scrollPercentage <= 30) {
-        setPageEndNearing(true)     
-      } else {
-        setPageEndNearing(false)
-      }
-    };
-
-    // Add event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <section>
@@ -193,9 +184,6 @@ function Home() {
       {event === "upcoming" ? (
         <article className="event-article" data-aos>
           {upcomingEvents.map((event: NewsItemProps) => {
-
-            const link = event.title === "Bridging Perspectives: The Road to Net-Zero" ? "https://www.eventbrite.com/e/bridging-perspectives-the-road-to-net-zero-tickets-795657100807?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl" : undefined;
-
             return (
               <div
                 className="news-piece-holder"
@@ -204,13 +192,14 @@ function Home() {
                 key={event.title}
               >
                 <NewsItem
+                  type="upcoming"
                   path={event.path}
                   blurhash={event.blurhash}
                   title={event.title}
                   description={event.description}
                   date={event.date}
                   animation={event.animation}
-                  link={link}
+                  link={event.link ? event.link : undefined}
                 ></NewsItem>
               </div>
             );
@@ -226,12 +215,14 @@ function Home() {
                 data-aos-anchor-placement="center-bottom"
               >
                 <NewsItem
+                  type="past"
                   path={event.path}
                   blurhash={event.blurhash}
                   title={event.title}
                   description={event.description}
                   date={event.date}
                   animation={event.animation}
+                  link={event.link ? event.link : undefined}
                 ></NewsItem>
               </div>
             );
@@ -247,12 +238,14 @@ function Home() {
                 data-aos-anchor-placement="center-bottom"
               >
                 <NewsItem
+                  type="achievements"
                   path={event.path}
                   blurhash={event.blurhash}
                   title={event.title}
                   description={event.description}
                   date={""}
                   animation={event.animation}
+                  link={event.link ? event.link : undefined}
                 ></NewsItem>
               </div>
             );

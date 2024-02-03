@@ -4,7 +4,7 @@ import ImgComponent from "./ImgComponent";
 
 
 interface NewsItemExtendedProps extends NewsItemProps {
-  link?: string; //optional for events
+  type: string; //optional for events
 }
 
 const NewsItem: React.FC<NewsItemExtendedProps> = ({
@@ -14,13 +14,22 @@ const NewsItem: React.FC<NewsItemExtendedProps> = ({
   description,
   date,
   link,
+  type,
 }) => {
   return (
     <div className="news-piece-container">
-      <div className="news-piece left-container">
+      <div className={link ? "news-piece left-container" : "news-piece left-container"}>
         <h1>{title}</h1>
-        <p>{description} {link && <div style={{display:"inline"}}> Get your tickets <a href={link} target="_blank" className="event-link">here</a>!</div> }</p>
-        <span>{date}</span>
+        <p>{description}</p>
+        {link ? (
+          <div className="bottom-info">
+            <a href={link} target="_blank" className="event-link-btn">{type === "upcoming" ? `Get Tickets` : `See Details`}</a>
+            <span>{date}</span>
+          </div>
+        ) :
+        (
+          <span>{date}</span>
+        )}
       </div>
       <div className="news-piece right-container">
         <div className="img-container">
