@@ -522,24 +522,24 @@ video{
 .news-piece p{
   line-height: 1.5; 
   color: black;
-  margin-bottom: 2rem;
 }
 
 .bottom-info{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 900%;
   height: 3rem;
   width: fit-content;
+  margin-top: 2rem;
 }
 
 .news-piece .event-link-btn{
   color: white;
-  font-size: 1rem;
-  background: var(--regblue);
+  font-size: 0.9rem;
+  background: var(--yellow);
   padding: 0.5rem 1rem;
   width: fit-content;
+  font-weight: 600;
   text-decoration: none;
   display: block;
   margin-right: 2rem;
@@ -575,11 +575,13 @@ video{
 .events-list {
   list-style: none;
 }
+
 .events-button{
   padding: 20px;
   cursor: pointer;
   border: none;
   color: var(--white);
+  font-size: 0.9rem;
   background-color: var(--regblue);
 }
 .events-button:hover{
@@ -618,7 +620,6 @@ video{
   
   .news-piece.right-container{
     width: 80%;
-    margin-top: 2rem; 
   }
   
   .news-piece.left-container{
@@ -634,11 +635,52 @@ video{
   .news-piece p{
     line-height: 1.5; 
     font-size: 0.8rem;
-    margin-bottom: 2rem;
   }
   
   .news-piece span{
     font-size: 0.9rem;
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .events-button{
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+
+  .news-piece .event-link-btn{
+    font-size: 0.8rem;
+    padding: 0.2rem 0.7rem;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+    margin-right: 0;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .bottom-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 4.5rem;
+    width: 5rem;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .bottom-info.half{
+    width: 100%;
+    height: fit-content;
+    min-height: 1.6rem;
+  }
+
+  .bottom-info.empty{
+    height: 0.1rem;
+    margin-bottom: 0rem;
+    margin-top: 1.5rem;
   }
 
 }
@@ -657,10 +699,6 @@ video{
 
   .events-button{
     padding: 10px;
-    cursor: pointer;
-    border: none;
-    color: var(--white);
-    background-color: var(--regblue);
     font-size: 0.7rem;
   }
 
@@ -692,16 +730,10 @@ video{
     font-size: 0.8rem;
     margin-bottom: 2rem;
   }
-  
-  .news-piece span{
-    font-size: 0.8rem;
-  }
 
   .news-piece .event-link-btn{
-    color: white;
-    font-size: 0.8rem;
-    background: var(--regblue);
-    padding: 0.2rem 0.7rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.7rem;
     width: fit-content;
     text-decoration: none;
     white-space: nowrap;
@@ -710,11 +742,19 @@ video{
   }
 
   .news-piece span{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: fit-content;
     display: block;
     word-break: break-word;
     white-space: normal;
+  }
+
+  .bottom-info{
+    align-items: flex-start;
+    height: 4.5rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
   }
 }
 
@@ -912,7 +952,6 @@ video{
     height: 85%;
     display: flex;
     flex-direction: column;
-
   }
 
   .right-container.footer{
@@ -1175,6 +1214,14 @@ video{
   .sub-banner-right{
     padding-left: 2rem;
     border: 1px solid white;
+  }
+
+  .main-banner-overlay h1{
+    font-size: 2.2rem;
+  }
+
+  .cursor-text{
+    font-size: 2.2rem;
   }
 }
 

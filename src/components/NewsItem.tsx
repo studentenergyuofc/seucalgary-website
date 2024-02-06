@@ -16,20 +16,18 @@ const NewsItem: React.FC<NewsItemExtendedProps> = ({
   link,
   type,
 }) => {
+
+  const className = (link && date === "") || (!link && date !== "") ? "bottom-info half" : (link && date !== "") ? "bottom-info full" : "bottom-info empty";
+
   return (
     <div className="news-piece-container">
       <div className={link ? "news-piece left-container" : "news-piece left-container"}>
         <h1>{title}</h1>
         <p>{description}</p>
-        {link ? (
-          <div className="bottom-info">
-            <a href={link} target="_blank" className="event-link-btn">{type === "upcoming" ? `Get Tickets` : `See Details`}</a>
-            <span>{date}</span>
-          </div>
-        ) :
-        (
-          <span>{date}</span>
-        )}
+        <div className={className}>
+          {(link) && <a href={link} target="_blank" className="event-link-btn">{type === "upcoming" ? `Get Tickets` : `Read More`}</a>}
+          {(date !== "") && <span>{date}</span>}
+        </div>
       </div>
       <div className="news-piece right-container">
         <div className="img-container">

@@ -54,7 +54,7 @@ function Contact() {
 
   return (
     <div>
-      <div className="contact-container">
+      <div className="contact-container" ref={topOfPage}>
         <div className="contact-banner">
           <img src="/contact-banner.jpg" alt="contact-banner" />
           <div className="contact-banner-overlay"></div>
