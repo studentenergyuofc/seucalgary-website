@@ -35,7 +35,7 @@ function Home() {
     } else {
       setEvent("upcoming");
     }
-  }, [upcomingEvents]);
+  }, []);
 
   useEffect(() => {
     Aos.init({ duration: 3000 });
