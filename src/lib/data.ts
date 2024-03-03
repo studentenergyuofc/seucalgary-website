@@ -76,29 +76,34 @@ export const positions = [
 export const articles = [
   {
     title: "Alternative energy sources you probably haven’t heard of",
-    description: "People everywhere are looking for new energy ideas to help them make energy-smart decisions for the future. Here at EDF Energy, we believe in renewable energy and changing the attitudes and practices about how people generate and use energy...",
+    description:
+      "People everywhere are looking for new energy ideas to help them make energy-smart decisions for the future. Here at EDF Energy, we believe in renewable energy and changing the attitudes and practices about how people generate and use energy...",
     image: "/blog1.jpg",
     link: "https://www.edfenergy.com/energywise/alternative-energy-sources-you-probably-havent-heard",
     date: "31/10",
-    blurhash: "LHLWU{01~B$*%MyDIVIV1NRiMyxa"
+    blurhash: "LHLWU{01~B$*%MyDIVIV1NRiMyxa",
   },
   {
-    title: "Engineers develop an efficient process to make fuel from carbon dioxide",
-    description: "The search is on worldwide to find ways to extract carbon dioxide from the air or from power plant exhaust and then make it into something useful...",
+    title:
+      "Engineers develop an efficient process to make fuel from carbon dioxide",
+    description:
+      "The search is on worldwide to find ways to extract carbon dioxide from the air or from power plant exhaust and then make it into something useful...",
     image: "/blog2.jpg",
     link: "https://www.sciencedaily.com/releases/2023/10/231030141345.htm",
     date: "30/10",
-    blurhash: "LUJ8eURit9ay~qkDWAaxRoj?WTof"
+    blurhash: "LUJ8eURit9ay~qkDWAaxRoj?WTof",
   },
   {
-    title: "Two million European households could abandon the electrical grid by 2050",
-    description: "Researchers report that 53% of European freestanding homes could have supplied all their own energy needs in 2020 using only local rooftop solar radiation...",
+    title:
+      "Two million European households could abandon the electrical grid by 2050",
+    description:
+      "Researchers report that 53% of European freestanding homes could have supplied all their own energy needs in 2020 using only local rooftop solar radiation...",
     image: "/blog3.jpg",
     link: "https://www.sciencedaily.com/releases/2023/11/231102135037.htm",
     date: "02/11",
-    blurhash: "LsLXxtRPIUV@.TV@V@aeDioLfka|"
+    blurhash: "LsLXxtRPIUV@.TV@V@aeDioLfka|",
   },
-]
+];
 
 export const executives = [
   {
@@ -110,8 +115,8 @@ export const executives = [
     major: "Electrical Engineering",
     text: "I am interested in a just energy transition, working towards a low emission future has to fall in hand with ensuring a fair, inclusive and equitable transition.",
     hobby: "Public speaking, gaming and gym.",
-    blurhash: "LlH{csxa?uRn.mtRaeofN#R*M|ad"
-  }, 
+    blurhash: "LlH{csxa?uRn.mtRaeofN#R*M|ad",
+  },
   {
     name: "Abduljalel Wadouh",
     position: "Vice President",
@@ -121,7 +126,7 @@ export const executives = [
     major: "Mechanical Engineering",
     text: "My interest stems from the pure dichotomy regarding energy usage and production philosophies. Taking a look into uniting both will be a great challenge that I am ready to partake in.",
     hobby: "Public speaking, gym and being an all-around legend.",
-    blurhash: "LjH.jBs;^+jG_4aJaJnhR:oHRjoc"
+    blurhash: "LjH.jBs;^+jG_4aJaJnhR:oHRjoc",
   },
   {
     name: "Ibrahim Hashmi",
@@ -132,7 +137,7 @@ export const executives = [
     major: "Mechanical Engineering",
     text: "Being able to facilitate and advocate for an exciting energy future unfolding right in front of us!",
     hobby: "Reading and playing video games.",
-    blurhash: "LJC~}Hxz5n9Z,$MuEeNI9dx[nOof"
+    blurhash: "LJC~}Hxz5n9Z,$MuEeNI9dx[nOof",
   },
   {
     name: "Axel Sanchez",
@@ -143,8 +148,8 @@ export const executives = [
     major: "Software Engineering",
     text: "I am interested in the innovative technologies and sustainable practices within the energy sector, their role in advancing renewable energy sources and reducing environmental impact.",
     hobby: "Football, gym and gaming.",
-    blurhash: "L8BW*=~ps_,T?LD*Epb_02X9%6o["
-  }, 
+    blurhash: "L8BW*=~ps_,T?LD*Epb_02X9%6o[",
+  },
   {
     name: "Mariia Podgaietska",
     path: "/img-mariia.jpg",
@@ -154,7 +159,7 @@ export const executives = [
     major: "Software Engineering",
     text: "I am interested in how technology can be leveraged within the energy sector to drive the transition towards renewable sources and pave a way for a sustainable energy future.",
     hobby: "Baking, gym and traveling.",
-    blurhash: "LjLgtuxutmRP~qoft6RjE1jYVsoz"
+    blurhash: "LjLgtuxutmRP~qoft6RjE1jYVsoz",
   },
   {
     name: "Murad Tashkandi",
@@ -165,7 +170,7 @@ export const executives = [
     major: "Electrical Engineering",
     text: "Renewable Energy Technologies! I am interested in the idea of developing and implementing sustainable energy resources.",
     hobby: "Sketching and drawing.",
-    blurhash: "LOHL0Y_M%y_3=^%M.7NGE2RiV[s;"
+    blurhash: "LOHL0Y_M%y_3=^%M.7NGE2RiV[s;",
   },
   {
     name: "Omar Ahmed",
@@ -176,8 +181,8 @@ export const executives = [
     major: "Electrical Engineering",
     text: "I am interested in the groundbreaking possibilities of renewable energy technologies, their innovative nature, and the sustainability-driven impact they offer.",
     hobby: "Gym and hiking.",
-    blurhash: "LAGkm_=s0MSz00I[-oE3?]j?^6?F"
-  }, 
+    blurhash: "LAGkm_=s0MSz00I[-oE3?]j?^6?F",
+  },
   {
     name: "Adballah El Gendy",
     path: "/img-elgendy.jpg",
@@ -187,7 +192,7 @@ export const executives = [
     major: "Natural Sciences",
     text: "I am interested in renewable energy systems and how economics, research and policy intertwine within the energy sector today.",
     hobby: "Squash and basketball.",
-    blurhash: "LkHTpuWTi{R+~Uads:ofTcjFtQt6"
+    blurhash: "LkHTpuWTi{R+~Uads:ofTcjFtQt6",
   },
   {
     name: "Banan Al Dabbas",
@@ -198,7 +203,7 @@ export const executives = [
     major: "Sustainable Systems Engineering",
     text: "I am interested in a low carbon footprint future where renewable energy thrives and can produce sufficient energy for consumers' consumption.",
     hobby: "Gym, Brazillian jiujitsu and gaming.",
-    blurhash: "L9B:No%zD%4;?a~B9bD%?u4:v#aK"
+    blurhash: "L9B:No%zD%4;?a~B9bD%?u4:v#aK",
   },
   {
     name: "Mariam Aly",
@@ -209,7 +214,7 @@ export const executives = [
     major: "Biomedical Engineering",
     text: "I am interested in the potential of renewable energy sources to significantly reduce the global carbon emissions and provide sustainable solutions for the world's growing energy needs.",
     hobby: "Gym, cooking and reading.",
-    blurhash: "LADJ6OD%.Sxa8{Rj01xtEOt7~CRj"
+    blurhash: "LADJ6OD%.Sxa8{Rj01xtEOt7~CRj",
   },
   {
     name: "Cameron Winfield",
@@ -220,24 +225,22 @@ export const executives = [
     major: "Environmental Science & Geology",
     text: "I am interested in contributing to sustainable practices and addressing global energy challenges to protect our future generations.",
     hobby: "Reading, hiking and gym.",
-    blurhash: "L5Aw0UI;0L^Q^,buOY-V*0s:v#I:"
-  }
-] as const;
-
-export const upcomingEvents = [
-  {
-    title: "Bridging Perspectives: The Road to Net-Zero",
-    description:
-      '"Bridging Prespectives: The Road to Net-Zero" is an insightful event hosted by CISSA and Student Energy at the Alta Hotel, which focuses on sustainability, renewable energy, net-zero pathways, and emphasizing the role of youth and indigenous perspectives in achieving sustainability. The event will include engaging discussions, a speaker panel of industry experts, networking sessions and refreshments.',
-    date: "February 17th, 9:30am",
-    path: "/bridgingperspectives.jpg",
-    blurhash: "L3Ct%-E705tS_5wM%yDtLcES}$xo",
-    animation: "fade-right",
-    link: "https://www.eventbrite.com/e/bridging-perspectives-the-road-to-net-zero-tickets-795657100807?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+    blurhash: "L5Aw0UI;0L^Q^,buOY-V*0s:v#I:",
   },
 ] as const;
 
+export const upcomingEvents = [] as const;
+
 export const pastEvents = [
+  {
+    title: "Bridging Perspectives: The Road to Net-Zero",
+    description:
+      '"Bridging Prespectives: The Road to Net-Zero" was an insightful event hosted by CISSA and Student Energy at the Alta Hotel, which focused on sustainability, renewable energy, net-zero pathways, and emphasizing the role of youth and indigenous perspectives in achieving sustainability. The event included engaging discussions, a speaker panel of industry experts and networking sessions.',
+    date: "February 17th, 2024",
+    path: "/bridgingperspectives.jpg",
+    blurhash: "L3Ct%-E705tS_5wM%yDtLcES}$xo",
+    animation: "fade-right",
+  },
   {
     title: "Professor Research Night",
     description:
@@ -245,7 +248,7 @@ export const pastEvents = [
     date: "January 22nd, 2024",
     path: "/research.jpg",
     blurhash: "LGG8r#V{R*oH_KRoofRiETt8Rkoe",
-    animation: "fade-right",
+    animation: "fade-left",
   },
   {
     title: "Industry Networking Event",
@@ -254,7 +257,7 @@ export const pastEvents = [
     date: "November 24th, 2023",
     path: "/networking.jpg",
     blurhash: "LHGbn%7I9Z%g~o9^9G.8m.VZxbNI",
-    animation: "fade-left",
+    animation: "fade-right",
   },
   {
     title: "Speaker Session",
@@ -263,7 +266,7 @@ export const pastEvents = [
     date: "September 15th 2023",
     path: "/speaker-session.jpg",
     blurhash: "LGBpUyT#xvV@WXs:Rkt6MIrBxBNe",
-    animation: "fade-right",
+    animation: "fade-left",
   },
 ] as const;
 
@@ -276,7 +279,7 @@ export const achievementsEvents = [
     path: "/electricity.jpg",
     blurhash: "LOI4qj%1D%~U~W%2oJNH9cofkCIW",
     animation: "fade-right",
-    link: "https://energyfutureslab.com/innovation-challenges/albertas-electricity-future/"
+    link: "https://energyfutureslab.com/innovation-challenges/albertas-electricity-future/",
   },
   {
     title: "Minister Roundtable",
@@ -286,7 +289,7 @@ export const achievementsEvents = [
     path: "/roundtable.jpg",
     blurhash: "LGI;nxNG9ZM|00IV%gNH~A?HIU-p",
     animation: "fade-left",
-    link: "https://www.canada.ca/en/services/jobs/training/initiatives/sustainable-jobs/plan.html#s2"
+    link: "https://www.canada.ca/en/services/jobs/training/initiatives/sustainable-jobs/plan.html#s2",
   },
   {
     title: "Ottawa EWB Advocacy Day",

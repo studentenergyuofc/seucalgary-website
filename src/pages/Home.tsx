@@ -21,7 +21,7 @@ function Home() {
   const topOfPage = useRef<HTMLDivElement>(null);
   const secondSection = useRef<HTMLDivElement>(null);
   const [pageEndNearing, setPageEndNearing] = useState<boolean>();
-  const [event, setEvent] = useState<string>("upcoming");
+  const [event, setEvent] = useState<string>();
   const [defaultBanner, setDefaultBanner] = useState<string>(banner);
   const [defaultBanner2, setDefaultBanner2] = useState<string>(banner);
   const isWindow = useMediaQuery("(max-width: 440px)");
@@ -30,44 +30,51 @@ function Home() {
   const x = useTransform(scrollYProgress, [0, 1], [200, -950]);
 
   useEffect(() => {
+    if (upcomingEvents.length < 1) {
+      setEvent("past");
+    } else {
+      setEvent("upcoming");
+    }
+  }, [upcomingEvents]);
+
+  useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
 
   useEffect(() => {
-    setPageEndNearing(true)
+    setPageEndNearing(true);
     topOfPage.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   const handleScroll = () => {
     const scrollDistance = window.innerHeight;
-    window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
+    window.scrollBy({ top: scrollDistance, behavior: "smooth" });
   };
 
-   useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
       const viewportHeight = window.innerHeight;
 
       if (scrolled >= viewportHeight + 170) {
-        setPageEndNearing(false)     
+        setPageEndNearing(false);
       } else {
-        setPageEndNearing(true)
+        setPageEndNearing(true);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    if (isWindow){
+    if (isWindow) {
       setDefaultBanner(smbanner);
       setDefaultBanner2(smbanner2);
-    }
-    else{
+    } else {
       setDefaultBanner(banner);
       setDefaultBanner2(banner2);
     }
@@ -77,22 +84,22 @@ function Home() {
     <section>
       <div className="section landing-page" ref={topOfPage}>
         <div className="background-container">
-          {pageEndNearing ?
-          <ImgComponent
-          src={defaultBanner}
-          altimages={""}
-          altimagesizes={""}
-          blurhash={"LqHM=wRkxaWY*0RkjYay9GoJWVoL"}
-        />
-          : null}
-          {!pageEndNearing ? 
-          <ImgComponent
-          src={defaultBanner2}
-          altimages={""}
-          altimagesizes={""}
-          blurhash={"L8DS%Ox_0K-.u6o}s,NF?akUt7xt"}
-          />
-          : null}
+          {pageEndNearing ? (
+            <ImgComponent
+              src={defaultBanner}
+              altimages={""}
+              altimagesizes={""}
+              blurhash={"LqHM=wRkxaWY*0RkjYay9GoJWVoL"}
+            />
+          ) : null}
+          {!pageEndNearing ? (
+            <ImgComponent
+              src={defaultBanner2}
+              altimages={""}
+              altimagesizes={""}
+              blurhash={"L8DS%Ox_0K-.u6o}s,NF?akUt7xt"}
+            />
+          ) : null}
           <div
             className={pageEndNearing ? "background-overlay" : "img-overlay"}
           ></div>
@@ -106,9 +113,13 @@ function Home() {
       </div>
       <div className="intro-info" ref={secondSection}>
         <div className="intro-info-container mission-text" id="par1">
-            <p>
-              We're passionate about fostering a <span id="word-highlight">dynamic community</span>, enabling students to <span id="word-highlight">explore</span>, <span id="word-highlight">innovate</span> and <span id="word-highlight">thrive</span> within the energy sector.{" "}
-            </p>
+          <p>
+            We're passionate about fostering a{" "}
+            <span id="word-highlight">dynamic community</span>, enabling
+            students to <span id="word-highlight">explore</span>,{" "}
+            <span id="word-highlight">innovate</span> and{" "}
+            <span id="word-highlight">thrive</span> within the energy sector.{" "}
+          </p>
         </div>
         <div className="mission-moto">
           <motion.h1 style={{ x }}>
@@ -117,14 +128,24 @@ function Home() {
           </motion.h1>
         </div>
         <div className="intro-info-container mission-text" id="par2">
-            <p>
-              Our commitment lies in nurturing <span id="word-highlight">professional growth</span> while championing <span id="word-highlight">sustainability</span> and <span id="word-highlight">innovation</span>. Join us on this exciting journey as we shape the future of energy together!{" "}
-            </p>
+          <p>
+            Our commitment lies in nurturing{" "}
+            <span id="word-highlight">professional growth</span> while
+            championing <span id="word-highlight">sustainability</span> and{" "}
+            <span id="word-highlight">innovation</span>. Join us on this
+            exciting journey as we shape the future of energy together!{" "}
+          </p>
         </div>
         <div className="intro-info-container mission-text" id="par3">
-            <p>
-              Whether you are interested in building a <span id="word-highlight">career within the energy sector</span>, creating an impact through <span id="word-highlight">advocacy</span>, or are seeking <span id="word-highlight">project development experience</span>, our chapter will place you in the heart of innovation and help you kickstart your career with experiences that matter.{" "}
-            </p>
+          <p>
+            Whether you are interested in building a{" "}
+            <span id="word-highlight">career within the energy sector</span>,
+            creating an impact through <span id="word-highlight">advocacy</span>
+            , or are seeking{" "}
+            <span id="word-highlight">project development experience</span>, our
+            chapter will place you in the heart of innovation and help you
+            kickstart your career with experiences that matter.{" "}
+          </p>
         </div>
       </div>
       <div className="section club-stats">
@@ -146,16 +167,20 @@ function Home() {
       </div>
       <div className="events-navbar">
         <ul className="events-list">
-          <li className="events-link">
-            <button
-              className={
-                event === "upcoming" ? "events-button active" : "events-button"
-              }
-              onClick={() => setEvent("upcoming")}
-            >
-              Upcoming Events
-            </button>
-          </li>
+          {upcomingEvents.length > 0 && (
+            <li>
+              <button
+                className={
+                  event === "upcoming"
+                    ? "events-button active"
+                    : "events-button"
+                }
+                onClick={() => setEvent("upcoming")}
+              >
+                Upcoming Events
+              </button>
+            </li>
+          )}
           <li>
             <button
               className={
@@ -181,77 +206,77 @@ function Home() {
         </ul>
       </div>
       <div className="event-container">
-      {event === "upcoming" ? (
-        <article className="event-article" data-aos>
-          {upcomingEvents.map((event: NewsItemProps) => {
-            return (
-              <div
-                className="news-piece-holder"
-                data-aos={event.animation}
-                data-aos-anchor-placement="center-bottom"
-                key={event.title}
-              >
-                <NewsItem
-                  type="upcoming"
-                  path={event.path}
-                  blurhash={event.blurhash}
-                  title={event.title}
-                  description={event.description}
-                  date={event.date}
-                  animation={event.animation}
-                  link={event.link ? event.link : undefined}
-                ></NewsItem>
-              </div>
-            );
-          })}
-        </article>
-      ) : event === "past" ? (
-        <article className="event-article">
-          {pastEvents.map((event: NewsItemProps) => {
-            return (
-              <div
-                className="news-piece-holder"
-                data-aos={event.animation}
-                data-aos-anchor-placement="center-bottom"
-              >
-                <NewsItem
-                  type="past"
-                  path={event.path}
-                  blurhash={event.blurhash}
-                  title={event.title}
-                  description={event.description}
-                  date={event.date}
-                  animation={event.animation}
-                  link={event.link ? event.link : undefined}
-                ></NewsItem>
-              </div>
-            );
-          })}
-        </article>
-      ) : (
-        <article className="event-article">
-          {achievementsEvents.map((event: NewsItemProps) => {
-            return (
-              <div
-                className="news-piece-holder"
-                data-aos={event.animation}
-                data-aos-anchor-placement="center-bottom"
-              >
-                <NewsItem
-                  type="achievements"
-                  path={event.path}
-                  blurhash={event.blurhash}
-                  title={event.title}
-                  description={event.description}
-                  date={""}
-                  animation={event.animation}
-                  link={event.link ? event.link : undefined}
-                ></NewsItem>
-              </div>
-            );
-          })}
-        </article>
-      )}
+        {event === "upcoming" ? (
+          <article className="event-article" data-aos>
+            {upcomingEvents.map((event: NewsItemProps) => {
+              return (
+                <div
+                  className="news-piece-holder"
+                  data-aos={event.animation}
+                  data-aos-anchor-placement="center-bottom"
+                  key={event.title}
+                >
+                  <NewsItem
+                    type="upcoming"
+                    path={event.path}
+                    blurhash={event.blurhash}
+                    title={event.title}
+                    description={event.description}
+                    date={event.date}
+                    animation={event.animation}
+                    link={event.link ? event.link : undefined}
+                  ></NewsItem>
+                </div>
+              );
+            })}
+          </article>
+        ) : event === "past" ? (
+          <article className="event-article">
+            {pastEvents.map((event: NewsItemProps) => {
+              return (
+                <div
+                  className="news-piece-holder"
+                  data-aos={event.animation}
+                  data-aos-anchor-placement="center-bottom"
+                >
+                  <NewsItem
+                    type="past"
+                    path={event.path}
+                    blurhash={event.blurhash}
+                    title={event.title}
+                    description={event.description}
+                    date={event.date}
+                    animation={event.animation}
+                    link={event.link ? event.link : undefined}
+                  ></NewsItem>
+                </div>
+              );
+            })}
+          </article>
+        ) : (
+          <article className="event-article">
+            {achievementsEvents.map((event: NewsItemProps) => {
+              return (
+                <div
+                  className="news-piece-holder"
+                  data-aos={event.animation}
+                  data-aos-anchor-placement="center-bottom"
+                >
+                  <NewsItem
+                    type="achievements"
+                    path={event.path}
+                    blurhash={event.blurhash}
+                    title={event.title}
+                    description={event.description}
+                    date={""}
+                    animation={event.animation}
+                    link={event.link ? event.link : undefined}
+                  ></NewsItem>
+                </div>
+              );
+            })}
+          </article>
+        )}
       </div>
       <Footer />
     </section>
