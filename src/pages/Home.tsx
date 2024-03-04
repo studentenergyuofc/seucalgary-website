@@ -27,7 +27,25 @@ function Home() {
   const isWindow = useMediaQuery("(max-width: 440px)");
 
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], [200, -950]);
+  const [transformValues, setTransformValues] = useState([100, -1100]);
+
+  useEffect(() => {
+    const updateTransformValues = () => {
+      if (window.innerWidth < 440) {
+        setTransformValues([80, -1100]);
+      } else {
+        setTransformValues([100, -1000]);
+      }
+    };
+
+    updateTransformValues();
+
+    window.addEventListener("resize", updateTransformValues);
+
+    return () => window.removeEventListener("resize", updateTransformValues);
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], transformValues);
 
   useEffect(() => {
     if (upcomingEvents.length < 1) {
@@ -55,7 +73,6 @@ function Home() {
     const handleScroll = () => {
       const scrolled = window.scrollY;
       const viewportHeight = window.innerHeight;
-
       if (scrolled >= viewportHeight + 170) {
         setPageEndNearing(false);
       } else {
