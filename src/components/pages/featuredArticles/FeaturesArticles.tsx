@@ -1,26 +1,26 @@
 import { useRef, useEffect } from "react";
-import Footer from "../components/Footer";
-import { Articles } from "../vite-env";
-import { articles } from "../lib/data";
-import ImgComponent from "../components/ImgComponent";
+import Footer from "@shared/Footer/Footer";
+import { Articles } from "../../../vite-env";
+import { articles } from "@lib/data";
+import ImgComponent from "@shared/ImgComponent/ImgComponent";
 import background from "/background3.jpg";
 import smbackground from "/background3-sm-800.jpg";
-import useMediaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "@hooks/useMediaQuery";
 import { useState } from "react";
 
 function Blogs() {
   const topOfPage = useRef<HTMLDivElement>(null);
   const isWindow = useMediaQuery("(max-width: 440px)");
-  const [defaultBackground, setDefaultBackground] = useState<string>(background);
+  const [defaultBackground, setDefaultBackground] =
+    useState<string>(background);
 
   useEffect(() => {
-    if (isWindow){
+    if (isWindow) {
       setDefaultBackground(smbackground);
-    }
-    else{
+    } else {
       setDefaultBackground(background);
     }
-  }, [isWindow])
+  }, [isWindow]);
 
   useEffect(() => {
     topOfPage.current?.scrollIntoView({ behavior: "smooth" });
@@ -31,10 +31,10 @@ function Blogs() {
       <div>
         <div className="page-heading" ref={topOfPage}>
           <ImgComponent
-          src={defaultBackground}
-          altimages={""}
-          altimagesizes={""}
-          blurhash={"L8DS%Ox_0K-.u6o}s,NF?akUt7xt"}
+            src={defaultBackground}
+            altimages={""}
+            altimagesizes={""}
+            blurhash={"L8DS%Ox_0K-.u6o}s,NF?akUt7xt"}
           />
           <div className="page-heading-overlay"></div>
           <div className="page-heading-text">
@@ -45,28 +45,28 @@ function Blogs() {
       </div>
       <div className="blog">
         {articles.map((article: Articles) => {
-            return (
-              <div className="blog-box" key={article.title}>
-                <div className="blog-details">
-                  <h4>{article.title}</h4>
-                  <p>
-                    {article.description}
-                  </p>
-                  <a href={article.link} target="_blank">CONTINUE READING</a>
-                </div>
-                <div className="blog-img">
-                  <ImgComponent
+          return (
+            <div className="blog-box" key={article.title}>
+              <div className="blog-details">
+                <h4>{article.title}</h4>
+                <p>{article.description}</p>
+                <a href={article.link} target="_blank">
+                  CONTINUE READING
+                </a>
+              </div>
+              <div className="blog-img">
+                <ImgComponent
                   src={article.image}
                   altimages={""}
                   altimagesizes={""}
                   blurhash={article.blurhash}
-                  />
-                  <div className="blog-img-overlay"></div>
-                </div>
-                <h1>{article.date}</h1>
+                />
+                <div className="blog-img-overlay"></div>
+              </div>
+              <h1>{article.date}</h1>
             </div>
-            )
-          })}
+          );
+        })}
       </div>
       <Footer />
     </div>

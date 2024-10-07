@@ -119,7 +119,7 @@ export const executives = [
   },
   {
     name: "Abduljalel Wadouh",
-    position: "Vice President",
+    position: "VP Finance",
     path: "/aj_img2.jpg",
     altimages: "/aj_img2-sm-150.jpg 150w, aj_img2.jpg 300w",
     altimagesizes: "(max-width: 440px) 130px, 300px",
@@ -140,22 +140,11 @@ export const executives = [
     blurhash: "LJC~}Hxz5n9Z,$MuEeNI9dx[nOof",
   },
   {
-    name: "Axel Sanchez",
-    position: "Co-VP Development",
-    path: "/img-axel.jpg",
-    altimages: "/img-axel-sm-150.jpg 150w, img-axel.jpg 300w",
-    altimagesizes: "(max-width: 440px) 130px, 300px",
-    major: "Software Engineering",
-    text: "I am interested in the innovative technologies and sustainable practices within the energy sector, their role in advancing renewable energy sources and reducing environmental impact.",
-    hobby: "Football, gym and gaming.",
-    blurhash: "L8BW*=~ps_,T?LD*Epb_02X9%6o[",
-  },
-  {
     name: "Mariia Podgaietska",
     path: "/img-mariia.jpg",
     altimages: "/img-mariia-sm-150.jpg 150w, img-mariia.jpg 300w",
     altimagesizes: "(max-width: 440px) 130px, 300px",
-    position: "Co-VP Development",
+    position: "VP Software Development",
     major: "Software Engineering",
     text: "I am interested in how technology can be leveraged within the energy sector to drive the transition towards renewable sources and pave a way for a sustainable energy future.",
     hobby: "Baking, gym and traveling.",
@@ -308,5 +297,92 @@ export const achievementsEvents = [
     path: "/albertasummit.jpg",
     blurhash: "LEFh#CM}EKR*00%Kn#E1~TI@eo%1",
     animation: "fade-left",
+  },
+] as const;
+
+export const collaborators = [
+  {
+    title: "NanosTech",
+    path: "/colab1.png",
+  },
+  {
+    title: "Kanin Energy",
+    path: "/colab2.png",
+  },
+  {
+    title: "ATCO",
+    path: "/colab3.png",
+  },
+  {
+    title: "Energy Toolbase",
+    path: "/colab4.png",
+  },
+  {
+    title: "TC Energy",
+    path: "/colab5.png",
+  },
+  {
+    title: "Canadian Natural(CNRL)",
+    path: "/colab6.png",
+  },
+  {
+    title: "accenture",
+    path: "/colab7.png",
+  },
+  {
+    title: "Schulich",
+    path: "/colab8.png",
+  },
+  {
+    title: "Alberta Energy Regulator",
+    path: "/colab9.png",
+  },
+  {
+    title: "Haskayne",
+    path: "/colab10.png",
+  },
+  {
+    title: "University of Calgary",
+    path: "/colab11.png",
+  },
+  {
+    title: "Carbon Upcycling",
+    path: "/colab12.png",
+  },
+  {
+    title: "Energy Futures Lab",
+    path: "/colab13.png",
+  },
+  {
+    title: "Propel",
+    path: "/colab14.png",
+  },
+  {
+    title: "Solas Energy",
+    path: "/colab15.png",
+  },
+  {
+    title: "EWB",
+    path: "/colab16.png",
+  },
+  {
+    title: "Alt Hotels",
+    path: "/colab17.png",
+  },
+  {
+    title: "Innovate Calgary",
+    path: "/colab18.png",
+  },
+  {
+    title: "Siksika",
+    path: "/colab19.png",
+  },
+  {
+    title: "Exergy",
+    path: "/colab20.png",
+  },
+  {
+    title: "Brightspot Climate",
+    path: "/colab21.png",
   },
 ] as const;
