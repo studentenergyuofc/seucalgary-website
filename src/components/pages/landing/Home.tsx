@@ -38,18 +38,6 @@ function Home() {
     window.scrollBy({ top: scrollDistance, behavior: "smooth" });
   };
 
-  const items = [
-    { image: "https://via.placeholder.com/400x300?text=Company1" },
-    { image: "https://via.placeholder.com/400x300?text=Company2" },
-    { image: "https://via.placeholder.com/400x300?text=Company3" },
-    { image: "https://via.placeholder.com/400x300?text=Company4" },
-    { image: "https://via.placeholder.com/400x300?text=Company5" },
-    { image: "https://via.placeholder.com/400x300?text=Company6" },
-    { image: "https://via.placeholder.com/400x300?text=Company7" },
-    { image: "https://via.placeholder.com/400x300?text=Company8" },
-    { image: "https://via.placeholder.com/400x300?text=Company9" },
-  ];
-
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;

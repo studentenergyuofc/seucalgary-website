@@ -28,18 +28,6 @@ export const Carousel: FC<CarouselProps> = ({ items }) => {
 
   const isSmallScreen = useMediaQuery("(max-width: 740px)");
 
-  useEffect(() => {
-    startAutoScroll();
-    return () => stopAutoScroll();
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.style.setProperty(
-      "--num",
-      items.length.toString()
-    );
-  }, [items]);
-
   const startAutoScroll = () => {
     stopAutoScroll();
     autoScrollInterval.current = setInterval(() => {
@@ -48,6 +36,18 @@ export const Carousel: FC<CarouselProps> = ({ items }) => {
       setCurrentIndex((prev) => (prev === items.length - 4 ? 0 : prev + 1));
     }, 3000);
   };
+
+  useEffect(() => {
+    startAutoScroll();
+    return () => stopAutoScroll();
+  }, [startAutoScroll]);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--num",
+      items.length.toString()
+    );
+  }, [items]);
 
   const stopAutoScroll = () => {
     if (autoScrollInterval.current) {
