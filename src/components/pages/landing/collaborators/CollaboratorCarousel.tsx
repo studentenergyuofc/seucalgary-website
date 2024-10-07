@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, FC } from "react";
+import { useState, useEffect, useRef, FC, useCallback } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./CollaboratorCarousel.css";
 import useMediaQuery from "@hooks/useMediaQuery";
@@ -28,14 +28,14 @@ export const Carousel: FC<CarouselProps> = ({ items }) => {
 
   const isSmallScreen = useMediaQuery("(max-width: 740px)");
 
-  const startAutoScroll = () => {
+  const startAutoScroll = useCallback(() => {
     stopAutoScroll();
     autoScrollInterval.current = setInterval(() => {
       setIsAnimating(true);
       setIsManualScroll(false);
       setCurrentIndex((prev) => (prev === items.length - 4 ? 0 : prev + 1));
     }, 3000);
-  };
+  }, [items.length]);
 
   useEffect(() => {
     startAutoScroll();
