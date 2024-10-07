@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "react-router-dom";
-import useMediaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "@hooks/useMediaQuery";
 import logo from "/logo3.png";
 import logotitle from "/logotitle.png";
 import { useEffect } from "react";
@@ -14,7 +14,12 @@ interface HeaderProps {
   setNavbar: (value: boolean) => void;
 }
 
-function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps) {
+function Header({
+  setDropdownMenu,
+  dropdownMenu,
+  navbar,
+  setNavbar,
+}: HeaderProps) {
   const location = useLocation();
   const isWindow = useMediaQuery("(max-width: 800px)");
   const atHome =
@@ -22,26 +27,24 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
     location.pathname === "/about" ||
     location.pathname === "/contact";
 
-    useEffect(() => {
-
-      const changeBackground = () => {
-        if (window.scrollY >= 10 ) {
-          setNavbar(true);
-        } else {
-          setNavbar(false);
-          if (dropdownMenu) {
-            setDropdownMenu(false);
-          }
+  useEffect(() => {
+    const changeBackground = () => {
+      if (window.scrollY >= 10) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+        if (dropdownMenu) {
+          setDropdownMenu(false);
         }
-        
-      };
+      }
+    };
 
     // Register the event listener
     window.addEventListener("scroll", changeBackground);
 
     // Return a cleanup function to remove the event listener when the component unmounts
     return () => window.removeEventListener("scroll", changeBackground);
-    }, [setNavbar, setDropdownMenu, dropdownMenu]);
+  }, [setNavbar, setDropdownMenu, dropdownMenu]);
 
   const showDropdown = () => {
     setDropdownMenu(!dropdownMenu);
@@ -50,7 +53,7 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
   useEffect(() => {
     if (dropdownMenu) {
       setNavbar(true);
-    } 
+    }
   }, [dropdownMenu, setNavbar]);
 
   useEffect(() => {
@@ -85,7 +88,9 @@ function Header({setDropdownMenu, dropdownMenu, navbar, setNavbar} : HeaderProps
               </li>
             </ul>
           ) : (
-            <p className="hamburger-menu" onClick={() => showDropdown()}>&#9776;</p>
+            <p className="hamburger-menu" onClick={() => showDropdown()}>
+              &#9776;
+            </p>
           )}
         </div>
       </div>

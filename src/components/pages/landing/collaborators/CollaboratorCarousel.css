@@ -1,0 +1,130 @@
+.collaborator-container {
+  position: relative;
+  height: 70vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collaborators-header {
+  position: relative;
+  height: auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collaborators-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.collaborators-title h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #f8b714;
+  margin-bottom: 0.5rem;
+}
+
+.carouselwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 6% 0 6%;
+}
+
+.ui {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 97%;
+  z-index: 2;
+}
+
+.carousel-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.carousel {
+  display: flex;
+  gap: 7%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-li {
+  list-style: none;
+  min-width: 20%;
+  box-sizing: border-box;
+}
+
+.carousel-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .collaborator-container {
+    height: 50vh;
+    padding-bottom: 2rem;
+  }
+
+  .collaborators-header {
+    height: auto;
+  }
+
+  .collaborators-title {
+    width: 70%;
+    text-align: center;
+  }
+
+  .collaborators-title h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    word-wrap: break-word;
+  }
+
+  .collaborators-title p {
+    font-size: 0.8rem;
+  }
+
+  .carousel-li {
+    list-style: none;
+    min-width: 46%;
+    box-sizing: border-box;
+  }
+
+  .carousel-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .collaborators-title h2 {
+    font-size: 1.7rem;
+    word-wrap: break-word;
+  }
+
+  .collaborator-container {
+    height: 40vh;
+  }
+
+  .carousel-button {
+    display: none;
+  }
+}

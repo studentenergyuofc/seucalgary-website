@@ -1,4 +1,4 @@
-import { Position } from "../vite-env";
+import { Position } from "../../../vite-env";
 
 function PositionCard(props: Position): JSX.Element {
   return (

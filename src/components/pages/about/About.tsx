@@ -1,13 +1,13 @@
-import FlipCard from "../components/FlipCard";
+import FlipCard from "./FlipCard";
 import subbnr from "/banner4.jpg";
 import mainbnr from "/banner3.jpg";
-import ImgComponent from "../components/ImgComponent";
-import Footer from "../components/Footer";
+import ImgComponent from "@shared/ImgComponent/ImgComponent";
+import Footer from "@shared/Footer/Footer";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useRef, useEffect } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { ExecMembers } from "../vite-env";
-import { executives } from "../lib/data";
+import { ExecMembers } from "../../../vite-env";
+import { executives } from "@lib/data";
 
 function About() {
   const topOfPage = useRef<HTMLDivElement>(null);
@@ -17,17 +17,14 @@ function About() {
   }, []);
 
   const [text] = useTypewriter({
-    words: [
-      "Student Energy at UofC!",
-      "SEUC!",
-    ],
+    words: ["Student Energy at UofC!", "SEUC!"],
     loop: true,
     deleteSpeed: 50,
   });
 
   const handleScroll = () => {
     const scrollDistance = window.innerHeight;
-    window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
+    window.scrollBy({ top: scrollDistance, behavior: "smooth" });
   };
 
   return (
@@ -43,12 +40,12 @@ function About() {
           />
           <div className="main-banner-overlay blue">
             <h1>
-              We are{" "}
-              <span className="cursor-text">{text}</span>
+              We are <span className="cursor-text">{text}</span>
               <Cursor />
             </h1>
             <h3>
-              Nurturing professional development and bridging the gap between university and the energy sector.
+              Nurturing professional development and bridging the gap between
+              university and the energy sector.
             </h3>
           </div>
           <div className="main-banner-overlay yellow"></div>
@@ -99,7 +96,7 @@ function About() {
                 hobby={exec.hobby}
                 blurhash={exec.blurhash}
               />
-            )
+            );
           })}
         </div>
       </div>
@@ -115,15 +112,17 @@ function About() {
           <div className="founder-container">
             <div className="founder-img">
               <ImgComponent
-              src={"/img-kareem-prof.jpg"}
-              altimages={"/img-kareem-prof-sm-300.jpg 300w, /img-kareem-prof.jpg 632w"}
-              altimagesizes={"(max-width: 440px) 300px, 500px"}
-              blurhash={"LhIiLG%1_Mof.TWAIUWBJFbIRks+"}
-            />
+                src={"/img-kareem-prof.jpg"}
+                altimages={
+                  "/img-kareem-prof-sm-300.jpg 300w, /img-kareem-prof.jpg 632w"
+                }
+                altimagesizes={"(max-width: 440px) 300px, 500px"}
+                blurhash={"LhIiLG%1_Mof.TWAIUWBJFbIRks+"}
+              />
             </div>
             <div className="founder-testimony">
               <div className="founder-title">
-                <h1>President and Co-Founder of Student Energy at UofC</h1>
+                <h1>Co-Founder and President of Student Energy at UofC</h1>
               </div>
               <p>
                 The future will be shaped by the energy decisions made today,
@@ -141,7 +140,7 @@ function About() {
           <div className="founder-container">
             <div className="founder-testimony">
               <div className="founder-title">
-                <h1>Vice President and Co-Founder of Student Energy at UofC</h1>
+                <h1>Co-Founder and VP Finance of Student Energy at UofC</h1>
               </div>
               <p>
                 With Alberta being the center of the Canadian energy sector,
@@ -158,11 +157,11 @@ function About() {
             </div>
             <div className="founder-img">
               <ImgComponent
-              src={"/aj_img1.jpg"}
-              altimages={"/aj_img1-sm-300.jpg 300w, /aj_img1.jpg 500w"}
-              altimagesizes={"(max-width: 440px) 300px, 500px"}
-              blurhash={"LwCa7IR:tSWAt:bIWFs.I_oKWBoc"}
-            />
+                src={"/aj_img1.jpg"}
+                altimages={"/aj_img1-sm-300.jpg 300w, /aj_img1.jpg 500w"}
+                altimagesizes={"(max-width: 440px) 300px, 500px"}
+                blurhash={"LwCa7IR:tSWAt:bIWFs.I_oKWBoc"}
+              />
             </div>
           </div>
         </div>
