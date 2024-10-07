@@ -12,7 +12,7 @@ const IntroInfo: React.FC = () => {
       if (window.innerWidth < 440) {
         setTransformValues([80, -1100]);
       } else {
-        setTransformValues([150, -1000]);
+        setTransformValues([100, -1000]);
       }
     };
 
