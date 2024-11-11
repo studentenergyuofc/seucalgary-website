@@ -142,7 +142,9 @@ function About() {
           <div className="founder-container">
             <div className="founder-testimony">
               <div className="founder-title">
-                <h1>Co-Founder and VP Finance of Student Energy at UofC</h1>
+                <h1>
+                  Co-Founder and Sponsorship Director of Student Energy at UofC
+                </h1>
               </div>
               <p>
                 With Alberta being the center of the Canadian energy sector,
