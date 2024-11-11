@@ -8,6 +8,8 @@ import { useRef, useEffect } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { ExecMembers } from "../../../vite-env";
 import { executives } from "@lib/data";
+import { collaborators } from "@lib/data";
+import { Collaborators } from "../about/collaborators/Collaborators";
 
 function About() {
   const topOfPage = useRef<HTMLDivElement>(null);
@@ -166,6 +168,7 @@ function About() {
           </div>
         </div>
       </div>
+      <Collaborators items={collaborators} />
       <Footer />
     </div>
   );
