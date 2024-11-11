@@ -116,9 +116,9 @@ export const executives = [
     altimagesizes: "(max-width: 440px) 130px, 300px",
     position: "VP Events",
     major: "Chemical Engineering",
-    text: "TBD",
-    hobby: "TBD",
-    blurhash: "LVL;y^j[~qof~qj[M_j[RjfQIUay",
+    text: "My interest in energy sector is driven by how it sits at the crossroads of technological innovation, environmental stewardship, and social equity.",
+    hobby: "Camping and horse riding.",
+    blurhash: "LMAnp7-o%%s,OeE1DiR+b_xBxsxZ",
   },
 ] as const;
 
