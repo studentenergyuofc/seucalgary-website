@@ -1,78 +1,3 @@
-export const positions = [
-  {
-    title: "VP DEVELOPMENT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-    deadline: "September 15th 2023",
-    path: "/rocket-dynamic-color.png",
-    btnText: "Applications closed",
-    isEnable: false,
-  },
-  {
-    title: "JR. DEVELOPMENT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-    deadline: "September 15th 2023",
-    path: "/computer-dynamic-color.png",
-    btnText: "Applications closed",
-    isEnable: false,
-  },
-  {
-    title: "VP EVENTS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-    deadline: "September 15th 2023",
-    path: "/video-camera-dynamic-color.png",
-    btnText: "Applications closed",
-    isEnable: false,
-  },
-  {
-    title: "JR. EVENTS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-    deadline: "September 15th 2023",
-    path: "/calender-dynamic-color.png",
-    btnText: "Applications closed",
-    isEnable: false,
-  },
-  {
-    title: "VP PUBLIC RELATIONS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-    deadline: "September 15th 2023",
-    path: "/megaphone-dynamic-color.png",
-    btnText: "Applications closed",
-    isEnable: false,
-  },
-  {
-    title: "JR. PUBLIC RELATIONS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-    deadline: "September 15th 2023",
-    path: "/at-dynamic-color.png",
-    btnText: "Applications closed",
-    isEnable: false,
-  },
-  {
-    title: "VP COMMUNICATIONS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-    deadline: "September 15th 2023",
-    path: "/chat-bubble-dynamic-color.png",
-    btnText: "Applications closed",
-    isEnable: false,
-  },
-  {
-    title: "JR. COMMUNICATIONS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet.",
-    deadline: "September 15th 2023",
-    path: "/phone-missing-dynamic-color.png",
-    btnText: "Applications closed",
-    isEnable: false,
-  },
-] as const;
-
 export const articles = [
   {
     title: "Alternative energy sources you probably haven’t heard of",
@@ -119,7 +44,7 @@ export const executives = [
   },
   {
     name: "Abduljalel Wadouh",
-    position: "VP Finance",
+    position: "Sponsorship Director",
     path: "/aj_img2.jpg",
     altimages: "/aj_img2-sm-150.jpg 150w, aj_img2.jpg 300w",
     altimagesizes: "(max-width: 440px) 130px, 300px",
@@ -129,15 +54,16 @@ export const executives = [
     blurhash: "LjH.jBs;^+jG_4aJaJnhR:oHRjoc",
   },
   {
-    name: "Ibrahim Hashmi",
+    name: "Gabriela Perez Nasibullina",
     position: "VP Communications",
-    path: "/img-ibrahim.jpg",
-    altimages: "/img-ibrahim-sm-150.jpg 150w, img-ibrahim.jpg 300w",
+    path: "/img-gabriela.jpg",
+    altimages: "/img-gabriela-sm-150.jpg 150w, img-gabriela.jpg 300w",
     altimagesizes: "(max-width: 440px) 130px, 300px",
-    major: "Mechanical Engineering",
-    text: "Being able to facilitate and advocate for an exciting energy future unfolding right in front of us!",
-    hobby: "Reading and playing video games.",
-    blurhash: "LJC~}Hxz5n9Z,$MuEeNI9dx[nOof",
+    major: "Energy Engineering",
+    text: "I’m drawn to areas like renewable energy systems, smart grids, and energy storage solutions, where optimization and sustainability are key.",
+    hobby:
+      "Gaming, working out, exploring around. But I also need a regular dose of snuggles with my cat.",
+    blurhash: "LGHnZ;~oTb=|;Jt2%Kr=_2s:={E2",
   },
   {
     name: "Mariia Podgaietska",
@@ -162,48 +88,15 @@ export const executives = [
     blurhash: "LOHL0Y_M%y_3=^%M.7NGE2RiV[s;",
   },
   {
-    name: "Omar Ahmed",
-    path: "/img-omar.jpg",
-    altimages: "/img-omar-sm-150.jpg 150w, img-omar.jpg 300w",
+    name: "Hashim Al-Kindi",
+    path: "/img-hashim.jpg",
+    altimages: "/img-hashim-sm-150.jpg 150w, img-hashim.jpg 300w",
     altimagesizes: "(max-width: 440px) 130px, 300px",
-    position: "VP Events",
-    major: "Electrical Engineering",
-    text: "I am interested in the groundbreaking possibilities of renewable energy technologies, their innovative nature, and the sustainability-driven impact they offer.",
-    hobby: "Gym and hiking.",
-    blurhash: "LAGkm_=s0MSz00I[-oE3?]j?^6?F",
-  },
-  {
-    name: "Adballah El Gendy",
-    path: "/img-elgendy.jpg",
-    altimages: "/img-elgendy-sm-150.jpg 150w, img-elgendy.jpg 300w",
-    altimagesizes: "(max-width: 440px) 130px, 300px",
-    position: "Junior VP Public Relations",
-    major: "Natural Sciences",
-    text: "I am interested in renewable energy systems and how economics, research and policy intertwine within the energy sector today.",
-    hobby: "Squash and basketball.",
-    blurhash: "LkHTpuWTi{R+~Uads:ofTcjFtQt6",
-  },
-  {
-    name: "Banan Al Dabbas",
-    path: "/img-bannan.jpg",
-    altimages: "/img-bannan-sm-150.jpg 150w, img-bannan.jpg 300w",
-    altimagesizes: "(max-width: 440px) 130px, 300px",
-    position: "Junior VP Communications",
-    major: "Sustainable Systems Engineering",
-    text: "I am interested in a low carbon footprint future where renewable energy thrives and can produce sufficient energy for consumers' consumption.",
-    hobby: "Gym, Brazillian jiujitsu and gaming.",
-    blurhash: "L9B:No%zD%4;?a~B9bD%?u4:v#aK",
-  },
-  {
-    name: "Mariam Aly",
-    path: "/mariam_img.jpg",
-    altimages: "/mariam_img-sm-150.jpg 150w, mariam_img.jpg 300w",
-    altimagesizes: "(max-width: 440px) 130px, 300px",
-    position: "Junior VP Events",
-    major: "Biomedical Engineering",
-    text: "I am interested in the potential of renewable energy sources to significantly reduce the global carbon emissions and provide sustainable solutions for the world's growing energy needs.",
-    hobby: "Gym, cooking and reading.",
-    blurhash: "LADJ6OD%.Sxa8{Rj01xtEOt7~CRj",
+    position: "VP Sponsorship & Finance",
+    major: "Mechanical Engineering",
+    text: "I look forward to seeing new innovations in the energy production space that would help us reuse current infrastructure and propel us to a more sustainable future.",
+    hobby: "Football, gym, motorsport.",
+    blurhash: "LBEVgKxy-@xvV$V=oMWAXQsNISav",
   },
   {
     name: "Cameron Winfield",
@@ -215,6 +108,17 @@ export const executives = [
     text: "I am interested in contributing to sustainable practices and addressing global energy challenges to protect our future generations.",
     hobby: "Reading, hiking and gym.",
     blurhash: "L5Aw0UI;0L^Q^,buOY-V*0s:v#I:",
+  },
+  {
+    name: "Almuataz Alghafri",
+    path: "/img-almuataz.jpg",
+    altimages: "/img-almuataz-sm-150.jpg 150w, img-almuataz.jpg 300w",
+    altimagesizes: "(max-width: 440px) 130px, 300px",
+    position: "VP Events",
+    major: "Chemical Engineering",
+    text: "TBD",
+    hobby: "TBD",
+    blurhash: "LVL;y^j[~qof~qj[M_j[RjfQIUay",
   },
 ] as const;
 

@@ -14,8 +14,6 @@ import useMediaQuery from "@hooks/useMediaQuery";
 import ClubStats from "./clubStats/ClubStats";
 import Events from "./events/Events";
 import IntroInfo from "./introInfo/IntroInfo";
-import { Carousel } from "./collaborators/CollaboratorCarousel";
-import { collaborators } from "@lib/data";
 
 function Home() {
   const topOfPage = useRef<HTMLDivElement>(null);
@@ -100,7 +98,6 @@ function Home() {
       <IntroInfo />
       <ClubStats />
       <Events />
-      <Carousel items={collaborators} />
       <Footer />
     </section>
   );

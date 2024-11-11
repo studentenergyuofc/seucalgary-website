@@ -1301,6 +1301,7 @@ span {
 }
 
 .card-content h4 {
+  text-align: center;
   font-size: 1rem;
 }
 
@@ -1335,6 +1336,10 @@ span {
 
   .cards-container {
     gap: 2.5rem;
+  }
+
+  .card-content h4 {
+    font-size: 0.8rem;
   }
 
   .card {
@@ -1380,6 +1385,7 @@ span {
 
   .card-content h4 {
     font-size: 0.8rem;
+    line-height: 1;
   }
 
   .card-content h6 {
@@ -1393,8 +1399,8 @@ span {
 
   .exec-img-container {
     width: 80%;
-    height: 75%;
-    margin-bottom: 0.5rem;
+    height: 65%;
+    margin-bottom: 0.8rem;
   }
 }
 

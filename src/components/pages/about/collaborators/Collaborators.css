@@ -1,10 +1,11 @@
 .collaborator-container {
   position: relative;
-  height: 70vh;
+  height: auto;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6rem 4rem 10rem 4rem;
 }
 
 .collaborators-header {
@@ -14,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 4rem;
 }
 
 .collaborators-title {
@@ -31,60 +33,38 @@
   margin-bottom: 0.5rem;
 }
 
-.carouselwrapper {
+.collaborators-list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
   justify-content: center;
-  position: relative;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 6% 0 6%;
+  /* background: green; */
 }
 
-.ui {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 97%;
-  z-index: 2;
-}
-
-.carousel-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  font-size: 1.5em;
-}
-
-.carousel {
-  display: flex;
-  gap: 7%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-li {
+.collaborator-card {
   list-style: none;
-  min-width: 20%;
-  box-sizing: border-box;
+  flex: 1 1 20%;
+  max-width: 200px;
+  min-width: 150px;
 }
 
-.carousel-img {
+.collaborator-img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
   .collaborator-container {
-    height: 50vh;
-    padding-bottom: 2rem;
+    padding: 4rem 2rem 2rem 3rem;
+    margin-bottom: 3rem;
   }
 
   .collaborators-header {
     height: auto;
+    padding-top: 0;
   }
 
   .collaborators-title {
@@ -95,7 +75,6 @@
   .collaborators-title h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-
     word-wrap: break-word;
   }
 
@@ -103,14 +82,17 @@
     font-size: 0.8rem;
   }
 
-  .carousel-li {
-    list-style: none;
-    min-width: 46%;
-    box-sizing: border-box;
+  .collaborator-card {
+    max-width: 120px;
+    min-width: 120px;
   }
 
-  .carousel-button {
-    display: none;
+  .collaborators-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -121,10 +103,15 @@
   }
 
   .collaborator-container {
-    height: 40vh;
+    padding: 3rem 0 3rem 0;
   }
 
-  .carousel-button {
-    display: none;
+  .collaborator-card {
+    max-width: 100px;
+    min-width: 100px;
+  }
+
+  .collaborators-list {
+    padding: 0;
   }
 }
