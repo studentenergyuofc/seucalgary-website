@@ -81,7 +81,7 @@ function Header({
                 <Link to="/about">ABOUT</Link>
               </li>
               <li className="nav-item">
-                <Link to="/blogs">ARTICLES</Link>
+                <Link to="/articles">ARTICLES</Link>
               </li>
               <li className="nav-item">
                 <Link to="/contact">CONTACT US</Link>

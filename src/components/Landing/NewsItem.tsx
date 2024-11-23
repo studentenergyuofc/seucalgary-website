@@ -1,10 +1,6 @@
 import React from "react";
-import { NewsItemProps } from "../../../../vite-env";
+import { NewsItemExtendedProps } from "@interfaces/NewsItems";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
-
-interface NewsItemExtendedProps extends NewsItemProps {
-  type: string; //optional for events
-}
 
 const NewsItem: React.FC<NewsItemExtendedProps> = ({
   path,

@@ -1,15 +1,11 @@
 import { Outlet } from "react-router-dom";
-import Header from "../AppHeader/AppHeader";
-import DropDownMenu from "../DropdownMenu/DropDownMenu";
+import Header from "@components/shared/AppHeader/AppHeader";
+import DropDownMenu from "@components/shared/DropdownMenu/DropDownMenu";
 import { useState } from "react";
 
-interface LayoutProps {
-  setDropdownMenu: (value: boolean) => void;
-  dropdownMenu: boolean;
-}
-
-function Layout({ dropdownMenu, setDropdownMenu }: LayoutProps) {
+function Layout() {
   const [navbar, setNavbar] = useState<boolean>(false);
+  const [dropdownMenu, setDropdownMenu] = useState<boolean>(false);
 
   return (
     <div className="main">

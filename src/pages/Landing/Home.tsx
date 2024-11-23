@@ -11,9 +11,9 @@ import "aos/dist/aos.css";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
 import useMediaQuery from "@hooks/useMediaQuery";
-import ClubStats from "./clubStats/ClubStats";
-import Events from "./events/Events";
-import IntroInfo from "./introInfo/IntroInfo";
+import ClubStats from "@components/Landing/ClubStats";
+import Events from "@components/Landing/Events";
+import IntroInfo from "@components/Landing/IntroInfo";
 
 function Home() {
   const topOfPage = useRef<HTMLDivElement>(null);
