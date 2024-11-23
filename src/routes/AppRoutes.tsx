@@ -1,5 +1,6 @@
 import { Suspense } from "react";
-import { RouteInfo, Routes as AppRoutesConfig } from "@routes/RouteDefs";
+import { Routes as AppRoutesConfig } from "@routes/RouteDefs";
+import { RouteInfo } from "@interfaces/RouteInfo";
 import { AppPageStringConstants as c } from "@lib/DisplayConstants";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Layout from "@layout/AppLayout";
