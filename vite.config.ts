@@ -7,11 +7,13 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@app": path.resolve(process.cwd(), "src/components/app"),
-      "@pages": path.resolve(process.cwd(), "src/components/pages"),
+      "@components": path.resolve(process.cwd(), "src/components"),
+      "@pages": path.resolve(process.cwd(), "src/pages"),
       "@shared": path.resolve(process.cwd(), "src/components/shared"),
       "@lib": path.resolve(process.cwd(), "src/lib"),
       "@hooks": path.resolve(process.cwd(), "src/hooks"),
+      "@routes": path.resolve(process.cwd(), "src/routes"),
+      "@layout": path.resolve(process.cwd(), "src/layout"),
     },
   },
 });

@@ -1,4 +1,4 @@
-import FlipCard from "./FlipCard";
+import FlipCard from "../../components/About/FlipCard";
 import subbnr from "/banner4.jpg";
 import mainbnr from "/banner3.jpg";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
@@ -6,10 +6,10 @@ import Footer from "@shared/Footer/Footer";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useRef, useEffect } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { ExecMembers } from "../../../vite-env";
+import { ExecMembers } from "../../vite-env";
 import { executives } from "@lib/data";
 import { collaborators } from "@lib/data";
-import { Collaborators } from "../about/collaborators/Collaborators";
+import { Collaborators } from "@components/About/Collaborators";
 
 function About() {
   const topOfPage = useRef<HTMLDivElement>(null);

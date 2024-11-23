@@ -1,6 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useState } from "react";
-import { ExecMembers } from "../../../vite-env";
+import { ExecMembers } from "../../vite-env";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
 
 function FlipCard(props: ExecMembers) {

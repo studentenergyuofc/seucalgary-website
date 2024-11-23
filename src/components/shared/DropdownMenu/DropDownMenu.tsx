@@ -56,8 +56,8 @@ function DropDownMenu({
           <li className="dd-menu-optns">
             <Link
               className="dd-menu-nav"
-              to="/blogs"
-              onClick={() => handlePageChange("/blogs")}
+              to="/articles"
+              onClick={() => handlePageChange("/articles")}
             >
               ARTICLES
             </Link>
