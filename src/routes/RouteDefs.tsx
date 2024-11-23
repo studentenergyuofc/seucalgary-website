@@ -1,11 +1,6 @@
-import React, { lazy } from "react";
+import { lazy } from "react";
 import { AppPageStringConstants as c } from "@lib/DisplayConstants";
-
-export interface RouteInfo {
-  Component: React.ComponentType;
-  path: string;
-  title: string;
-}
+import { RouteInfo } from "@interfaces/RouteInfo";
 
 export const Routes: RouteInfo[] = [
   {
@@ -24,7 +19,7 @@ export const Routes: RouteInfo[] = [
     title: c.title.CONTACT,
   },
   {
-    Component: lazy(() => import("@pages/Articles/FeaturesArticles")),
+    Component: lazy(() => import("@pages/Articles/Articles")),
     path: c.pathId.ARTICLES,
     title: c.title.ARTICLES,
   },

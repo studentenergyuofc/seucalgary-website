@@ -6,7 +6,7 @@ import Footer from "@shared/Footer/Footer";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useRef, useEffect } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { ExecMembers } from "../../vite-env";
+import { ExecMembers } from "@interfaces/ExecMembers";
 import { executives } from "@lib/data";
 import { collaborators } from "@lib/data";
 import { Collaborators } from "@components/About/Collaborators";

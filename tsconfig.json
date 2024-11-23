@@ -29,7 +29,8 @@
       "@lib/*": ["src/lib/*"],
       "@hooks/*": ["src/hooks/*"],
       "@routes/*": ["src/routes/*"],
-      "@layout/*": ["src/layout/*"]
+      "@layout/*": ["src/layout/*"],
+      "@interfaces/*": ["src/interfaces/*"]
     }
   },
   "include": ["src"],

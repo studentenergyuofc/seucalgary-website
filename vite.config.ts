@@ -14,6 +14,7 @@ export default defineConfig({
       "@hooks": path.resolve(process.cwd(), "src/hooks"),
       "@routes": path.resolve(process.cwd(), "src/routes"),
       "@layout": path.resolve(process.cwd(), "src/layout"),
+      "@interfaces": path.resolve(process.cwd(), "src/interfaces"),
     },
   },
 });

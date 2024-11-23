@@ -1,4 +1,4 @@
-import { NewsItemProps } from "../../../vite-env";
+import { NewsItemProps } from "@interfaces/NewsItems";
 import NewsItem from "./NewsItem";
 import { useState, useEffect } from "react";
 import { achievementsEvents, upcomingEvents, pastEvents } from "@lib/data";

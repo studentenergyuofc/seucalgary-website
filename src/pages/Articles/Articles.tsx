@@ -1,14 +1,14 @@
 import { useRef, useEffect } from "react";
 import Footer from "@shared/Footer/Footer";
-import { Articles } from "../../../vite-env";
 import { articles } from "@lib/data";
+import { Articles } from "@interfaces/Articles";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
 import background from "/background3.jpg";
 import smbackground from "/background3-sm-800.jpg";
 import useMediaQuery from "@hooks/useMediaQuery";
 import { useState } from "react";
 
-function Blogs() {
+function Articles() {
   const topOfPage = useRef<HTMLDivElement>(null);
   const isWindow = useMediaQuery("(max-width: 440px)");
   const [defaultBackground, setDefaultBackground] =
@@ -73,4 +73,4 @@ function Blogs() {
   );
 }
 
-export default Blogs;
+export default Articles;
