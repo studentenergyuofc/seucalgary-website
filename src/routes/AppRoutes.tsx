@@ -3,14 +3,7 @@ import { RouteInfo, Routes as AppRoutesConfig } from "@routes/RouteDefs";
 import { AppPageStringConstants as c } from "@lib/DisplayConstants";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Layout from "@layout/AppLayout";
-
-export function checkRouteHasRequiredPermissions(pathId: string): boolean {
-  if (pathId === c.pathId.INTERNAL) {
-    return false;
-  }
-
-  return true;
-}
+import { checkRouteHasRequiredPermissions } from "./PermissionsUtil";
 
 const AppRoutes = (): JSX.Element => {
   const routes = AppRoutesConfig.filter((route: RouteInfo) => {
