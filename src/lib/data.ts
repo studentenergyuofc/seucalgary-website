@@ -1,3 +1,11 @@
+import { ContactMethod } from "@interfaces/Contact";
+import {
+  BsFillEnvelopeFill,
+  BsTwitter,
+  BsInstagram,
+  BsLinkedin,
+} from "react-icons/bs";
+
 export const articles = [
   {
     title: "Alternative energy sources you probably haven’t heard of",
@@ -290,3 +298,22 @@ export const collaborators = [
     path: "/colab21.png",
   },
 ] as const;
+
+export const contactMethods: ContactMethod[] = [
+  {
+    icon: BsFillEnvelopeFill,
+    text: "ucalgary@studentenergy.org",
+  },
+  {
+    icon: BsTwitter,
+    text: "@se_uofc",
+  },
+  {
+    icon: BsInstagram,
+    text: "@studentenergy_uofc",
+  },
+  {
+    icon: BsLinkedin,
+    text: "Student Energy at University of Calgary",
+  },
+];
