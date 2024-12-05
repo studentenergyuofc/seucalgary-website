@@ -1,11 +1,8 @@
-import {
-  BsInstagram,
-  BsLinkedin,
-  BsTwitter,
-  BsFillEnvelopeFill,
-} from "react-icons/bs";
 import { useState, useRef, useEffect } from "react";
 import { toast } from "react-toastify";
+import React from "react";
+import * as S from "./Contact.styles";
+import { contactMethods } from "@lib/data";
 
 function Contact() {
   const [name, setName] = useState<string>("");
@@ -53,8 +50,67 @@ function Contact() {
   };
 
   return (
-    <div>
-      <div className="contact-container" ref={topOfPage}>
+    <React.Fragment>
+      <S.Page>
+        <S.Banner>
+          <img src="/contact-banner.jpg" alt="contact-banner" />
+          <S.Overlay></S.Overlay>
+        </S.Banner>
+      </S.Page>
+      <S.MainContainer>
+        <S.InnerContainer>
+          <S.TextElement>
+            <h1>Get In Touch</h1>
+            <p>
+              Have a question or a proposal? Fill out the form below to get in
+              touch or contact us through any other platform!
+            </p>
+          </S.TextElement>
+          <S.ContactWindow>
+            <S.ContactWindowLeft>
+              <h4>CONTACT FORM</h4>
+              <S.Form onSubmit={onSubmit}>
+                <S.Input
+                  type="text"
+                  placeholder="NAME"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+                <S.Input
+                  type="text"
+                  placeholder="EMAIL"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <S.Textarea
+                  cols={30}
+                  rows={6}
+                  placeholder="MESSAGE"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                ></S.Textarea>
+              </S.Form>
+            </S.ContactWindowLeft>
+            <S.ContactWindowRight>
+              <S.ContactDetails>
+                <h4>OTHER WAYS TO CONTACT US</h4>
+                <S.ContactMethods>
+                  {contactMethods.map((method, index) => (
+                    <S.SocialLink key={index}>
+                      <method.icon className="icon" />
+                      <p>{method.text}</p>
+                    </S.SocialLink>
+                  ))}
+                </S.ContactMethods>
+              </S.ContactDetails>
+            </S.ContactWindowRight>
+          </S.ContactWindow>
+        </S.InnerContainer>
+      </S.MainContainer>
+      {/* <div className="contact-container" ref={topOfPage}>
         <div className="contact-banner">
           <img src="/contact-banner.jpg" alt="contact-banner" />
           <div className="contact-banner-overlay"></div>
@@ -125,8 +181,8 @@ function Contact() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> */}
+    </React.Fragment>
   );
 }
 
