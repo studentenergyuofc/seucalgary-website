@@ -4,6 +4,7 @@
   --regblue: #317db2;
   --reggreen: #abc737;
   --white: #fdfdfd;
+  --off-white: #f8f8f8;
   --lightblue: #60a7f2;
   --black: #202223;
   --altblue: #4badce;
@@ -120,27 +121,29 @@ div {
 .head-center {
   justify-content: space-between;
   height: 100%;
+  width: 100%;
+  padding: 0 3rem;
 }
 
 .logo {
-  height: 4rem;
-  width: 4rem;
-  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
   cursor: pointer;
+  margin-left: 2rem;
+  gap: 1rem;
 }
 
 .logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 4rem;
+  width: 4rem;
 }
 
 .logo-title {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  padding-left: 0.6rem;
+  height: 4rem;
+  width: 6rem;
 }
 
 .nav-item {
@@ -302,11 +305,23 @@ video {
     height: 10rem;
   }
 
+  .head-center {
+    padding: 0 2rem;
+  }
+
   .logo {
-    height: 4rem;
-    width: 4rem;
-    margin-left: -1rem;
-    position: relative;
+    margin-left: 0;
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .logo-title {
+    height: 3rem;
+    width: 5rem;
   }
 
   .scroll-down-btn {
@@ -314,14 +329,13 @@ video {
     right: 1.5rem;
   }
 }
-/* 
-@media screen and (max-width: 440px){
 
-  .club-name img{
+@media screen and (max-width: 440px) {
+  .club-name img {
     width: 70% !important;
     height: 8rem;
   }
-} */
+}
 
 .img-overlay {
   width: 100%;
@@ -1643,120 +1657,11 @@ span {
   }
 }
 
-/* Blogs */
-.blog {
-  padding: 12rem 13rem 9rem 13rem;
-  overflow: hidden;
-}
-
-.blog .blog-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 300px;
-  position: relative;
-  margin-bottom: 0;
-}
-
-.blog .blog-box .blog-img {
-  width: 45%;
-  height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.blog-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  transition: 600ms ease-in-out;
-  filter: grayscale(100%);
-}
-
-.blog-img-overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(49, 125, 178, 0.3);
-  transition: opacity 800ms ease-in-out;
-  z-index: 20;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.blog .blog-box .blog-details {
-  width: 40%;
-  position: absolute;
-  right: 0;
-}
-
-.blog .blog-box .blog-details h4 {
-  font-size: 1.6rem;
-  margin-bottom: 40px;
-}
-
-.blog .blog-box .blog-details p {
-  font-size: 0.9rem;
-  margin-top: 2rem;
-  margin-bottom: 20px;
-}
-
-.blog .blog-box .blog-details a {
-  font-weight: 600;
-  font-size: 0.7rem;
-  position: relative;
-  transition: 0.3s;
-  color: var(--coolgreen);
-}
-
-.blog .blog-box .blog-details a:hover {
-  color: var(--coolgreen);
-}
-
-.blog .blog-box .blog-details a::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 1px;
-  background-color: var(--coolgreen);
-  position: absolute;
-  top: 13px;
-  right: -60px;
-  transition: 0.3s;
-}
-
-.blog .blog-box .blog-details a:hover::after {
-  color: var(--coolgreen);
-}
-
-.blog .blog-box h1 {
-  position: absolute;
-  top: -80px;
-  left: 0;
-  font-size: 5.5rem;
-  font-weight: 700;
-  color: rgba(111, 165, 183, 0.5);
-  z-index: -1;
-  font-weight: 800;
-}
-
-.blog .blog-box:not(:last-child) {
-  margin-bottom: 14rem;
-}
-
-.blog-details:hover + .blog-img img {
-  filter: none;
-}
-
-.blog-details:hover + .blog-img .blog-img-overlay {
-  opacity: 0;
-}
+/* Guided Projects */
 
 .page-heading {
   width: 100%;
-  height: 45vh;
+  height: 55vh;
   background: var(--grey2);
   display: flex;
   justify-content: center;
@@ -1772,13 +1677,13 @@ span {
 }
 
 .page-heading .page-heading-text {
-  width: 100%;
-  height: 45vh;
+  width: 60%;
+  height: 55vh;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  gap: 1rem;
 }
 
 .page-heading-text h1 {
@@ -1790,8 +1695,8 @@ span {
 
 .page-heading-overlay {
   width: 100%;
-  height: 45vh;
-  background: rgba(49, 125, 178, 0.5);
+  height: 55vh;
+  background: rgba(34, 107, 160, 0.846);
   position: absolute;
   top: 0;
   left: 0;
@@ -1802,107 +1707,45 @@ span {
   font-size: 1.2rem;
 }
 
-@media screen and (min-width: 1800px) {
-  .blog {
-    padding: 12rem 20rem 12rem 20rem;
-  }
+.project-navigation {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  direction: flex-row;
+  font-size: 1.3rem;
+  gap: 0.3rem;
+  width: 80%;
+}
 
-  .blog .blog-box .blog-img {
-    width: 40%;
-    height: 320px;
-  }
+.tab {
+  width: 30%;
+  background-color: var(--coolgreen);
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  padding: 0.3rem;
+  padding-left: 1rem;
+}
+
+.active-tab {
+  width: 30%;
+  color: var(--coolgreen);
+  background-color: white;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  padding: 0.3rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 1800px) {
 }
 
 @media screen and (max-width: 1176px) {
-  .blog {
-    padding: 10rem 5rem 9rem 5rem;
-    overflow: hidden;
-  }
-
-  .blog .blog-box:not(:last-child) {
-    margin-bottom: 10rem;
-  }
 }
 
 @media screen and (max-width: 812px) {
-  .blog {
-    padding: 8rem 2rem 9rem 2rem;
-  }
-
-  .blog .blog-box {
-    height: 250px;
-  }
-
-  .blog .blog-box:not(:last-child) {
-    margin-bottom: 8rem;
-  }
-
-  .blog .blog-box .blog-img {
-    width: 55%;
-    height: 250px;
-  }
-
-  .blog .blog-box .blog-details h4 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-
-  .blog .blog-box .blog-details p {
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    margin-bottom: 20px;
-  }
-
-  .blog .blog-box h1 {
-    font-size: 5rem;
-  }
 }
 
 @media screen and (max-width: 440px) {
-  .blog {
-    padding: 8rem 2rem 9rem 2rem;
-  }
-
-  .blog .blog-box {
-    height: 160px;
-  }
-
-  .blog .blog-box:not(:last-child) {
-    margin-bottom: 8rem;
-  }
-
-  .blog .blog-box .blog-img {
-    width: 50%;
-    height: 160px;
-  }
-
-  .blog .blog-box .blog-details h4 {
-    font-size: 0.7rem;
-    margin-bottom: 10px;
-  }
-
-  .blog .blog-box .blog-details p {
-    font-size: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 20px;
-  }
-
-  .blog .blog-box h1 {
-    font-size: 3.5rem;
-    top: -50px;
-    left: 0;
-  }
-
-  .blog .blog-box .blog-details a {
-    font-size: 0.5rem;
-  }
-
-  .blog .blog-box .blog-details a::after {
-    width: 30px;
-    top: 8px;
-    right: -33px;
-  }
-
   .page-heading {
     width: 100%;
     height: 35vh;
@@ -1933,12 +1776,7 @@ span {
   }
 
   .page-heading-overlay {
-    width: 100%;
     height: 35vh;
-    background: rgba(49, 125, 178, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   .page-heading-text p {

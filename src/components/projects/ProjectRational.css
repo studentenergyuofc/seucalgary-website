@@ -1,0 +1,49 @@
+@import url("../App.css");
+
+.project-rational {
+  background-color: var(--off-white);
+  padding: 5rem 6rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.project-rational-desc {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  gap: 2.5rem;
+}
+
+.project-rational-desc h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--regblue);
+}
+
+.project-rational-desc ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  display: block;
+}
+
+.project-rational-desc li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  display: list-item;
+  list-style-type: circle;
+}
+
+.project-rational-desc li strong {
+  color: var(--coolgreen);
+}
+
+.slideshow-deck-container {
+  display: flex;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 440px) {
+}

@@ -20,12 +20,7 @@ function Header({
   navbar,
   setNavbar,
 }: HeaderProps) {
-  const location = useLocation();
   const isWindow = useMediaQuery("(max-width: 800px)");
-  const atHome =
-    location.pathname === "/" ||
-    location.pathname === "/about" ||
-    location.pathname === "/contact";
 
   useEffect(() => {
     const changeBackground = () => {
@@ -63,8 +58,8 @@ function Header({
   }, [isWindow, dropdownMenu, setDropdownMenu]);
 
   return (
-    <div className={navbar || !atHome ? "header active" : "header"}>
-      <div className="head-center container d-flex">
+    <div className={navbar ? "header active" : "header"}>
+      <div className="head-center d-flex">
         <Link to="/">
           <div className="logo">
             <img className="logo-img" src={logo} />
@@ -81,7 +76,7 @@ function Header({
                 <Link to="/about">ABOUT</Link>
               </li>
               <li className="nav-item">
-                <Link to="/articles">ARTICLES</Link>
+                <Link to="/projects">PROJECTS</Link>
               </li>
               <li className="nav-item">
                 <Link to="/contact">CONTACT US</Link>

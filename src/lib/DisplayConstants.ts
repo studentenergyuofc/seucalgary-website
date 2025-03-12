@@ -7,14 +7,14 @@ export const AppPageStringConstants = {
     MAIN: "",
     ABOUT: "about",
     CONTACT: "contact",
-    ARTICLES: "articles",
+    PROJECTS: "projects",
     INTERNAL: "internal",
   },
   title: {
     MAIN: "Dashboard",
     ABOUT: "About",
     CONTACT: "Contact",
-    ARTICLES: "Articles",
+    PROJECTS: "Guided Projects",
     INTERNAL: "internal",
   },
 };
