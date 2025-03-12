@@ -1,0 +1,65 @@
+@import url("../App.css");
+
+.club-stats {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  padding: 4rem;
+}
+
+.club-stats h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40vh;
+  width: 80%;
+  color: white;
+}
+
+.stats h1 {
+  font-size: 6rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+@media screen and (max-width: 956px) {
+  .stats {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .club-stats h1 {
+    font-size: 2.4rem;
+  }
+
+  .stats h1 {
+    font-size: 3rem;
+  }
+
+  .club-stats {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .club-stats h1 {
+    font-size: 2.3rem;
+  }
+
+  .stats h1 {
+    font-size: 2rem;
+  }
+}

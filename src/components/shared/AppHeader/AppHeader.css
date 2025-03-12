@@ -1,0 +1,130 @@
+@import url("../../App.css");
+
+.header {
+  overflow-x: hidden;
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
+}
+
+.header.active {
+  overflow-x: hidden;
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  z-index: 999;
+  background-color: var(--regblue);
+  transition: all 0.5s ease-in-out;
+}
+
+.head-center {
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-left: 2rem;
+  gap: 1rem;
+}
+
+.logo-img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.logo-title {
+  height: 4rem;
+  width: 6rem;
+}
+
+.nav-item {
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: var(--reggreen);
+}
+
+.nav-list .nav-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.header p {
+  font-size: 2rem;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  color: white;
+}
+
+.dropdown-menu {
+  background: var(--regblue);
+  position: fixed;
+  top: 5rem;
+  height: fit-content;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none; /* Add this line */
+  z-index: -99999;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  pointer-events: auto; /* Add this line */
+  z-index: 99999;
+}
+
+.dd-menu-optns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  color: white;
+}
+
+.dd-menu-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .head-center {
+    padding: 0 2rem;
+  }
+
+  .logo {
+    margin-left: 0;
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .logo-title {
+    height: 3rem;
+    width: 5rem;
+  }
+}

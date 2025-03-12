@@ -5,7 +5,7 @@ import useMediaQuery from "@hooks/useMediaQuery";
 import logo from "/logo3.png";
 import logotitle from "/logotitle.png";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import "./AppHeader.css";
 
 interface HeaderProps {
   setDropdownMenu: (value: boolean) => void;

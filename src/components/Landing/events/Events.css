@@ -1,0 +1,88 @@
+@import url("../../App.css");
+
+.events-navbar {
+  width: 100%;
+  background-color: white;
+  border: 1px solid white;
+  height: 14rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.events-list {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  background: white;
+  list-style: none;
+}
+
+.event-container {
+  background: white;
+}
+
+.events-button {
+  padding: 20px;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  font-size: 0.9rem;
+  background-color: var(--regblue);
+}
+.events-button:hover {
+  background-color: #23699b;
+  scale: 1.05;
+  transition: all 0.2s ease;
+}
+.events-button.active {
+  background: var(--coolgreen);
+}
+.events-button:active {
+  scale: 1.01;
+  transition: all 0.1s ease;
+}
+
+.event-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.event-article {
+  position: relative;
+  height: auto;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .events-list {
+    gap: 3rem;
+  }
+
+  .events-button {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .events-list {
+    gap: 2rem;
+  }
+
+  .events-button {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+}

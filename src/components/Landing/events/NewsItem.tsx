@@ -1,6 +1,7 @@
 import React from "react";
 import { NewsItemExtendedProps } from "@interfaces/NewsItems";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
+import "./NewsItem.css";
 
 const NewsItem: React.FC<NewsItemExtendedProps> = ({
   path,

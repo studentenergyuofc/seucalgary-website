@@ -10,6 +10,7 @@ import { ExecMembers } from "@interfaces/ExecMembers";
 import { executives } from "@lib/data";
 import { collaborators } from "@lib/data";
 import { Collaborators } from "@components/about/Collaborators";
+import "./about.css";
 
 function About() {
   const topOfPage = useRef<HTMLDivElement>(null);
