@@ -8,9 +8,6 @@ interface ProjectRationalProps {
 const ProjectRational: React.FC<ProjectRationalProps> = ({ images }) => {
   return (
     <div className="project-rational">
-      <div className="slideshow-deck-container">
-        <Slideshow images={images} />
-      </div>
       <div className="project-rational-desc">
         <h1>Project Rationale</h1>
         <p>
@@ -46,6 +43,9 @@ const ProjectRational: React.FC<ProjectRationalProps> = ({ images }) => {
           households and the broader community, ensuring long-term resilience
           and sustainability.
         </p>
+      </div>
+      <div className="slideshow-deck-container">
+        <Slideshow images={images} />
       </div>
     </div>
   );

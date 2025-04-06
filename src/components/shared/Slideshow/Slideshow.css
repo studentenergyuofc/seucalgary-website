@@ -73,3 +73,27 @@
 .dot.active {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 768px) {
+  .slideshow-body {
+    height: 250px;
+  }
+
+  .slideshow-deck {
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1rem;
+  }
+
+  .dot {
+    height: 4px;
+    width: 4px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+}

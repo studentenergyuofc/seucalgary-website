@@ -43,7 +43,51 @@
 }
 
 @media screen and (max-width: 768px) {
+  .project-rational {
+    padding: 4rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-rational-desc {
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .slideshow-deck-container {
+    width: 100%;
+  }
+
+  .project-rational-desc h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-rational-desc p {
+    font-size: 0.8rem;
+  }
+
+  .project-rational-desc li {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 440px) {
+  .project-rational {
+    padding: 4rem 2rem;
+    gap: 1rem;
+  }
+
+  .project-rational-desc h1 {
+    font-size: 1.2rem;
+  }
+
+  .project-rational-desc p {
+    font-size: 0.6rem;
+  }
+
+  .project-rational-desc li {
+    margin-bottom: 0.5rem;
+    font-size: 0.6rem;
+  }
 }

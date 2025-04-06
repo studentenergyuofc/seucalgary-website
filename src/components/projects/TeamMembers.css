@@ -68,4 +68,29 @@
 }
 
 @media screen and (max-width: 440px) {
+  .team-members-overview {
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .team-member {
+    gap: 1rem;
+  }
+
+  .team-member-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-members-overview h1 {
+    font-size: 1.2rem;
+  }
+
+  .team-member h3 {
+    font-size: 0.8rem;
+  }
+
+  .team-member p {
+    font-size: 0.6rem;
+  }
 }

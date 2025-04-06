@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0;
   gap: 3rem;
 }
 
@@ -36,7 +36,51 @@
 }
 
 @media screen and (max-width: 768px) {
+  .project-description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-overview {
+    width: 60%;
+    gap: 2rem;
+  }
+
+  .map {
+    width: 50%;
+    height: 50vh;
+  }
+
+  .project-overview h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-overview p {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 440px) {
+  .project-description {
+    padding: 3rem 0;
+    gap: 2rem;
+  }
+
+  .project-overview {
+    width: 70%;
+    gap: 1rem;
+  }
+
+  .map {
+    width: 70%;
+    height: 30vh;
+  }
+
+  .project-overview h1 {
+    font-size: 1.2rem;
+  }
+
+  .project-overview p {
+    font-size: 0.6rem;
+  }
 }

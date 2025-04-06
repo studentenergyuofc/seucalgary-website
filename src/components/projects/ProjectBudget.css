@@ -68,11 +68,82 @@
 .budget-calc {
   display: flex;
   justify-content: center;
+  gap: 0.2rem;
+}
+
+.budget-calc strong {
+  font-size: 1.4rem;
+}
+
+.budget-calc p {
   font-size: 1.4rem;
 }
 
 @media screen and (max-width: 768px) {
+  .project-budget {
+    padding: 4rem;
+    padding-bottom: 6rem;
+    gap: 3rem;
+  }
+
+  .project-budget h1 {
+    font-size: 1.5rem;
+  }
+
+  .budget-item .text p {
+    font-size: 0.8rem;
+  }
+
+  .budget-item .text h4 {
+    font-size: 1rem;
+  }
+
+  .budget-calc {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .budget-calc p {
+    font-size: 1rem;
+  }
+
+  .budget-calc strong {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 440px) {
+  .project-budget {
+    padding: 4rem 2rem;
+  }
+
+  .project-budget h1 {
+    font-size: 1.2rem;
+  }
+
+  .budget-item .text p {
+    font-size: 0.6rem;
+  }
+
+  .budget-item .text h4 {
+    font-size: 0.8rem;
+  }
+
+  .budget-item {
+    gap: 1rem;
+  }
+
+  .project-budget-list {
+    gap: 2.5rem;
+    padding: 0;
+  }
+
+  .budget-calc p {
+    font-size: 0.8rem;
+  }
+
+  .budget-calc strong {
+    font-size: 0.8rem;
+  }
 }

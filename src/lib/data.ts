@@ -47,7 +47,7 @@ export const projects = [
       {
         name: "Walid Shmoury",
         role: "Team Lead",
-        major: "Master’s in Mechanical Engineering",
+        major: "MEng in Mechanical Engineering",
         description:
           "Meet Walid Shmoury, your dedicated Team Lead for this project. With a Master’s in Mechanical Engineering, I bring a wealth of experience in renewable energy, specializing in designing feasible solar systems. My leadership ensures our project stays on track for success.",
         image: {
@@ -58,7 +58,7 @@ export const projects = [
       },
       {
         name: "Mickey Macdonald",
-        major: "Bachelor of Sustainable Systems Engineering",
+        major: "BSc in Sustainable Systems Engineering",
         description:
           "Engaged in his first year of Engineering, pursuing a Bachelor of Sustainable Systems Engineering. After a decade out of post secondary, Mickey returned to school, leaving a career in distilling craft spirits,  to attempt to help solve the ever present dangers of climate change in a meaningful way. Their role is to support and facilitate connection to the local community, while developing the technical skills through osmosis from his peers.",
         image: {
@@ -69,7 +69,7 @@ export const projects = [
       },
       {
         name: "Kareem Youssef",
-        major: "Electrical & Digital Engineering",
+        major: "BSc in Electrical Engineering",
         description:
           "Kareem is taking the role of  Fundraising and Outreach Lead for the project. Kareem is an Electrical & Digital Engineering student and the co-founder and president of the Student Energy University of Calgary Chapter since 2021.",
         image: {
@@ -80,7 +80,7 @@ export const projects = [
       },
       {
         name: "Abdujalel Wadouh",
-        major: "Mechanical & Manufacturing Engineering",
+        major: "BSc in Mechanical Engineering",
         description:
           "Abduljalel Wadouh is taking the role of Project Deliverable Lead for the Solar Project. He is also a Mechanical & Manufacturing Engineering student at the University of Calgary in which he co-founded the Student Energy Chapter there in 2021 and has subsequently been serving as an executive since.",
         image: {
