@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import "./Slideshow.css";
 
@@ -9,9 +9,9 @@ interface SlideshowProps {
 const Slideshow: React.FC<SlideshowProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]);
 
   const prevSlide = () => {
     setCurrentIndex(
