@@ -1,4 +1,4 @@
-import FlipCard from "../../components/about/FlipCard";
+import FlipCard from "@components/About/FlipCard";
 import subbnr from "/banner4.jpg";
 import mainbnr from "/banner3.jpg";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
@@ -9,7 +9,7 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import { ExecMembers } from "@interfaces/ExecMembers";
 import { executives } from "@lib/data";
 import { collaborators } from "@lib/data";
-import { Collaborators } from "@components/about/Collaborators";
+import { Collaborators } from "@components/About/Collaborators";
 import "./about.css";
 
 function About() {
