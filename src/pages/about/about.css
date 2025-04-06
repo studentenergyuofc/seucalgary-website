@@ -1,0 +1,678 @@
+@import url("../../components/App.css");
+
+/* About */
+.about-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-banner {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-banner-overlay.blue {
+  width: 75%;
+  height: 100%;
+  background: rgba(49, 125, 178, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-banner-overlay.yellow {
+  width: 25%;
+  height: 100%;
+  background: rgba(248, 183, 20, 0.25);
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main-banner-overlay h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  width: 90%;
+}
+
+.main-banner-overlay h3 {
+  color: white;
+  max-width: 65%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.cursor-text {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.sub-banners {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background: white;
+}
+
+.sub-banner-left {
+  width: 60%;
+  height: 100%;
+}
+
+.sub-banner-left-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(88, 170, 30, 0.25);
+  position: absolute;
+  top: 0;
+  right: 40%;
+}
+
+.sub-banner-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sub-banner-right {
+  width: 40%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-banner-right p {
+  color: black;
+  font-size: 1.4rem;
+  z-index: 10;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+
+.sub-banner-right span {
+  color: black;
+  font-size: 1.4rem;
+  z-index: 10;
+  font-weight: 400;
+}
+
+#green-text {
+  color: var(--reggreen);
+}
+
+#yellow-text {
+  color: var(--yellow);
+}
+
+#blue-text {
+  color: var(--regblue);
+}
+
+@media screen and (min-width: 1800px) {
+  .sub-banner-right .text {
+    width: 70%;
+  }
+
+  .sub-banner-right p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .sub-banner-right span {
+    font-size: 1.8rem;
+  }
+
+  .main-banner-overlay h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1004px) {
+  .main-banner-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-banner-overlay h3 {
+    max-width: 75%;
+    font-size: 1rem;
+  }
+
+  .cursor-text {
+    font-size: 2.5rem;
+  }
+
+  .sub-banner-right p {
+    font-size: 0.9rem;
+  }
+
+  .sub-banner-right span {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .main-banner-overlay h1 {
+    font-size: 2.3rem;
+    width: 90%;
+  }
+
+  .cursor-text {
+    font-size: 2.3rem;
+  }
+
+  .main-banner-overlay.blue {
+    width: 100%;
+  }
+
+  .main-banner-overlay.yellow {
+    width: 0;
+    height: 100%;
+  }
+
+  .sub-banner-left {
+    width: 50%;
+    height: 100%;
+  }
+
+  .sub-banner-left-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(88, 170, 30, 0.25);
+    position: absolute;
+    top: 0;
+    right: 50%;
+  }
+
+  .scroll-down-btn.about {
+    bottom: 1rem;
+    right: 0.5rem;
+    z-index: 1;
+    background-color: rgba(49, 125, 178, 0.4);
+  }
+
+  .sub-banner-right {
+    width: 50%;
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .sub-banner-right {
+    padding-left: 2rem;
+    border: 1px solid white;
+  }
+
+  .main-banner-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .cursor-text {
+    font-size: 2.2rem;
+  }
+}
+
+/* Team Section */
+.team-members-section {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+  background: white;
+}
+
+.team-members-header {
+  width: 100%;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-members-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--reggreen);
+}
+
+.team-members-header p {
+  font-size: 0.8rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.card {
+  background: white;
+  width: 13rem;
+  height: 20rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+}
+
+.inner-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-content.back {
+  padding: 1rem;
+  line-height: 1.2rem;
+  align-items: start;
+}
+
+.card-content.back p {
+  margin-bottom: 0.7rem;
+}
+
+.card-content.back .exec-question {
+  font-weight: 800;
+  color: var(--yellow);
+}
+
+.exec-img-container {
+  width: 80%;
+  height: 75%;
+  margin-bottom: 0.5rem;
+}
+
+.exec-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content p {
+  font-size: 0.7rem;
+}
+
+.card-content h4 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card-content h6 {
+  font-size: 0.8rem;
+  color: var(--regblue);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 960px) {
+  .cards-container {
+    gap: 3rem;
+  }
+
+  .card {
+    width: 12rem;
+    height: 18rem;
+  }
+
+  .section.team-members-section {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .section.team-members-section {
+    padding-top: 5rem;
+    padding-bottom: 0;
+  }
+
+  .cards-container {
+    gap: 2.5rem;
+  }
+
+  .card-content h4 {
+    font-size: 0.8rem;
+  }
+
+  .card {
+    width: 12rem;
+    height: 18rem;
+  }
+
+  .team-members-header {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .section.team-members-section {
+    padding: 5rem 1rem 0 1rem;
+  }
+
+  .team-members-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--reggreen);
+    text-align: center;
+    width: 90%;
+  }
+
+  .cards-container {
+    gap: 2rem;
+  }
+
+  .card {
+    width: 10rem;
+    height: 15rem;
+  }
+
+  .card-content.back p {
+    margin-bottom: 0.5rem;
+    line-height: 0.9rem;
+  }
+
+  .card-content p {
+    font-size: 0.6rem;
+  }
+
+  .card-content h4 {
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
+  .card-content h6 {
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .team-members-header {
+    margin-bottom: 4rem;
+  }
+
+  .exec-img-container {
+    width: 80%;
+    height: 65%;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Founders */
+.club-founders-main {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
+.club-founders-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 80%;
+}
+
+.founder-title {
+  width: 100%;
+  line-height: 2.2rem;
+  text-align: start;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: var(--regblue);
+}
+
+.founder-name {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: end;
+  color: var(--reggreen);
+}
+
+.club-founders-header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--reggreen);
+}
+
+.club-founders-header p {
+  width: 35%;
+  font-size: 1rem;
+  width: 60%;
+  margin-top: 0.5rem;
+}
+
+.club-founders-title p {
+  text-align: start;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.founder-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.founder-container:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.founder-testimony {
+  width: 40%;
+  padding: 0 2rem;
+  line-height: 1.8;
+}
+
+.founder-img {
+  width: 40%;
+  height: 30rem;
+  border-radius: 0.5rem;
+}
+
+.founder-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 1006px) {
+  .club-founders-main {
+    padding-top: 7rem;
+  }
+
+  .founder-container {
+    width: 90%;
+  }
+
+  .section.club-founders {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  .founder-testimony {
+    width: 50%;
+    padding: 0 2rem;
+    line-height: 1.8;
+  }
+
+  .founder-img {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .club-founders-header {
+    width: 100%;
+  }
+
+  .section.team-members-section {
+    padding-bottom: 0;
+  }
+
+  .club-founders-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .club-founders-header p {
+    font-size: 0.9rem;
+    width: 60%;
+  }
+
+  .club-founders-main {
+    padding-top: 5rem;
+  }
+
+  .founder-container {
+    width: 100%;
+  }
+
+  .founder-testimony {
+    width: 50%;
+    padding: 0 2rem;
+    line-height: 1.8;
+  }
+
+  .founder-testimony p {
+    font-size: 0.8rem;
+  }
+
+  .founder-img {
+    width: 45%;
+    height: 20rem;
+  }
+
+  .founder-title {
+    width: 100%;
+    line-height: 1.8rem;
+    text-align: start;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    color: var(--regblue);
+  }
+
+  .founder-container:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .club-founders-header h1 {
+    font-size: 2rem;
+  }
+
+  .club-founders-header p {
+    font-size: 0.8rem;
+    width: 60%;
+  }
+
+  .founder-title {
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .founder-testimony p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .section.club-founders {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .club-founders-header {
+    width: 100%;
+    align-items: center;
+  }
+
+  .club-founders-header h1 {
+    font-size: 2rem;
+  }
+
+  .club-founders-header p {
+    font-size: 0.8rem;
+    width: 85%;
+    text-align: center;
+  }
+
+  .founder-container {
+    width: 100%;
+    flex-direction: column;
+    min-height: 36rem;
+    height: fit-content;
+  }
+
+  .founder-container:last-child {
+    position: relative;
+  }
+
+  .founder-testimony {
+    width: 100%;
+  }
+
+  .founder-img {
+    width: 80%;
+    height: 18rem;
+  }
+
+  .founder-container:last-child .founder-testimony {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .founder-container:last-child .founder-img {
+    top: 0;
+  }
+
+  .founder-container:last-child {
+    min-height: 38rem;
+  }
+}

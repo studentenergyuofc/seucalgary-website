@@ -2,6 +2,7 @@ import { NewsItemProps } from "@interfaces/NewsItems";
 import NewsItem from "./NewsItem";
 import { useState, useEffect } from "react";
 import { achievementsEvents, upcomingEvents, pastEvents } from "@lib/data";
+import "./Events.css";
 
 const Events: React.FC = () => {
   const [event, setEvent] = useState<string>();
@@ -62,7 +63,7 @@ const Events: React.FC = () => {
             {upcomingEvents.map((event: NewsItemProps) => {
               return (
                 <div
-                  className="news-piece-holder"
+                  className="event-holder"
                   data-aos={event.animation}
                   data-aos-anchor-placement="center-bottom"
                   key={event.title}
@@ -86,7 +87,7 @@ const Events: React.FC = () => {
             {pastEvents.map((event: NewsItemProps) => {
               return (
                 <div
-                  className="news-piece-holder"
+                  className="event-holder"
                   data-aos={event.animation}
                   data-aos-anchor-placement="center-bottom"
                   key={event.title}
@@ -110,7 +111,7 @@ const Events: React.FC = () => {
             {achievementsEvents.map((event: NewsItemProps) => {
               return (
                 <div
-                  className="news-piece-holder"
+                  className="event-holder"
                   data-aos={event.animation}
                   data-aos-anchor-placement="center-bottom"
                   key={event.title}

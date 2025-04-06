@@ -12,7 +12,7 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
 import useMediaQuery from "@hooks/useMediaQuery";
 import ClubStats from "@components/Landing/ClubStats";
-import Events from "@components/Landing/Events";
+import Events from "@components/Landing/events/Events";
 import IntroInfo from "@components/Landing/IntroInfo";
 
 function Home() {

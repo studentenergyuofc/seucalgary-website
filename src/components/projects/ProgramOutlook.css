@@ -1,0 +1,39 @@
+@import url("../App.css");
+
+.program-outlook {
+  padding: 5rem 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.program-outlook-img {
+  width: 100%;
+}
+
+.program-outlook h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--yellow);
+}
+
+@media screen and (max-width: 768px) {
+  .program-outlook {
+    padding: 4rem;
+    gap: 2rem;
+  }
+
+  .program-outlook h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .program-outlook {
+    padding: 4rem 2rem;
+  }
+
+  .program-outlook h1 {
+    font-size: 1.2rem;
+  }
+}

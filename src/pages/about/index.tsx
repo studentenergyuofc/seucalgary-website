@@ -1,4 +1,4 @@
-import FlipCard from "../../components/About/FlipCard";
+import FlipCard from "@components/About/FlipCard";
 import subbnr from "/banner4.jpg";
 import mainbnr from "/banner3.jpg";
 import ImgComponent from "@shared/ImgComponent/ImgComponent";
@@ -10,6 +10,7 @@ import { ExecMembers } from "@interfaces/ExecMembers";
 import { executives } from "@lib/data";
 import { collaborators } from "@lib/data";
 import { Collaborators } from "@components/About/Collaborators";
+import "./about.css";
 
 function About() {
   const topOfPage = useRef<HTMLDivElement>(null);

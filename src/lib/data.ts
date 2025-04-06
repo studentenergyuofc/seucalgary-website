@@ -1,3 +1,11 @@
+import {
+  FaToolbox,
+  FaFilePowerpoint,
+  FaCarBattery,
+  FaWrench,
+  FaSolarPanel,
+} from "react-icons/fa";
+
 export const articles = [
   {
     title: "Alternative energy sources you probably haven’t heard of",
@@ -27,6 +35,98 @@ export const articles = [
     link: "https://www.sciencedaily.com/releases/2023/11/231102135037.htm",
     date: "02/11",
     blurhash: "LsLXxtRPIUV@.TV@V@aeDioLfka|",
+  },
+];
+
+export const projects = [
+  {
+    title: "Sisika Reserve",
+    description:
+      "The project aims to install Solar PV systems on the roof of a home in the Siksika Reserve, reducing utility costs and enhancing energy security. By harnessing renewable solar energy, the initiative seeks to promote sustainability and self-sufficiency within the community. The project will significantly benefit the residents by reducing the frequency or fully eliminating emergency periods without power, ensuring a more stable and reliable energy supply.",
+    team: [
+      {
+        name: "Walid Shmoury",
+        role: "Team Lead",
+        major: "MEng in Mechanical Engineering",
+        description:
+          "Meet Walid Shmoury, your dedicated Team Lead for this project. With a Master’s in Mechanical Engineering, I bring a wealth of experience in renewable energy, specializing in designing feasible solar systems. My leadership ensures our project stays on track for success.",
+        image: {
+          src: "/img-walid.jpg",
+          altimagesizes: "/img-walid-sm-150.jpg 150w, img-walid.jpg 300w",
+          blurhash: "LIPGHWi^?]tm9Fo#yDnhV^e:NIoe",
+        },
+      },
+      {
+        name: "Mickey Macdonald",
+        major: "BSc in Sustainable Systems Engineering",
+        description:
+          "Engaged in his first year of Engineering, pursuing a Bachelor of Sustainable Systems Engineering. After a decade out of post secondary, Mickey returned to school, leaving a career in distilling craft spirits,  to attempt to help solve the ever present dangers of climate change in a meaningful way. Their role is to support and facilitate connection to the local community, while developing the technical skills through osmosis from his peers.",
+        image: {
+          src: "/img-mickey.jpg",
+          altimagesizes: "/img-mickey-sm-150.jpg 150w, img-mickey.jpg 300w",
+          blurhash: "LmIX?YE1.9%2~qWY%MofNbxaV@WB",
+        },
+      },
+      {
+        name: "Kareem Youssef",
+        major: "BSc in Electrical Engineering",
+        description:
+          "Kareem is taking the role of  Fundraising and Outreach Lead for the project. Kareem is an Electrical & Digital Engineering student and the co-founder and president of the Student Energy University of Calgary Chapter since 2021.",
+        image: {
+          src: "/img-kareem2.jpg",
+          altimagesizes: "/img-kareem2-sm-150.jpg 150w, img-kareem2.jpg 300w",
+          blurhash: "LhIr$+%1~pof.TWAIUWBJFbIRks+",
+        },
+      },
+      {
+        name: "Abdujalel Wadouh",
+        major: "BSc in Mechanical Engineering",
+        description:
+          "Abduljalel Wadouh is taking the role of Project Deliverable Lead for the Solar Project. He is also a Mechanical & Manufacturing Engineering student at the University of Calgary in which he co-founded the Student Energy Chapter there in 2021 and has subsequently been serving as an executive since.",
+        image: {
+          src: "/aj_img2.jpg",
+          altimagesizes: "/aj_img2-sm-150.jpg 150w, aj_img2.jpg 300w",
+          blurhash: "LjH.jBs;^+jG_4aJaJnhR:oHRjoc",
+        },
+      },
+    ],
+    project_outlook_link: "/program_outlook.png",
+    images: [
+      "/project1.png",
+      "project2.png",
+      "project3.png",
+      "project4.png",
+      "project5.png",
+      "project6.png",
+    ],
+    budget_breakdown: [
+      {
+        name: "Permit",
+        amount: "$350",
+        icon: FaFilePowerpoint,
+      },
+      {
+        name: "Inverter",
+        amount: "$8,000",
+        icon: FaCarBattery,
+      },
+      {
+        name: "Tools",
+        amount: "$650",
+        icon: FaWrench,
+      },
+      {
+        name: "Solar Panels",
+        amount: "$4,500",
+        icon: FaSolarPanel,
+      },
+      {
+        name: "Labour",
+        amount: "$3,500",
+        icon: FaToolbox,
+      },
+    ],
+    total_budget_statement: "$17,000 + 10% contingency = $18,700",
   },
 ];
 

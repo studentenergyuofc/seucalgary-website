@@ -1,3 +1,5 @@
+import "./ClubStats.css";
+
 const ClubStats: React.FC = () => {
   return (
     <div className="section club-stats">
