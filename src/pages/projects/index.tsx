@@ -18,7 +18,7 @@ function GuidedProjects() {
   const isWindow = useMediaQuery("(max-width: 440px)");
   const [defaultBackground, setDefaultBackground] =
     useState<string>(background);
-  const [selectedProject, setSelectedProject] = useState(0);
+  const [selectedProject] = useState(0);
 
   useEffect(() => {
     if (isWindow) {
