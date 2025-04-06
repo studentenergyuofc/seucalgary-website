@@ -40,7 +40,7 @@ export const articles = [
 
 export const projects = [
   {
-    title: "Sisika Reserve",
+    title: "Siksika Housing",
     description:
       "The project aims to install Solar PV systems on the roof of a home in the Siksika Reserve, reducing utility costs and enhancing energy security. By harnessing renewable solar energy, the initiative seeks to promote sustainability and self-sufficiency within the community. The project will significantly benefit the residents by reducing the frequency or fully eliminating emergency periods without power, ensuring a more stable and reliable energy supply.",
     team: [
