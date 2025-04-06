@@ -22,7 +22,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images }) => {
   useEffect(() => {
     const interval = setInterval(nextSlide, 10000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   return (
     <div className="slideshow-deck">
