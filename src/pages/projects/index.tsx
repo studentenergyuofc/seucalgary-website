@@ -71,9 +71,7 @@ function GuidedProjects() {
 
       <ProjectDescription description={projects[selectedProject].description} />
       <TeamMembers team={projects[selectedProject].team} />
-      <ProgramOutlook
-        img_url={projects[selectedProject].project_outlook_link}
-      />
+      <ProgramOutlook img={projects[selectedProject].project_outlook_link} />
       <ProjectRational images={projects[selectedProject].images} />
       <ProjectBudget
         budget_breakdown={projects[selectedProject].budget_breakdown}
