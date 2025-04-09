@@ -90,14 +90,37 @@ export const projects = [
         },
       },
     ],
-    project_outlook_link: "/program_outlook.png",
+    project_outlook_link: {
+      src: "/program_outlook.png",
+      altimagesizes: "/program_outlook.png 150w, /program_outlook.png 300w",
+      blurhash: "LlH{csxa?uRn.mtRaeofN#R*M|ad",
+    },
     images: [
-      "/project1.png",
-      "project2.png",
-      "project3.png",
-      "project4.png",
-      "project5.png",
-      "project6.png",
+      {
+        src: "/project_img1.png",
+        altimagesizes: "/project_img1.png 150w, project_img1.png 300w",
+        blurhash: "LTGI=ubJ-;jrOcogWBWA_4Rjobj?",
+      },
+      {
+        src: "/project_img2.png",
+        altimagesizes: "/project_img2.png 150w, project_img2.png 300w",
+        blurhash: "LQGv3TD%x^WYFkMyozWC~qkDMwRj",
+      },
+      {
+        src: "/project_img3.png",
+        altimagesizes: "/project_img3.png 150w, project_img3.png 300w",
+        blurhash: "LNGc18tRoftR?wkCRiayxvWBRja{",
+      },
+      {
+        src: "/project_img4.png",
+        altimagesizes: "/project_img4.png 150w, project_img4.png 300w",
+        blurhash: "LQE:fFIVx]t6XrWFt6ay4TWBRjj]",
+      },
+      {
+        src: "/project_img5.png",
+        altimagesizes: "/project_img5.png 150w, project_img5.png 300w",
+        blurhash: "LZHyaoWUo}WAyZocj@kB%Kj[RPkC",
+      },
     ],
     budget_breakdown: [
       {

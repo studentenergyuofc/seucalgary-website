@@ -1,8 +1,9 @@
 import Slideshow from "@components/shared/Slideshow/Slideshow";
 import "./ProjectRational.css";
+import { Image } from "@interfaces/Project";
 
 interface ProjectRationalProps {
-  images: string[];
+  images: Image[];
 }
 
 const ProjectRational: React.FC<ProjectRationalProps> = ({ images }) => {

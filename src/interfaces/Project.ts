@@ -24,8 +24,8 @@ export interface GuidedProject {
   title: string;
   description: string;
   team: TeamMember[];
-  project_outlook_link: string;
-  images: string[];
+  project_outlook_link: Image;
+  images: Image[];
   budget_breakdown: BudgetItem[];
   total_budget_statement: string;
 }

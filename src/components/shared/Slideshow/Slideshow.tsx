@@ -1,9 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import "./Slideshow.css";
+import { Image } from "@interfaces/Project";
+import ImgComponent from "../ImgComponent/ImgComponent";
 
 interface SlideshowProps {
-  images: string[];
+  images: Image[];
 }
 
 const Slideshow: React.FC<SlideshowProps> = ({ images }) => {
@@ -34,10 +36,14 @@ const Slideshow: React.FC<SlideshowProps> = ({ images }) => {
       <div className="slideshow-body">
         <div className="slideshow">
           {/* Slide Container */}
-          <div
-            className="slide"
-            style={{ backgroundImage: `url(${images[currentIndex]})` }}
-          ></div>
+          <div className="slide">
+            <ImgComponent
+              src={images[currentIndex].src}
+              blurhash={images[currentIndex].blurhash}
+              altimages=""
+              altimagesizes=""
+            />
+          </div>
 
           {/* Dots for Navigation */}
         </div>
